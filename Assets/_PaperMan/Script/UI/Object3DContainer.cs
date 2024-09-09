@@ -24,6 +24,7 @@ namespace Com.IsartDigital.PaperMan
         [SerializeField] private float animationDuration = 1.2f;
         private Vector3 object3dStartScale;
 
+        public bool isActivated = false;
         private bool canRotate = false;
 
         private void Awake()
@@ -34,7 +35,7 @@ namespace Com.IsartDigital.PaperMan
 
         private void Start()
         {
-            //Hide3DObject();
+            Hide3DObject();
         }
 
         public void OnBeginDrag(PointerEventData eventData)
@@ -77,6 +78,7 @@ namespace Com.IsartDigital.PaperMan
             object3dStartScale = object3dToRotate.transform.localScale;
 
             // show the canvas
+            isActivated = true;
             canvas.gameObject.SetActive(true);
             StartCoroutine(DoAnim(1));
             await Task.Delay(TimeSpan.FromSeconds(animationDuration));
@@ -84,16 +86,19 @@ namespace Com.IsartDigital.PaperMan
         }
 
         [ContextMenu("StartAnim")]
-        private void DebugShow()
+        public void DebugShow()
         {
+            isActivated = true;
             canvas.gameObject.SetActive(true);
             object3dStartScale = object3dToRotate.transform.localScale;
             StartCoroutine(DoAnim(1));
+            canRotate = true;
         }
 
         [ContextMenu("StartHide")]
-        private void DebugHide()
+        public void DebugHide()
         {
+            isActivated = false;
             StartCoroutine(DoAnim(-1));
         }
 
@@ -103,7 +108,6 @@ namespace Com.IsartDigital.PaperMan
         /// <param name="direction"> 1 for going from 0 to 1 or -1 for it to go from 1 to 0
         private IEnumerator DoAnim(float direction)
         {
-            Debug.Log("do anim");
             float elapsedTime = 0;
             float ratio;
             while (elapsedTime < animationDuration)
@@ -116,9 +120,7 @@ namespace Com.IsartDigital.PaperMan
                 yield return null;
             }
 
-            Debug.Log("end");
             object3dToRotate.transform.localScale = object3dStartScale;
-            Debug.Log(object3dToRotate.transform.localScale + " " + object3dStartScale);
         }
 
         /// <summary>
@@ -126,7 +128,9 @@ namespace Com.IsartDigital.PaperMan
         /// </summary>
         public async void Hide3DObject()
         {
+            isActivated = false;
             canRotate = false;
+            object3dStartScale = object3dToRotate.transform.localScale;
             StartCoroutine(DoAnim(-1));
 
             await Task.Delay(TimeSpan.FromSeconds(animationDuration));

@@ -41,7 +41,7 @@ namespace Com.IsartDigital.PaperMan
         private void DoActionPlayerIn()
         {
             // the player interact with this object
-            if (Input.GetKeyDown(interactionInput) && canInteract)
+            if (Input.GetButtonDown(interactionInput) && canInteract)
                 Interact();
         }
 
