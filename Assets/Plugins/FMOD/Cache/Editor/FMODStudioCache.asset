@@ -15,10 +15,10 @@ MonoBehaviour:
   Path: FMOD/PaperMan/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638614915583897247
+  lastModified: 638614932507193620
   FileSizes:
   - Name: Desktop
-    Value: 712
+    Value: 838
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -35,14 +35,43 @@ MonoBehaviour:
   EditorBanks:
   - {fileID: -2604284439467036025}
   - {fileID: 4669912215218507413}
-  EditorEvents: []
+  EditorEvents:
+  - {fileID: 6161082381075584104}
+  - {fileID: 1689010966888866988}
   EditorParameters: []
   MasterBanks:
   - {fileID: 4669912215218507413}
   StringsBanks:
   - {fileID: -2604284439467036025}
-  cacheTime: 638614915583897247
+  cacheTime: 638614932507193620
   cacheVersion: 131619
+--- !u!114 &1689010966888866988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/music_radio_station_rock_loop
+  m_EditorClassIdentifier: 
+  Path: event:/Music/music_radio_station_rock_loop
+  Guid:
+    Data1: 1744438431
+    Data2: 1091613361
+    Data3: -1687862653
+    Data4: 1299993459
+  Banks:
+  - {fileID: 4669912215218507413}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 32000
 --- !u!114 &4669912215218507413
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58,8 +87,35 @@ MonoBehaviour:
   Path: FMOD/PaperMan/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638614915583871579
+  lastModified: 638614932507183518
   FileSizes:
   - Name: Desktop
-    Value: 1036
+    Value: 457984
   Exists: 1
+--- !u!114 &6161082381075584104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/ui_okay
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/ui_okay
+  Guid:
+    Data1: 1472717450
+    Data2: 1235520097
+    Data3: -117749072
+    Data4: 1561112974
+  Banks:
+  - {fileID: 4669912215218507413}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
