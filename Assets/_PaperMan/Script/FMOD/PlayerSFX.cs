@@ -23,6 +23,7 @@ public class PlayerSFX : MonoBehaviour
     {
         studioEventEmitter.EventReference = pEventToPlay;
         studioEventEmitter.Play();
+
     }
 
 
