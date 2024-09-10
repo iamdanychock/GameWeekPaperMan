@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Com.IsartDigital.PaperMan;
 
-public class Zipline : MonoBehaviour
+public class Zipline : Interactable
 {
     [SerializeField] float UP_DISTANCE;
     [SerializeField] float SEC_TO_GO_UP = 1;
@@ -16,23 +17,32 @@ public class Zipline : MonoBehaviour
 
     Vector3 _startPosition;
 
-    public void Activate() 
+    protected override void Interact()
     {
+        if (_posOnCurve != 0 && _posOnCurve != 1)
+            return;
+
         if (_posOnCurve > .5)
             _posOnCurve -= Time.deltaTime;
         else
             _posOnCurve += Time.deltaTime;
+
+        Player.Instance.SetModZipline(this);
     }
 
-    private void Start()
+    protected override void Start()
     {
+        base.Start();
+
         _posOnCurve = _isUp ? 1 : 0;
 
         _startPosition = transform.position;
     }
 
-    private void Update()
+    protected override void Update()
     {
+        base.Update();
+
         if (_posOnCurve == 0 || _posOnCurve == 1)
             return;
 
