@@ -2,17 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SettingsSaveFile : MonoBehaviour
+public static class SettingsSaveFile
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public static float masterVolumeValue = 1;
+    public static float musicVolumeValue = 1;
+    public static float SFXVolumeValue = 1;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
+
 }

@@ -69,11 +69,6 @@ public class Player : MonoBehaviour
         //Dont care about the zipline if the player isnt pressing interract key
         if (!Input.GetButtonDown(INTERRACTION_INPUT))
             return;
-
-        Zipline ziplineHit = CheckForZipline();
-
-        if (ziplineHit != null)
-            SetModZipline(ziplineHit);
     }
 
     void NormalMovements()
@@ -98,20 +93,7 @@ public class Player : MonoBehaviour
         _rigidComponent.velocity = new Vector3(Mathf.Clamp(_rigidComponent.velocity.x, -MAX_SPEED, MAX_SPEED), _rigidComponent.velocity.y, Mathf.Clamp(_rigidComponent.velocity.z, -MAX_SPEED, MAX_SPEED));
     }
 
-    Zipline CheckForZipline()
-    {
-        RaycastHit hit;
-
-        if (Physics.Raycast(transform.position, Vector3.up, out hit, ZIPLINE_RANGE))
-        {
-            if (hit.collider.tag == ZIPLINE_TAG)
-                return hit.collider.GetComponent<Zipline>();
-        }
-
-        return null;
-    }
-
-    void SetModZipline(Zipline ziplineToFollow)
+    public void SetModZipline(Zipline ziplineToFollow)
     {
         _state = DoActionZipline;
         _zipline = ziplineToFollow;
@@ -123,8 +105,6 @@ public class Player : MonoBehaviour
         _animatorComponent.SetTrigger(ZIPLINE_GRAB_ANIM);
 
         _rigidComponent.isKinematic = true;
-
-        _zipline.Activate();
     }
 
     void DoActionZipline()
@@ -134,9 +114,6 @@ public class Player : MonoBehaviour
             SetModNormal();
             return;
         }
-
-        //Ignore gravity
-        _rigidComponent.velocity += Vector3.down * _rigidComponent.velocity.y;
 
         transform.position = Vector3.Lerp(transform.position, _zipline.transform.position + Vector3.up * ZIPLINE_Y_OFFSET, ZIPLINE_EASE * Time.deltaTime);
     }
