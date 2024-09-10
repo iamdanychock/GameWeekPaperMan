@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: TestVideoMat
+  m_Name: TestVideoMat2
   m_Shader: {fileID: -6465566751694194690, guid: c6819da01094a9643a4357c6b0038112, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -68,7 +68,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Video:
-        m_Texture: {fileID: 8400000, guid: d229036bb85bd774a8ab11f3b901a6c7, type: 2}
+        m_Texture: {fileID: 8400000, guid: 6e60547598639274392d0329eda97105, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -110,7 +110,7 @@ Material:
     - _HueShift: 0.025
     - _ImageSaturation: 3.92
     - _ImageValue: 0.8
-    - _IsOn: 1
+    - _IsOn: 0
     - _LineSize: 0
     - _Metallic: 0
     - _MovingSpeed: 0.4
