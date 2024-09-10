@@ -11,24 +11,25 @@ public class Player : MonoBehaviour
     [SerializeField] float MAX_SPEED = 3f;
 
     [SerializeField] float ZIPLINE_EASE = 16;
-    [SerializeField] float ZIPLINE_RANGE = 5000f;
+    [SerializeField] float ZIPLINE_RANGE = 3;
     [SerializeField] float ZIPLINE_Y_OFFSET = -1;
 
     const string INTERRACTION_INPUT = "Interact";
     const string HORIZONTAL_AXIS = "Horizontal";
     const string VERTICAL_AXIS = "Vertical";
 
-    [SerializeField] KeyCode UP_KEY = KeyCode.Z;
-    [SerializeField] KeyCode DOWN_KEY = KeyCode.S;
-    [SerializeField] KeyCode RIGHT_KEY = KeyCode.D;
-    [SerializeField] KeyCode LEFT_KEY = KeyCode.Q;
-    [SerializeField] KeyCode INTERRACT_KEY = KeyCode.E;
-
     const string ZIPLINE_TAG = "Zipline";
+
+    const string WALKING_ANIM = "Walking";
+    const string ZIPLINE_GRAB_ANIM = "ZiplineGrab";
+    const string ZIPLINE_IDLE_ANIM = "ZiplineIdle";
+    const string ZIPLINE_RELEASE_ANIM = "ZiplineRelease";
+    const string IDLE_ANIM = "Idle";
 
     Zipline _zipline = null;
 
     Rigidbody _rigidComponent => GetComponent<Rigidbody>();
+    Animator _animatorComponent => GetComponent<Animator>();
 
     Vector3 _velocity;
 
@@ -80,6 +81,9 @@ public class Player : MonoBehaviour
         _velocity.z += Input.GetAxis(VERTICAL_AXIS);
         _velocity.x += Input.GetAxis(HORIZONTAL_AXIS);
 
+        //Animation handling 
+        _animatorComponent.SetBool(IDLE_ANIM, _velocity == Vector3.zero);
+        _animatorComponent.SetBool(WALKING_ANIM, _velocity != Vector3.zero);
 
         //Apply inputs to velocity
         _rigidComponent.velocity += _velocity;
@@ -105,6 +109,10 @@ public class Player : MonoBehaviour
     {
         _state = DoActionZipline;
         _zipline = ziplineToFollow;
+
+        _animatorComponent.SetBool(WALKING_ANIM, false);
+        _animatorComponent.SetBool(IDLE_ANIM, false);
+        _animatorComponent.SetTrigger(ZIPLINE_GRAB_ANIM);
 
         _rigidComponent.isKinematic = true;
 
