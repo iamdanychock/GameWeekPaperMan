@@ -15,6 +15,9 @@ namespace Com.IsartDigital.PaperMan.Sound
         private Bus SFXBus;
         private Bus MasterBus;
 
+        private EventInstance _AmbiantSound;
+        private EventInstance _Music;
+
 
         private void Awake()
         {
@@ -64,7 +67,14 @@ namespace Com.IsartDigital.PaperMan.Sound
             
         }
 
-        // Update is called once per frame
+        public EventInstance CreateLoop(EventReference pSound) => RuntimeManager.CreateInstance(pSound);
+
+
+        public void SetMusic(EventReference pMusic)
+        {
+            _Music = CreateLoop(pMusic);
+            _Music.start();
+        }
         void Update()
         {
 
