@@ -3,19 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using FMODUnity;
 using FMOD.Studio;
+using System;
 
 namespace Com.IsartDigital.PaperMan.Sound
 {
     public class AudioManager : MonoBehaviour
     {
-
         public static AudioManager instance { get; private set; }
-
-        
 
         private Bus MusicBus;
         private Bus SFXBus;
         private Bus MasterBus;
+
+
+        [SerializeField] private string bankPath;
+
 
 
         private void Awake()
@@ -31,7 +33,6 @@ namespace Com.IsartDigital.PaperMan.Sound
             MasterBus = RuntimeManager.GetBus("bus:/");
             SFXBus = RuntimeManager.GetBus("bus:/SFX");
             MusicBus = RuntimeManager.GetBus("bus:/Music");
-
         }
 
 
