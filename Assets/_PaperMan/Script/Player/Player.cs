@@ -30,6 +30,7 @@ public class Player : MonoBehaviour
 
     Rigidbody _rigidComponent => GetComponent<Rigidbody>();
     Animator _animatorComponent => GetComponent<Animator>();
+    ParticleSystem.EmissionModule _particleSystemMain;
 
     Vector3 _velocity;
 
@@ -45,6 +46,8 @@ public class Player : MonoBehaviour
 
     void Start()
     {
+        _particleSystemMain = GetComponentInChildren<ParticleSystem>().emission;
+
         SetModNormal();
     }
 
@@ -85,6 +88,9 @@ public class Player : MonoBehaviour
         _animatorComponent.SetBool(IDLE_ANIM, _velocity == Vector3.zero);
         _animatorComponent.SetBool(WALKING_ANIM, _velocity != Vector3.zero);
 
+        //Walk Particle
+        _particleSystemMain.enabled = _velocity == Vector3.zero ? false : true;
+
         //Apply inputs to velocity
         _rigidComponent.velocity += _velocity;
 
@@ -109,6 +115,8 @@ public class Player : MonoBehaviour
     {
         _state = DoActionZipline;
         _zipline = ziplineToFollow;
+
+        _particleSystemMain.enabled = false;
 
         _animatorComponent.SetBool(WALKING_ANIM, false);
         _animatorComponent.SetBool(IDLE_ANIM, false);
