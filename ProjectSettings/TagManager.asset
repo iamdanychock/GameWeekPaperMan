@@ -3,12 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Zipline
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - 3dObjectsContainer
   - Water
   - UI
   - 
