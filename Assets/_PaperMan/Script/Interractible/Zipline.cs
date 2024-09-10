@@ -18,14 +18,10 @@ public class Zipline : MonoBehaviour
 
     public void Activate() 
     {
-        Debug.Log(_posOnCurve);
-
         if (_posOnCurve > .5)
             _posOnCurve -= Time.deltaTime;
         else
             _posOnCurve += Time.deltaTime;
-
-        Debug.Log(_posOnCurve);
     }
 
     private void Start()
@@ -42,11 +38,8 @@ public class Zipline : MonoBehaviour
 
         _posOnCurve += _direction * Time.deltaTime / SEC_TO_GO_UP;
 
-        Debug.Log(_posOnCurve + " " + _direction);
-
         if (_posOnCurve < 0 || _posOnCurve > 1)
         {
-            Debug.Log("ff " + _posOnCurve);
             Player.Instance.SetModNormal();
             _posOnCurve = Mathf.RoundToInt(_posOnCurve);
 
