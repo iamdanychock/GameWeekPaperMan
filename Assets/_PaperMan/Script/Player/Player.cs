@@ -14,6 +14,10 @@ public class Player : MonoBehaviour
     [SerializeField] float ZIPLINE_RANGE = 5000f;
     [SerializeField] float ZIPLINE_Y_OFFSET = -1;
 
+    const string INTERRACTION_INPUT = "Interact";
+    const string HORIZONTAL_AXIS = "Horizontal";
+    const string VERTICAL_AXIS = "Vertical";
+
     [SerializeField] KeyCode UP_KEY = KeyCode.Z;
     [SerializeField] KeyCode DOWN_KEY = KeyCode.S;
     [SerializeField] KeyCode RIGHT_KEY = KeyCode.D;
@@ -59,7 +63,7 @@ public class Player : MonoBehaviour
         NormalMovements();
 
         //Dont care about the zipline if the player isnt pressing interract key
-        if (!Input.GetKeyDown(INTERRACT_KEY))
+        if (!Input.GetButtonDown(INTERRACTION_INPUT))
             return;
 
         Zipline ziplineHit = CheckForZipline();
@@ -73,14 +77,9 @@ public class Player : MonoBehaviour
         _velocity = Vector3.zero;
 
         //Handle four different inputs
-        if (Input.GetKey(UP_KEY))
-            _velocity.z += ACCELERATION;
-        if (Input.GetKey(DOWN_KEY))
-            _velocity.z -= ACCELERATION;
-        if (Input.GetKey(RIGHT_KEY))
-            _velocity.x += ACCELERATION;
-        if (Input.GetKey(LEFT_KEY))
-            _velocity.x -= ACCELERATION;
+        _velocity.z += Input.GetAxis(VERTICAL_AXIS);
+        _velocity.x += Input.GetAxis(HORIZONTAL_AXIS);
+
 
         //Apply inputs to velocity
         _rigidComponent.velocity += _velocity;
