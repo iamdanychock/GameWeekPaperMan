@@ -16,8 +16,11 @@ public class SettingsManager : MonoBehaviour
 
     [SerializeField] private Button _ScreenSizeButton;
 
+    private GameObject _PanelSettings => transform.GetChild(0).gameObject;
 
-    
+    const string PAUSE_INPUT = "Pause";
+
+
 
 
     void Start()
@@ -48,9 +51,23 @@ public class SettingsManager : MonoBehaviour
     }
 
 
+
+    private void Visibility()
+    {
+        _PanelSettings.SetActive(!_PanelSettings.activeInHierarchy);
+    }
+
     // Update is called once per frame
     void Update()
     {
-        
+
+        if (Input.GetButtonDown(PAUSE_INPUT))
+        {
+            Visibility();
+            Debug.Log("rye");
+        }
+
+
+
     }
 }
