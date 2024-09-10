@@ -115,9 +115,6 @@ public class Player : MonoBehaviour
             return;
         }
 
-        //Ignore gravity
-        //_rigidComponent.velocity += Vector3.down * _rigidComponent.velocity.y;
-
         transform.position = Vector3.Lerp(transform.position, _zipline.transform.position + Vector3.up * ZIPLINE_Y_OFFSET, ZIPLINE_EASE * Time.deltaTime);
     }
 
