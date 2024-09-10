@@ -8,10 +8,17 @@ namespace Com.IsartDigital.PaperMan
         [SerializeField] private string playerTag = "Player";
         [SerializeField] private string interactionInput = "Interact";
 
+        [SerializeField] private bool activateOutline = true;
+
         private Action doAction;
         protected bool canInteract = true;
 
-        private void Update()
+        protected virtual void Start()
+        {
+
+        }
+
+        protected virtual void Update()
         {
             doAction?.Invoke();
         }
@@ -43,6 +50,13 @@ namespace Com.IsartDigital.PaperMan
             // the player interact with this object
             if (Input.GetButtonDown(interactionInput) && canInteract)
                 Interact();
+        }
+
+        private void ChangeOutlineSizeAllChildrens(Transform _transform, float newOutlineSize)
+        {
+            _transform.GetComponent<MeshRenderer>();
+            foreach (Transform child in _transform)
+                ChangeOutlineSizeAllChildrens(child, newOutlineSize);
         }
 
         protected abstract void Interact();
