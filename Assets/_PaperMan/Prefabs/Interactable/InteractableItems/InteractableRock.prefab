@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2375691447743667024}
   - component: {fileID: 1362293353407291541}
+  - component: {fileID: 3548406107338516657}
   m_Layer: 0
   m_Name: InteractableRock
   m_TagString: Untagged
@@ -47,6 +48,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTag: Player
   interactionInput: Interact
+  itemValues:
+    itemName: Rock
+    itemDescription: This is a rock
+    itemScale: 30
+    itemObject: {fileID: 919132149155446097, guid: 526684da4f039804daaf952ae7b2f859, type: 3}
+--- !u!65 &3548406107338516657
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8916667538790605106}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.127746, y: 1.8722286, z: 1.1659622}
+  m_Center: {x: 0.0032528043, y: 0.4361143, z: 0.018404007}
 --- !u!1001 &8028188783478599815
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -55,6 +82,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2375691447743667024}
     m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 526684da4f039804daaf952ae7b2f859, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 526684da4f039804daaf952ae7b2f859, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 526684da4f039804daaf952ae7b2f859, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 526684da4f039804daaf952ae7b2f859, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0
@@ -95,6 +134,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 526684da4f039804daaf952ae7b2f859, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -4092844578741883967, guid: 526684da4f039804daaf952ae7b2f859, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e3a008c2c49828c43a081f24cf3a8152, type: 2}
     - target: {fileID: 919132149155446097, guid: 526684da4f039804daaf952ae7b2f859, type: 3}
       propertyPath: m_Name
       value: SK_DebugRock

@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using System.Threading.Tasks;
 using System;
+using TMPro;
 
 namespace Com.IsartDigital.PaperMan
 {
@@ -15,6 +16,10 @@ namespace Com.IsartDigital.PaperMan
         [SerializeField] private GameObject object3dToRotate;
         [SerializeField] private Transform containerTransform;
         [SerializeField] private Transform cameraTransform;
+        [SerializeField] private TextMeshProUGUI itemName;
+        [SerializeField] private TextMeshProUGUI itemDescription;
+
+        [Space]
         [SerializeField] private float rotationSpeed = .01f;
         private Quaternion _rotationWhenBeginDrag;
         private Vector2 _mouseLastPos;
@@ -23,6 +28,8 @@ namespace Com.IsartDigital.PaperMan
         [SerializeField] private AnimationCurve animationCurve;
         [SerializeField] private float animationDuration = 1.2f;
         private Vector3 object3dStartScale;
+
+        private Coroutine animCoroutine;
 
         public bool isActivated = false;
         private bool canRotate = false;
@@ -35,7 +42,7 @@ namespace Com.IsartDigital.PaperMan
 
         private void Start()
         {
-            Hide3DObject();
+            Hide3DObject(false);
         }
 
         public void OnBeginDrag(PointerEventData eventData)
@@ -67,39 +74,41 @@ namespace Com.IsartDigital.PaperMan
         /// <summary>
         /// Show the 3d object in the viewport with a spawn anim
         /// </summary>
-        public async void Show3DObject(GameObject _3dObject)
+        public void Show3DObject(Item item)
         {
             // destroy the last _3dObject
             if (object3dToRotate) Destroy(object3dToRotate);
 
             // reset container rotation then create the new 3d object
             containerTransform.rotation = Quaternion.identity;
-            object3dToRotate = Instantiate(_3dObject, containerTransform);
-            object3dStartScale = object3dToRotate.transform.localScale;
-
+            object3dToRotate = Instantiate(item.itemObject, containerTransform);
+            ChangeLayerAllChildren(object3dToRotate.transform, gameObject.layer);
+            object3dStartScale = Vector3.one * item.itemScale;
+            
             // show the canvas
             isActivated = true;
             canvas.gameObject.SetActive(true);
-            StartCoroutine(DoAnim(1));
-            await Task.Delay(TimeSpan.FromSeconds(animationDuration));
-            canRotate = true;
+            StartAnim(1);
+
+            // set the texts
+            itemName.text = item.itemName;
+            itemDescription.text = item.itemDescription;
         }
 
-        [ContextMenu("StartAnim")]
-        public void DebugShow()
+        private void ChangeLayerAllChildren(Transform _transform, int _layer)
         {
-            isActivated = true;
-            canvas.gameObject.SetActive(true);
-            object3dStartScale = object3dToRotate.transform.localScale;
-            StartCoroutine(DoAnim(1));
-            canRotate = true;
+            _transform.gameObject.layer = _layer;
+            foreach (Transform child in _transform)
+                ChangeLayerAllChildren(child, _layer);
         }
 
-        [ContextMenu("StartHide")]
-        public void DebugHide()
+        private void StartAnim(float direction)
         {
-            isActivated = false;
-            StartCoroutine(DoAnim(-1));
+            if (!canvas.activeSelf) return;
+
+            if (animCoroutine != null)
+                StopCoroutine(animCoroutine);
+            animCoroutine = StartCoroutine(DoAnim(direction));
         }
 
         /// <summary>
@@ -114,32 +123,51 @@ namespace Com.IsartDigital.PaperMan
             {
                 ratio = direction == 1 ? elapsedTime / animationDuration : 1 - elapsedTime / animationDuration;
                 object3dToRotate.transform.localScale = object3dStartScale * animationCurve.Evaluate(ratio);
-                Debug.Log(elapsedTime);
 
                 elapsedTime += Time.deltaTime;
                 yield return null;
             }
 
+            // set values at the end of anim
             object3dToRotate.transform.localScale = object3dStartScale;
+
+            // if the viewer is closing deactivate values
+            if (direction == -1)
+            {
+                isActivated = false;
+                canvas.gameObject.SetActive(false);
+            }
+            // if the viewer is opening activate values
+            else
+            {
+                canRotate = true;
+            }
         }
 
         /// <summary>
         /// hide the 3d object and the canvas as well as doing an anim for the object
         /// </summary>
-        public async void Hide3DObject()
+        public void Hide3DObject(bool doAnim = true)
         {
-            isActivated = false;
-            canRotate = false;
-            object3dStartScale = object3dToRotate.transform.localScale;
-            StartCoroutine(DoAnim(-1));
+            // check if skip the anim or not
+            if (doAnim) StartAnim(-1);
+            else canvas.gameObject.SetActive(false);
 
-            await Task.Delay(TimeSpan.FromSeconds(animationDuration));
-            canvas.gameObject.SetActive(false);
+            canRotate = false;
         }
 
         private void OnDestroy()
         {
             if (Instance == this) Instance = null;
+        }
+
+        [Serializable]
+        public struct Item
+        {
+            public string itemName;
+            public string itemDescription;
+            public float itemScale;
+            public GameObject itemObject;
         }
     }
 }

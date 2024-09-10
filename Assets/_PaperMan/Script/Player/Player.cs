@@ -10,21 +10,27 @@ public class Player : MonoBehaviour
     [SerializeField] float ACCELERATION = 3f;
     [SerializeField] float MAX_SPEED = 3f;
 
-    [SerializeField] float ZIPLINE_EASE = 8;
-    [SerializeField] float ZIPLINE_RANGE = 5000f;
+    [SerializeField] float ZIPLINE_EASE = 16;
+    [SerializeField] float ZIPLINE_RANGE = 3;
     [SerializeField] float ZIPLINE_Y_OFFSET = -1;
 
-    [SerializeField] KeyCode UP_KEY = KeyCode.Z;
-    [SerializeField] KeyCode DOWN_KEY = KeyCode.S;
-    [SerializeField] KeyCode RIGHT_KEY = KeyCode.D;
-    [SerializeField] KeyCode LEFT_KEY = KeyCode.Q;
-    [SerializeField] KeyCode INTERRACT_KEY = KeyCode.E;
+    const string INTERRACTION_INPUT = "Interact";
+    const string HORIZONTAL_AXIS = "Horizontal";
+    const string VERTICAL_AXIS = "Vertical";
 
     const string ZIPLINE_TAG = "Zipline";
+
+    const string WALKING_ANIM = "Walking";
+    const string ZIPLINE_GRAB_ANIM = "ZiplineGrab";
+    const string ZIPLINE_IDLE_ANIM = "ZiplineIdle";
+    const string ZIPLINE_RELEASE_ANIM = "ZiplineRelease";
+    const string IDLE_ANIM = "Idle";
 
     Zipline _zipline = null;
 
     Rigidbody _rigidComponent => GetComponent<Rigidbody>();
+    Animator _animatorComponent => GetComponent<Animator>();
+    ParticleSystem.EmissionModule _particleSystemMain;
 
     Vector3 _velocity;
 
@@ -40,6 +46,8 @@ public class Player : MonoBehaviour
 
     void Start()
     {
+        _particleSystemMain = GetComponentInChildren<ParticleSystem>().emission;
+
         SetModNormal();
     }
 
@@ -48,8 +56,9 @@ public class Player : MonoBehaviour
         _state();
     }
 
-    void SetModNormal()
+    public void SetModNormal()
     {
+        _rigidComponent.isKinematic = false;
         _state = DoActionNormal;
     }
 
@@ -58,7 +67,7 @@ public class Player : MonoBehaviour
         NormalMovements();
 
         //Dont care about the zipline if the player isnt pressing interract key
-        if (!Input.GetKeyDown(INTERRACT_KEY))
+        if (!Input.GetButtonDown(INTERRACTION_INPUT))
             return;
 
         Zipline ziplineHit = CheckForZipline();
@@ -72,14 +81,15 @@ public class Player : MonoBehaviour
         _velocity = Vector3.zero;
 
         //Handle four different inputs
-        if (Input.GetKey(UP_KEY))
-            _velocity.z += ACCELERATION;
-        if (Input.GetKey(DOWN_KEY))
-            _velocity.z -= ACCELERATION;
-        if (Input.GetKey(RIGHT_KEY))
-            _velocity.x += ACCELERATION;
-        if (Input.GetKey(LEFT_KEY))
-            _velocity.x -= ACCELERATION;
+        _velocity.z += Input.GetAxis(VERTICAL_AXIS);
+        _velocity.x += Input.GetAxis(HORIZONTAL_AXIS);
+
+        //Animation handling 
+        _animatorComponent.SetBool(IDLE_ANIM, _velocity == Vector3.zero);
+        _animatorComponent.SetBool(WALKING_ANIM, _velocity != Vector3.zero);
+
+        //Walk Particle
+        _particleSystemMain.enabled = _velocity == Vector3.zero ? false : true;
 
         //Apply inputs to velocity
         _rigidComponent.velocity += _velocity;
@@ -106,6 +116,14 @@ public class Player : MonoBehaviour
         _state = DoActionZipline;
         _zipline = ziplineToFollow;
 
+        _particleSystemMain.enabled = false;
+
+        _animatorComponent.SetBool(WALKING_ANIM, false);
+        _animatorComponent.SetBool(IDLE_ANIM, false);
+        _animatorComponent.SetTrigger(ZIPLINE_GRAB_ANIM);
+
+        _rigidComponent.isKinematic = true;
+
         _zipline.Activate();
     }
 
@@ -120,7 +138,7 @@ public class Player : MonoBehaviour
         //Ignore gravity
         _rigidComponent.velocity += Vector3.down * _rigidComponent.velocity.y;
 
-        transform.position = Vector3.Lerp(transform.position, _zipline.transform.position, ZIPLINE_EASE * Time.deltaTime);
+        transform.position = Vector3.Lerp(transform.position, _zipline.transform.position + Vector3.up * ZIPLINE_Y_OFFSET, ZIPLINE_EASE * Time.deltaTime);
     }
 
     private void OnDestroy()
