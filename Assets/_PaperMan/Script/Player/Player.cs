@@ -10,7 +10,7 @@ public class Player : MonoBehaviour
     [SerializeField] float ACCELERATION = 3f;
     [SerializeField] float MAX_SPEED = 3f;
 
-    [SerializeField] float ZIPLINE_EASE = 8;
+    [SerializeField] float ZIPLINE_EASE = 16;
     [SerializeField] float ZIPLINE_RANGE = 5000f;
     [SerializeField] float ZIPLINE_Y_OFFSET = -1;
 
@@ -48,8 +48,9 @@ public class Player : MonoBehaviour
         _state();
     }
 
-    void SetModNormal()
+    public void SetModNormal()
     {
+        _rigidComponent.isKinematic = false;
         _state = DoActionNormal;
     }
 
@@ -106,6 +107,8 @@ public class Player : MonoBehaviour
         _state = DoActionZipline;
         _zipline = ziplineToFollow;
 
+        _rigidComponent.isKinematic = true;
+
         _zipline.Activate();
     }
 
@@ -120,7 +123,7 @@ public class Player : MonoBehaviour
         //Ignore gravity
         _rigidComponent.velocity += Vector3.down * _rigidComponent.velocity.y;
 
-        transform.position = Vector3.Lerp(transform.position, _zipline.transform.position, ZIPLINE_EASE * Time.deltaTime);
+        transform.position = Vector3.Lerp(transform.position, _zipline.transform.position + Vector3.up * ZIPLINE_Y_OFFSET, ZIPLINE_EASE * Time.deltaTime);
     }
 
     private void OnDestroy()
