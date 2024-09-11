@@ -16,6 +16,9 @@ public class Player : MonoBehaviour
     [SerializeField] float SPRITE_TURN_SPEED = 16;
     [SerializeField] AnimationCurve SPRITE_TURN_CURVE;
 
+    [Header("Death")]
+    [SerializeField] private float deathDuration = 1f;
+
     const string INTERRACTION_INPUT = "Interact";
     const string HORIZONTAL_AXIS = "Horizontal";
     const string VERTICAL_AXIS = "Vertical";
@@ -25,6 +28,7 @@ public class Player : MonoBehaviour
     const string ZIPLINE_IDLE_ANIM = "ZiplineIdle";
     const string ZIPLINE_RELEASE_ANIM = "ZiplineRelease";
     const string IDLE_ANIM = "Idle";
+    private const string DEATH_TRIGGER_ANIM = "kill";
 
     bool _spriteLookingLeft = false;
     Vector2 _spriteStartSize;
@@ -60,6 +64,14 @@ public class Player : MonoBehaviour
     void Update()
     {
         _state();
+
+        // DEBUG
+        #if UNITY_EDITOR
+        if (Input.GetButtonDown("DebugKill"))
+        {
+            Kill();
+        }
+        #endif
     }
 
     public void SetModNormal()
@@ -137,6 +149,34 @@ public class Player : MonoBehaviour
         }
 
         transform.position = Vector3.Lerp(transform.position, _zipline.transform.position + Vector3.up * ZIPLINE_Y_OFFSET, ZIPLINE_EASE * Time.deltaTime);
+    }
+
+    /// <summary>
+    /// Kill the player
+    /// </summary>
+    public void Kill()
+    {
+        // init death values and deactivate the rigidbody
+        _rigidComponent.isKinematic = true;
+        deathElapsedTime = 0;
+
+        _state = DoActionDeath;
+    }
+
+    private float deathElapsedTime = 0;
+    private void DoActionDeath()
+    {
+        deathElapsedTime += Time.deltaTime;
+
+        if (deathElapsedTime > deathDuration)
+        {
+            // set the player pos when is alive again
+            transform.position = GameManager.Instance.GetPlayerPos();
+            _rigidComponent.isKinematic = false;
+            _animatorComponent.SetTrigger(DEATH_TRIGGER_ANIM);
+
+            SetModNormal();
+        }
     }
 
     private void OnDestroy()
