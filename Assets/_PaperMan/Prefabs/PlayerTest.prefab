@@ -4944,6 +4944,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  deathDuration: 1
 --- !u!136 &8629888046831719391
 CapsuleCollider:
   m_ObjectHideFlags: 0
