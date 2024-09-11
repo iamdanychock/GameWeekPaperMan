@@ -11,6 +11,12 @@ namespace Com.IsartDigital.PaperMan.Sound
     {
         public static AudioManager instance { get; private set; }
 
+        [SerializeField] private EventReference _EnigmaReference;
+        [SerializeField] private EventReference _UIMusicReference;
+
+
+
+
         private Bus MusicBus;
         private Bus SFXBus;
         private Bus MasterBus;
@@ -37,10 +43,12 @@ namespace Com.IsartDigital.PaperMan.Sound
             //MusicBus.setVolume(SettingsSaveFile.musicVolumeValue);
             //SFXBus.setVolume(SettingsSaveFile.SFXVolumeValue);
 
+            PlayEnigmaResolved();
+
 
         }
 
-
+      
         public void PlayOneShot(EventReference sound, Vector3 worldPos)
         {
             RuntimeManager.PlayOneShot(sound);
@@ -74,10 +82,46 @@ namespace Com.IsartDigital.PaperMan.Sound
         {
             _Music = CreateLoop(pMusic);
             _Music.start();
+            RuntimeManager.AttachInstanceToGameObject(_Music, GetComponent<Transform>());
         }
+
+
+        public void SetAmbiance(EventReference pAmbiance)
+        {
+            _AmbiantSound = CreateLoop(pAmbiance);
+            _AmbiantSound.start();
+            RuntimeManager.AttachInstanceToGameObject(_AmbiantSound, GetComponent<Transform>());
+        }
+
+
+        public void UpdateAmbiance(string pParameterName, int pValue)
+        {
+            _AmbiantSound.setParameterByName(pParameterName, pValue);
+
+        }
+
+
+        public void PlayUIMusic()
+        {
+            SetMusic(_EnigmaReference);
+
+        }
+
+        public void PlayEnigmaResolved()
+        {
+            SetMusic(_EnigmaReference);
+        }
+
+
+        public void StopMusic()
+        {
+            _Music.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        }
+
+
         void Update()
         {
-
+            transform.position = UnityEngine.Camera.main.transform.position;
         }
     }
 }

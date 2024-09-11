@@ -64,7 +64,6 @@ public class SettingsManager : MonoBehaviour
         if (Input.GetButtonDown(PAUSE_INPUT))
         {
             Visibility();
-            Debug.Log("rye");
         }
 
 

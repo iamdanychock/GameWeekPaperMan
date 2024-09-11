@@ -1,5 +1,59 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8862494747125311897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/jingle_enigma
+  m_EditorClassIdentifier: 
+  Path: event:/Music/jingle_enigma
+  Guid:
+    Data1: -1580096389
+    Data2: 1091946968
+    Data3: 2112169097
+    Data4: 1536552204
+  Banks:
+  - {fileID: 7436688076678086655}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 10000
+--- !u!114 &-6678824309864953653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Amb/tv_amb
+  m_EditorClassIdentifier: 
+  Path: event:/Amb/tv_amb
+  Guid:
+    Data1: -1488836784
+    Data2: 1211760935
+    Data3: -462550091
+    Data4: -1255280071
+  Banks:
+  - {fileID: 4331503687608742679}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 182004
 --- !u!114 &-6393527176121401038
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42,11 +96,40 @@ MonoBehaviour:
   Path: FMOD/PaperMan/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638616034190795677
+  lastModified: 638616644214246520
   FileSizes:
   - Name: Desktop
-    Value: 928
+    Value: 1192
   Exists: 1
+--- !u!114 &-2235310830588812118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Amb/amb_loop
+  m_EditorClassIdentifier: 
+  Path: event:/Amb/amb_loop
+  Guid:
+    Data1: -1425916189
+    Data2: 1116213944
+    Data3: 881515904
+    Data4: -1050467514
+  Banks:
+  - {fileID: 4331503687608742679}
+  - {fileID: 4669912215218507413}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 1652820175905582139}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 120000
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62,18 +145,47 @@ MonoBehaviour:
   EditorBanks:
   - {fileID: -2604284439467036025}
   - {fileID: 4669912215218507413}
+  - {fileID: 4331503687608742679}
+  - {fileID: 7436688076678086655}
   EditorEvents:
   - {fileID: 6161082381075584104}
-  - {fileID: 1689010966888866988}
   - {fileID: -6393527176121401038}
+  - {fileID: -6678824309864953653}
+  - {fileID: -2235310830588812118}
+  - {fileID: -8862494747125311897}
+  - {fileID: 4140550520738869673}
   EditorParameters: []
   MasterBanks:
   - {fileID: 4669912215218507413}
   StringsBanks:
   - {fileID: -2604284439467036025}
-  cacheTime: 638616034190795677
+  cacheTime: 638616644225472374
   cacheVersion: 131619
---- !u!114 &1689010966888866988
+--- !u!114 &1652820175905582139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/amb_loop/amb_state
+  m_EditorClassIdentifier: 
+  Name: amb_state
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 1088058702
+    data2: 1635050984
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &4140550520738869673
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -83,23 +195,43 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/music_radio_station_rock_loop
+  m_Name: event:/Amb/menu_music
   m_EditorClassIdentifier: 
-  Path: event:/Music/music_radio_station_rock_loop
+  Path: event:/Amb/menu_music
   Guid:
-    Data1: 1744438431
-    Data2: 1091613361
-    Data3: -1687862653
-    Data4: 1299993459
+    Data1: 1773110246
+    Data2: 1254613760
+    Data3: 356181175
+    Data4: 2070962771
   Banks:
-  - {fileID: 4669912215218507413}
+  - {fileID: 7436688076678086655}
   IsStream: 1
-  Is3D: 1
+  Is3D: 0
   IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 32000
+  Length: 98896
+--- !u!114 &4331503687608742679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Amb.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD/PaperMan/Build/Desktop/Amb.bank
+  Name: Amb
+  StudioPath: bank:/Amb
+  lastModified: 638616644192525901
+  FileSizes:
+  - Name: Desktop
+    Value: 13101120
+  Exists: 1
 --- !u!114 &4669912215218507413
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -115,10 +247,10 @@ MonoBehaviour:
   Path: FMOD/PaperMan/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638616034190765333
+  lastModified: 638616644214211053
   FileSizes:
   - Name: Desktop
-    Value: 1514464
+    Value: 7705856
   Exists: 1
 --- !u!114 &6161082381075584104
 MonoBehaviour:
@@ -147,3 +279,23 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &7436688076678086655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/musique.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD/PaperMan/Build/Desktop/musique.bank
+  Name: musique
+  StudioPath: bank:/musique
+  lastModified: 638616644225472374
+  FileSizes:
+  - Name: Desktop
+    Value: 1239872
+  Exists: 1
