@@ -25,14 +25,19 @@ public class Player : MonoBehaviour
 
     const string WALKING_ANIM = "Walking";
     const string ZIPLINE_GRAB_ANIM = "ZiplineGrab";
-    const string ZIPLINE_IDLE_ANIM = "ZiplineIdle";
-    const string ZIPLINE_RELEASE_ANIM = "ZiplineRelease";
+    const string FALL_ANIM = "Fall";
+    const string TOUCH_ANIM = "Touch";
     const string IDLE_ANIM = "Idle";
     private const string DEATH_TRIGGER_ANIM = "kill";
+
+    const float ON_GROUND_DISTANCE = 2;
 
     bool _spriteLookingLeft = false;
     Vector2 _spriteStartSize;
     float _spriteTurnLerp = 0;
+
+    bool isTouching = false;
+    bool isFalling = false;
 
     Zipline _zipline = null;
 
@@ -99,10 +104,21 @@ public class Player : MonoBehaviour
         _velocity.x += Input.GetAxis(HORIZONTAL_AXIS);
 
         //Animation handling 
-        if(lastVel == Vector3.zero && _velocity != Vector3.zero)
-            _animatorComponent.SetTrigger(WALKING_ANIM);
-        else if(lastVel != Vector3.zero && _velocity == Vector3.zero)
-            _animatorComponent.SetTrigger(IDLE_ANIM);
+        if (!Physics.Raycast(transform.position, Vector3.down, ON_GROUND_DISTANCE) && !isFalling)
+        {
+            isFalling = true;
+            _animatorComponent.SetTrigger(FALL_ANIM);
+        }
+        else if(Physics.Raycast(transform.position, Vector3.down, ON_GROUND_DISTANCE))
+        {
+            
+            if (lastVel == Vector3.zero && _velocity != Vector3.zero)
+                _animatorComponent.SetTrigger(WALKING_ANIM);
+            else if ((lastVel != Vector3.zero && _velocity == Vector3.zero) || isFalling)
+                _animatorComponent.SetTrigger(IDLE_ANIM);
+
+            isFalling = false;
+        }
 
         //Flip sprite direction
         if ((_velocity.x > 0 && _spriteLookingLeft) || (_velocity.x < 0 && !_spriteLookingLeft))
