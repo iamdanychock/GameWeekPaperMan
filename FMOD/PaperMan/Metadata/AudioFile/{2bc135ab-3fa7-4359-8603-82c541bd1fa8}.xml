@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{2bc135ab-3fa7-4359-8603-82c541bd1fa8}">
+		<property name="assetPath">
+			<value>_amb_enviro/tv_amb/tv_news-019.ogg</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>7.855270833333333</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{e5760a8c-c8ab-4fd3-acbe-a80350240b5e}</destination>
+		</relationship>
+	</object>
+</objects>
