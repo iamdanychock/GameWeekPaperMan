@@ -183,6 +183,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: -876546973899608171, guid: 31db643c5833f0043a08352d30b04bc1, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -272,8 +273,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf6ec4461590cad4d84bead773ead4fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  outlineStrength: 1.1
   playerTag: Player
   interactionInput: Interact
+  activateOutline: 1
   meshRenderer: {fileID: 4913365532911975191}
   onOffValueName: _IsOn
   isOn: 0
