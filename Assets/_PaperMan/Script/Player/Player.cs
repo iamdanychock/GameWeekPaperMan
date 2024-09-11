@@ -13,7 +13,7 @@ public class Player : MonoBehaviour
     [SerializeField] float ZIPLINE_EASE = 16;
     [SerializeField] float ZIPLINE_Y_OFFSET = -2;
 
-    [SerializeField] float SPRITE_TURN_SPEED = 8;
+    [SerializeField] float SPRITE_TURN_SPEED = 16;
     [SerializeField] AnimationCurve SPRITE_TURN_CURVE;
 
     const string INTERRACTION_INPUT = "Interact";
@@ -28,6 +28,7 @@ public class Player : MonoBehaviour
 
     bool _spriteLookingLeft = false;
     Vector2 _spriteStartSize;
+    float _spriteTurnLerp = 0;
 
     Zipline _zipline = null;
 
@@ -98,11 +99,10 @@ public class Player : MonoBehaviour
         _spriteComponent.flipX = _spriteComponent.size.x > 0;
 
         if(MathF.Abs(_spriteComponent.size.x) != _spriteStartSize.x || Mathf.Sign(_spriteComponent.size.x) != (_spriteLookingLeft ? 1 : -1))
-            _spriteComponent.size += Vector2.right * (_spriteLookingLeft ? 1 : -1) * SPRITE_TURN_SPEED * Time.deltaTime * _spriteStartSize;
+            _spriteComponent.size += Vector2.right * (_spriteLookingLeft ? 1 : -1) * SPRITE_TURN_CURVE.Evaluate(Mathf.InverseLerp(-_spriteStartSize.x,_spriteStartSize.x,_spriteComponent.size.x)) * SPRITE_TURN_SPEED * Time.deltaTime * _spriteStartSize;
             
         if (MathF.Abs(_spriteComponent.size.x) > _spriteStartSize.x)
-            _spriteComponent.size = Vector2.one * (_spriteLookingLeft ? 1 : -1) * _spriteStartSize;
-            
+            _spriteComponent.size = Vector2.one * (_spriteLookingLeft ? 1 : -1) * _spriteStartSize;            
 
         //Walk Particle
         _particleSystemMain.enabled = _velocity == Vector3.zero ? false : true;

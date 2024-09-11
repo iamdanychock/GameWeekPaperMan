@@ -4919,7 +4919,31 @@ MonoBehaviour:
   MAX_SPEED: 5
   ZIPLINE_EASE: 4
   ZIPLINE_Y_OFFSET: -2
-  SPRITE_TURN_SPEED: 8
+  SPRITE_TURN_SPEED: 16
+  SPRITE_TURN_CURVE:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.0011100769
+      value: 0.0067443848
+      inSlope: 4.001361
+      outSlope: 4.001361
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.020577997
+    - serializedVersion: 3
+      time: 0.99890137
+      value: 0.0030670166
+      inSlope: -3.7364147
+      outSlope: -3.7364147
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.04506074
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!136 &8629888046831719391
 CapsuleCollider:
   m_ObjectHideFlags: 0
