@@ -73,6 +73,7 @@ public class Player : MonoBehaviour
 
     void NormalMovements()
     {
+        Vector3 lastVel = _velocity;
         _velocity = Vector3.zero;
 
         //Handle four different inputs
@@ -80,8 +81,10 @@ public class Player : MonoBehaviour
         _velocity.x += Input.GetAxis(HORIZONTAL_AXIS);
 
         //Animation handling 
-        _animatorComponent.SetBool(IDLE_ANIM, _velocity == Vector3.zero);
-        _animatorComponent.SetBool(WALKING_ANIM, _velocity != Vector3.zero);
+        if(lastVel == Vector3.zero && _velocity != Vector3.zero)
+            _animatorComponent.SetTrigger(WALKING_ANIM);
+        else if(lastVel != Vector3.zero && _velocity == Vector3.zero)
+            _animatorComponent.SetTrigger(IDLE_ANIM);
 
         //Flip sprite direction
         if ((_velocity.x > 0 && _spriteComponent.flipX) || (_velocity.x < 0 && !_spriteComponent.flipX))
