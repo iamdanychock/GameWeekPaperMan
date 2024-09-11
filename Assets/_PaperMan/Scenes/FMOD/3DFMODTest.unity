@@ -2433,7 +2433,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b866402f8ec2eb4ab9ea21f89634b21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _SoundParameter: 2
+  _SoundParameterLeft: 1
+  _SoundParameterRight: 2
   _SoundReference: amb_state
 --- !u!65 &724609323
 BoxCollider:
@@ -3848,7 +3849,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b866402f8ec2eb4ab9ea21f89634b21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _SoundParameter: 1
+  _SoundParameterLeft: 0
+  _SoundParameterRight: 1
   _SoundReference: amb_state
 --- !u!65 &1041060498
 BoxCollider:
