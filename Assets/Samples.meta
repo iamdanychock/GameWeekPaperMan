@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Samples.meta
 guid: 989805833030cc44da43b91bb1288485
+========
+guid: 186ecbe095af82645aa2f53ca42a2ddb
+>>>>>>>> playeranim:Assets/_PaperMan/Art/Animator/PlayerAnimations.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
