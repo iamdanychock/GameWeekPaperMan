@@ -1,5 +1,32 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-6393527176121401038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/menu_music_loop
+  m_EditorClassIdentifier: 
+  Path: event:/Music/menu_music_loop
+  Guid:
+    Data1: -1353869257
+    Data2: 1100878764
+    Data3: -1292347501
+    Data4: -676498732
+  Banks:
+  - {fileID: 4669912215218507413}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 92133
 --- !u!114 &-2604284439467036025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15,10 +42,10 @@ MonoBehaviour:
   Path: FMOD/PaperMan/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638615576937804518
+  lastModified: 638616034190795677
   FileSizes:
   - Name: Desktop
-    Value: 872
+    Value: 928
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -38,12 +65,13 @@ MonoBehaviour:
   EditorEvents:
   - {fileID: 6161082381075584104}
   - {fileID: 1689010966888866988}
+  - {fileID: -6393527176121401038}
   EditorParameters: []
   MasterBanks:
   - {fileID: 4669912215218507413}
   StringsBanks:
   - {fileID: -2604284439467036025}
-  cacheTime: 638615576937804518
+  cacheTime: 638616034190795677
   cacheVersion: 131619
 --- !u!114 &1689010966888866988
 MonoBehaviour:
@@ -67,7 +95,7 @@ MonoBehaviour:
   - {fileID: 4669912215218507413}
   IsStream: 1
   Is3D: 1
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
@@ -87,10 +115,10 @@ MonoBehaviour:
   Path: FMOD/PaperMan/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638615576937786329
+  lastModified: 638616034190765333
   FileSizes:
   - Name: Desktop
-    Value: 457920
+    Value: 1514464
   Exists: 1
 --- !u!114 &6161082381075584104
 MonoBehaviour:
