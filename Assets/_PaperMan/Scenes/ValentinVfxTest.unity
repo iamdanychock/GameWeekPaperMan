@@ -170,25 +170,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6534715721267541274, guid: 7a704e7aa559bec4283bd4ce45094685, type: 3}
-      propertyPath: m_PropertySheet.m_NamedObject.m_Array.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6534715721267541274, guid: 7a704e7aa559bec4283bd4ce45094685, type: 3}
-      propertyPath: m_PropertySheet.m_NamedObject.m_Array.Array.data[0].m_Name
-      value: FlameTexture
-      objectReference: {fileID: 0}
-    - target: {fileID: 6534715721267541274, guid: 7a704e7aa559bec4283bd4ce45094685, type: 3}
-      propertyPath: m_PropertySheet.m_NamedObject.m_Array.Array.data[0].m_Value
-      value: 
-      objectReference: {fileID: 2800000, guid: 4ca88dcf5c1666841a38e18fc9bee1e9, type: 3}
-    - target: {fileID: 6534715721267541274, guid: 7a704e7aa559bec4283bd4ce45094685, type: 3}
-      propertyPath: m_PropertySheet.m_NamedObject.m_Array.Array.data[0].m_Overridden
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8856642336474406875, guid: 7a704e7aa559bec4283bd4ce45094685, type: 3}
       propertyPath: m_Name
-      value: vfx_fire_tuto (1)
+      value: vfx_fire_tuto
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
