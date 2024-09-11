@@ -36,7 +36,7 @@ public class Player : MonoBehaviour
     Vector2 _spriteStartSize;
     float _spriteTurnLerp = 0;
 
-    bool isTouching = false;
+    public bool isTouching = false;
     bool isFalling = false;
 
     Zipline _zipline = null;
@@ -111,9 +111,11 @@ public class Player : MonoBehaviour
         }
         else if(Physics.Raycast(transform.position, Vector3.down, ON_GROUND_DISTANCE))
         {
-            if (lastVel == Vector3.zero && _velocity != Vector3.zero || isFalling)
+            if (isTouching && ((lastVel != Vector3.zero && _velocity == Vector3.zero) || isFalling))
+                _animatorComponent.SetTrigger(TOUCH_ANIM);
+            else if ((lastVel == Vector3.zero && _velocity != Vector3.zero) || (_velocity != Vector3.zero && isFalling))
                 _animatorComponent.SetTrigger(WALKING_ANIM);
-            else if ((lastVel != Vector3.zero && _velocity == Vector3.zero) || isFalling)
+            else if (!isTouching && ((lastVel != Vector3.zero && _velocity == Vector3.zero) || isFalling))
                 _animatorComponent.SetTrigger(IDLE_ANIM);
 
             isFalling = false;
