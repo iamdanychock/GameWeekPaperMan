@@ -4,6 +4,7 @@ using UnityEngine;
 using FMODUnity;
 using FMOD.Studio;
 using System;
+using static UnityEngine.Rendering.DebugUI;
 
 namespace Com.IsartDigital.PaperMan.Sound
 {
@@ -40,7 +41,7 @@ namespace Com.IsartDigital.PaperMan.Sound
 
         }
 
-
+      
         public void PlayOneShot(EventReference sound, Vector3 worldPos)
         {
             RuntimeManager.PlayOneShot(sound);
@@ -74,10 +75,27 @@ namespace Com.IsartDigital.PaperMan.Sound
         {
             _Music = CreateLoop(pMusic);
             _Music.start();
+
         }
+
+
+        public void SetAmbiance(EventReference pAmbiance)
+        {
+            _AmbiantSound = CreateLoop(pAmbiance);
+            _AmbiantSound.start();
+            RuntimeManager.AttachInstanceToGameObject(_AmbiantSound, GetComponent<Transform>());
+        }
+
+
+        public void UpdateAmbiance(string pParameterName, int pValue)
+        {
+            _AmbiantSound.setParameterByName(pParameterName, pValue);
+
+        }
+
         void Update()
         {
-
+            transform.position = UnityEngine.Camera.main.transform.position;
         }
     }
 }
