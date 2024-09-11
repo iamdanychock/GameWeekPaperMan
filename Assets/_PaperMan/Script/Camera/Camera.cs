@@ -12,8 +12,17 @@ public class Camera : MonoBehaviour
 
     [SerializeField] bool IGNORE_Z = false;
 
+    public float leftLimit;
+    public float rightLimit;
+
     //The position that the camera follow
-    public Vector3 PointOfInterrest; 
+    public Vector3 PointOfInterrest;
+
+    private void Start()
+    {
+        leftLimit = float.NegativeInfinity;
+        rightLimit = float.PositiveInfinity;
+    }
 
     void Update()
     {
@@ -41,6 +50,9 @@ public class Camera : MonoBehaviour
     {
         //Offset the POI so the camera is looking at it instead of teleporting to it
         PointOfInterrest += new Vector3(0, Y_OFFSET, Z_OFFSET);
+
+        if (PointOfInterrest.x > rightLimit) PointOfInterrest.x = rightLimit;
+        else if (PointOfInterrest.x < leftLimit) PointOfInterrest.x = leftLimit;
 
         //Possibly ignore Z offset
         if (IGNORE_Z)
