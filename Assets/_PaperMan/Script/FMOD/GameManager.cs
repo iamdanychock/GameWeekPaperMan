@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float spawnYOffset = .5f;
     private Checkpoint lastCheckpoint;
 
-    [SerializeField] public EventReference _Music1;
+    [SerializeField] public EventReference _Amb;
 
     private void Awake()
     {
@@ -23,14 +23,10 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        AudioManager.instance.SetMusic(_Music1);
+        AudioManager.instance.SetAmbiance(_Amb);
+
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void SetLastCheckpoint(Checkpoint _checkpoint)
     {

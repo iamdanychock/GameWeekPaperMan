@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{3758f29f-e62c-4448-b22b-a15d1a254997}">
+		<property name="assetPath">
+			<value>enviro3/lampzap-015.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>1.5431458333333334</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{e5760a8c-c8ab-4fd3-acbe-a80350240b5e}</destination>
+		</relationship>
+	</object>
+</objects>
