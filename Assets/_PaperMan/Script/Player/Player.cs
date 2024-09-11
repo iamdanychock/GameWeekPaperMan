@@ -16,6 +16,9 @@ public class Player : MonoBehaviour
     [SerializeField] float SPRITE_TURN_SPEED = 16;
     [SerializeField] AnimationCurve SPRITE_TURN_CURVE;
 
+    [Header("Death")]
+    [SerializeField] private float deathDuration = 1f;
+
     const string INTERRACTION_INPUT = "Interact";
     const string HORIZONTAL_AXIS = "Horizontal";
     const string VERTICAL_AXIS = "Vertical";
@@ -25,6 +28,7 @@ public class Player : MonoBehaviour
     const string ZIPLINE_IDLE_ANIM = "ZiplineIdle";
     const string ZIPLINE_RELEASE_ANIM = "ZiplineRelease";
     const string IDLE_ANIM = "Idle";
+    private const string DEATH_TRIGGER_ANIM = "kill";
 
     bool _spriteLookingLeft = false;
     Vector2 _spriteStartSize;
@@ -32,7 +36,7 @@ public class Player : MonoBehaviour
 
     Zipline _zipline = null;
 
-    Rigidbody _rigidComponent => GetComponent<Rigidbody>();
+    public Rigidbody RigidComponent => GetComponent<Rigidbody>();
     SpriteRenderer _spriteComponent => GetComponent<SpriteRenderer>();
     Animator _animatorComponent => GetComponent<Animator>();
     ParticleSystem.EmissionModule _particleSystemMain;
@@ -60,11 +64,19 @@ public class Player : MonoBehaviour
     void Update()
     {
         _state();
+
+        // DEBUG
+        #if UNITY_EDITOR
+        if (Input.GetButtonDown("DebugKill"))
+        {
+            Kill();
+        }
+        #endif
     }
 
     public void SetModNormal()
     {
-        _rigidComponent.isKinematic = false;
+        RigidComponent.isKinematic = false;
         _state = DoActionNormal;
     }
 
@@ -108,10 +120,10 @@ public class Player : MonoBehaviour
         _particleSystemMain.enabled = _velocity == Vector3.zero ? false : true;
 
         //Apply inputs to velocity
-        _rigidComponent.velocity += _velocity;
+        RigidComponent.velocity += _velocity;
 
         //Clamp to max speed
-        _rigidComponent.velocity = new Vector3(Mathf.Clamp(_rigidComponent.velocity.x, -MAX_SPEED, MAX_SPEED), _rigidComponent.velocity.y, Mathf.Clamp(_rigidComponent.velocity.z, -MAX_SPEED, MAX_SPEED));
+        RigidComponent.velocity = new Vector3(Mathf.Clamp(RigidComponent.velocity.x, -MAX_SPEED, MAX_SPEED), RigidComponent.velocity.y, Mathf.Clamp(RigidComponent.velocity.z, -MAX_SPEED, MAX_SPEED));
     }
 
     public void SetModZipline(Zipline ziplineToFollow)
@@ -125,7 +137,7 @@ public class Player : MonoBehaviour
         _animatorComponent.SetBool(IDLE_ANIM, false);
         _animatorComponent.SetTrigger(ZIPLINE_GRAB_ANIM);
 
-        _rigidComponent.isKinematic = true;
+        RigidComponent.isKinematic = true;
     }
 
     void DoActionZipline()
@@ -137,6 +149,34 @@ public class Player : MonoBehaviour
         }
 
         transform.position = Vector3.Lerp(transform.position, _zipline.transform.position + Vector3.up * ZIPLINE_Y_OFFSET, ZIPLINE_EASE * Time.deltaTime);
+    }
+
+    /// <summary>
+    /// Kill the player
+    /// </summary>
+    public void Kill()
+    {
+        // init death values and deactivate the rigidbody
+        RigidComponent.isKinematic = true;
+        deathElapsedTime = 0;
+
+        _state = DoActionDeath;
+    }
+
+    private float deathElapsedTime = 0;
+    private void DoActionDeath()
+    {
+        deathElapsedTime += Time.deltaTime;
+
+        if (deathElapsedTime > deathDuration)
+        {
+            // set the player pos when is alive again
+            transform.position = GameManager.Instance.GetPlayerPos();
+            RigidComponent.isKinematic = false;
+            _animatorComponent.SetTrigger(DEATH_TRIGGER_ANIM);
+
+            SetModNormal();
+        }
     }
 
     private void OnDestroy()
