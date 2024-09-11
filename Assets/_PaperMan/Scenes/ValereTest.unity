@@ -861,6 +861,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 128347275954723379, guid: 24b5568f22911054cb1b21517eb260a0, type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1086366620792243058, guid: 24b5568f22911054cb1b21517eb260a0, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -913,9 +917,29 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerTest
       objectReference: {fileID: 0}
+    - target: {fileID: 7243558917304966707, guid: 24b5568f22911054cb1b21517eb260a0, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7243558917304966707, guid: 24b5568f22911054cb1b21517eb260a0, type: 3}
+      propertyPath: m_DrawMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7917217074590891830, guid: 24b5568f22911054cb1b21517eb260a0, type: 3}
+      propertyPath: MAX_SPEED
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7917217074590891830, guid: 24b5568f22911054cb1b21517eb260a0, type: 3}
+      propertyPath: ACCELERATION
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7917217074590891830, guid: 24b5568f22911054cb1b21517eb260a0, type: 3}
       propertyPath: ZIPLINE_EASE
       value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 7917217074590891830, guid: 24b5568f22911054cb1b21517eb260a0, type: 3}
+      propertyPath: SPRITE_TURN_SPEED
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

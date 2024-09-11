@@ -13,17 +13,21 @@ public class Player : MonoBehaviour
     [SerializeField] float ZIPLINE_EASE = 16;
     [SerializeField] float ZIPLINE_Y_OFFSET = -2;
 
+    [SerializeField] float SPRITE_TURN_SPEED = 8;
+    [SerializeField] AnimationCurve SPRITE_TURN_CURVE;
+
     const string INTERRACTION_INPUT = "Interact";
     const string HORIZONTAL_AXIS = "Horizontal";
     const string VERTICAL_AXIS = "Vertical";
-
-    const string ZIPLINE_TAG = "Zipline";
 
     const string WALKING_ANIM = "Walking";
     const string ZIPLINE_GRAB_ANIM = "ZiplineGrab";
     const string ZIPLINE_IDLE_ANIM = "ZiplineIdle";
     const string ZIPLINE_RELEASE_ANIM = "ZiplineRelease";
     const string IDLE_ANIM = "Idle";
+
+    bool _spriteLookingLeft = false;
+    Vector2 _spriteStartSize;
 
     Zipline _zipline = null;
 
@@ -47,6 +51,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         _particleSystemMain = GetComponentInChildren<ParticleSystem>().emission;
+        _spriteStartSize = _spriteComponent.size;
 
         SetModNormal();
     }
@@ -87,8 +92,17 @@ public class Player : MonoBehaviour
             _animatorComponent.SetTrigger(IDLE_ANIM);
 
         //Flip sprite direction
-        if ((_velocity.x > 0 && _spriteComponent.flipX) || (_velocity.x < 0 && !_spriteComponent.flipX))
-            _spriteComponent.flipX = !_spriteComponent.flipX;
+        if ((_velocity.x > 0 && _spriteLookingLeft) || (_velocity.x < 0 && !_spriteLookingLeft))
+            _spriteLookingLeft = !_spriteLookingLeft;
+
+        _spriteComponent.flipX = _spriteComponent.size.x > 0;
+
+        if(MathF.Abs(_spriteComponent.size.x) != _spriteStartSize.x || Mathf.Sign(_spriteComponent.size.x) != (_spriteLookingLeft ? 1 : -1))
+            _spriteComponent.size += Vector2.right * (_spriteLookingLeft ? 1 : -1) * SPRITE_TURN_SPEED * Time.deltaTime * _spriteStartSize;
+            
+        if (MathF.Abs(_spriteComponent.size.x) > _spriteStartSize.x)
+            _spriteComponent.size = Vector2.one * (_spriteLookingLeft ? 1 : -1) * _spriteStartSize;
+            
 
         //Walk Particle
         _particleSystemMain.enabled = _velocity == Vector3.zero ? false : true;
