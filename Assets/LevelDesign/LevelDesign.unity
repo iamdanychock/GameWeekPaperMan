@@ -11488,7 +11488,7 @@ Transform:
   m_GameObject: {fileID: 1050105447}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 210, y: 75.5, z: 0}
+  m_LocalPosition: {x: 210, y: 75.23, z: 0}
   m_LocalScale: {x: 0.5, y: 18, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16474,34 +16474,6 @@ PrefabInstance:
     - target: {fileID: 4675859759456822695, guid: 24b5568f22911054cb1b21517eb260a0, type: 3}
       propertyPath: m_Name
       value: PlayerTest
-      objectReference: {fileID: 0}
-    - target: {fileID: 7917217074590891830, guid: 24b5568f22911054cb1b21517eb260a0, type: 3}
-      propertyPath: ZIPLINE_EASE
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 8629888046831719391, guid: 24b5568f22911054cb1b21517eb260a0, type: 3}
-      propertyPath: m_Height
-      value: 1.6010941
-      objectReference: {fileID: 0}
-    - target: {fileID: 8629888046831719391, guid: 24b5568f22911054cb1b21517eb260a0, type: 3}
-      propertyPath: m_Radius
-      value: 0.10501671
-      objectReference: {fileID: 0}
-    - target: {fileID: 8629888046831719391, guid: 24b5568f22911054cb1b21517eb260a0, type: 3}
-      propertyPath: m_Center.x
-      value: -0.0056940913
-      objectReference: {fileID: 0}
-    - target: {fileID: 8629888046831719391, guid: 24b5568f22911054cb1b21517eb260a0, type: 3}
-      propertyPath: m_Center.y
-      value: -1.33
-      objectReference: {fileID: 0}
-    - target: {fileID: 8629888046831719391, guid: 24b5568f22911054cb1b21517eb260a0, type: 3}
-      propertyPath: m_Center.z
-      value: 0.020704865
-      objectReference: {fileID: 0}
-    - target: {fileID: 8629888046831719391, guid: 24b5568f22911054cb1b21517eb260a0, type: 3}
-      propertyPath: m_Direction
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

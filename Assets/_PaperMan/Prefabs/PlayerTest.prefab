@@ -4853,6 +4853,7 @@ GameObject:
   - component: {fileID: 8629888046831719391}
   - component: {fileID: 2854700759113054533}
   - component: {fileID: 7243558917304966707}
+  - component: {fileID: 6373034392306182948}
   m_Layer: 0
   m_Name: PlayerTest
   m_TagString: Player
@@ -4917,7 +4918,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ACCELERATION: 5
   MAX_SPEED: 5
-  ZIPLINE_EASE: 4
+  ZIPLINE_EASE: 16
   ZIPLINE_Y_OFFSET: -2
   SPRITE_TURN_SPEED: 16
   SPRITE_TURN_CURVE:
@@ -4964,10 +4965,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.7
-  m_Height: 3.1
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.10501671
+  m_Height: 1.1411688
+  m_Direction: 0
+  m_Center: {x: -0.006889701, y: -1.33, z: 0.020704865}
 --- !u!95 &2854700759113054533
 Animator:
   serializedVersion: 5
@@ -5041,3 +5042,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!136 &6373034392306182948
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4675859759456822695}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.10501671
+  m_Height: 2.7755868
+  m_Direction: 1
+  m_Center: {x: -0.030000001, y: 0.04542005, z: 0}
