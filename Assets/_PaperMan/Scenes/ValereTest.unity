@@ -392,8 +392,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Z_OFFSET: -8
   Y_OFFSET: 4
+  MAX_ZOOM: 1.2
+  TIME_BEFORE_ZOOMING: 2
+  ZOOM_EASING_IN: 0.5
+  ZOOM_EASING_OUT: 1
   EASING: 4
   IGNORE_Z: 1
+  leftLimit: 0
+  rightLimit: 0
   PointOfInterrest: {x: 0, y: 0, z: 0}
 --- !u!1 &1036242669
 GameObject:
@@ -600,7 +606,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0.0008457303, y: 0, z: -0, w: 0.99999964}
   m_LocalPosition: {x: 0, y: -3, z: 3.215}
-  m_LocalScale: {x: 7, y: 2.2100098, z: 14.7177}
+  m_LocalScale: {x: 51.7489, y: 2.2100098, z: 14.7177}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

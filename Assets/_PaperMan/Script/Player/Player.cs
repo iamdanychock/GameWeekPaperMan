@@ -36,7 +36,7 @@ public class Player : MonoBehaviour
 
     Zipline _zipline = null;
 
-    Rigidbody _rigidComponent => GetComponent<Rigidbody>();
+    public Rigidbody RigidComponent => GetComponent<Rigidbody>();
     SpriteRenderer _spriteComponent => GetComponent<SpriteRenderer>();
     Animator _animatorComponent => GetComponent<Animator>();
     ParticleSystem.EmissionModule _particleSystemMain;
@@ -76,7 +76,7 @@ public class Player : MonoBehaviour
 
     public void SetModNormal()
     {
-        _rigidComponent.isKinematic = false;
+        RigidComponent.isKinematic = false;
         _state = DoActionNormal;
     }
 
@@ -120,10 +120,10 @@ public class Player : MonoBehaviour
         _particleSystemMain.enabled = _velocity == Vector3.zero ? false : true;
 
         //Apply inputs to velocity
-        _rigidComponent.velocity += _velocity;
+        RigidComponent.velocity += _velocity;
 
         //Clamp to max speed
-        _rigidComponent.velocity = new Vector3(Mathf.Clamp(_rigidComponent.velocity.x, -MAX_SPEED, MAX_SPEED), _rigidComponent.velocity.y, Mathf.Clamp(_rigidComponent.velocity.z, -MAX_SPEED, MAX_SPEED));
+        RigidComponent.velocity = new Vector3(Mathf.Clamp(RigidComponent.velocity.x, -MAX_SPEED, MAX_SPEED), RigidComponent.velocity.y, Mathf.Clamp(RigidComponent.velocity.z, -MAX_SPEED, MAX_SPEED));
     }
 
     public void SetModZipline(Zipline ziplineToFollow)
@@ -137,7 +137,7 @@ public class Player : MonoBehaviour
         _animatorComponent.SetBool(IDLE_ANIM, false);
         _animatorComponent.SetTrigger(ZIPLINE_GRAB_ANIM);
 
-        _rigidComponent.isKinematic = true;
+        RigidComponent.isKinematic = true;
     }
 
     void DoActionZipline()
@@ -157,7 +157,7 @@ public class Player : MonoBehaviour
     public void Kill()
     {
         // init death values and deactivate the rigidbody
-        _rigidComponent.isKinematic = true;
+        RigidComponent.isKinematic = true;
         deathElapsedTime = 0;
 
         _state = DoActionDeath;
@@ -172,7 +172,7 @@ public class Player : MonoBehaviour
         {
             // set the player pos when is alive again
             transform.position = GameManager.Instance.GetPlayerPos();
-            _rigidComponent.isKinematic = false;
+            RigidComponent.isKinematic = false;
             _animatorComponent.SetTrigger(DEATH_TRIGGER_ANIM);
 
             SetModNormal();
