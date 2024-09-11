@@ -18,7 +18,6 @@ public class SettingsManager : MonoBehaviour
 
     private GameObject _PanelSettings => transform.GetChild(0).gameObject;
 
-    const string PAUSE_INPUT = "Pause";
 
 
 
@@ -52,19 +51,16 @@ public class SettingsManager : MonoBehaviour
 
 
 
-    private void Visibility()
+    public void Visibility()
     {
         _PanelSettings.SetActive(!_PanelSettings.activeInHierarchy);
+
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        if (Input.GetButtonDown(PAUSE_INPUT))
-        {
-            Visibility();
-        }
 
 
 
