@@ -809,7 +809,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MIN_ALPHA: 0.3
-  FADING_EASE: 4
+  FADING_EASE: 8
 --- !u!1001 &2024233489
 PrefabInstance:
   m_ObjectHideFlags: 0
