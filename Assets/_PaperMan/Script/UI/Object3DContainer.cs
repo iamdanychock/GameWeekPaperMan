@@ -32,7 +32,7 @@ namespace Com.IsartDigital.PaperMan
         private Coroutine animCoroutine;
 
         public bool isActivated = false;
-        private bool canRotate = false;
+        public bool canRotate = false;
 
         private void Awake()
         {

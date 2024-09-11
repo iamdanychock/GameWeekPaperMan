@@ -23,7 +23,9 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        AudioManager.instance.SetMusic(_Music1);
+        if (AudioManager.instance)
+            AudioManager.instance.SetMusic(_Music1);
+        else Debug.LogError("AudioManager Instance is null");
     }
 
     // Update is called once per frame
