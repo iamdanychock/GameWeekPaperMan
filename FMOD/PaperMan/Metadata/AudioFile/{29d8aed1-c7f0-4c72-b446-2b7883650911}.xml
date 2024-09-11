@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{29d8aed1-c7f0-4c72-b446-2b7883650911}">
 		<property name="assetPath">
-			<value>music_radio_station_rock_loop.ogg</value>
+			<value>__test_1/music_radio_station_rock_loop.ogg</value>
 		</property>
 		<property name="isStreaming">
 			<value>true</value>
