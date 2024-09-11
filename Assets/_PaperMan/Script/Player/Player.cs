@@ -157,9 +157,10 @@ public class Player : MonoBehaviour
     public void Kill()
     {
         // init death values and deactivate the rigidbody
+        UIManager.instance.OnPlayerDying();
+
         RigidComponent.isKinematic = true;
         deathElapsedTime = 0;
-
         _state = DoActionDeath;
     }
 
@@ -171,9 +172,12 @@ public class Player : MonoBehaviour
         if (deathElapsedTime > deathDuration)
         {
             // set the player pos when is alive again
+            UIManager.instance.OnPlayerSpawning();
+
             transform.position = GameManager.Instance.GetPlayerPos();
             RigidComponent.isKinematic = false;
             _animatorComponent.SetTrigger(DEATH_TRIGGER_ANIM);
+
 
             SetModNormal();
         }
