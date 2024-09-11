@@ -15,16 +15,26 @@ public class Camera : MonoBehaviour
     //The position that the camera follow
     public Vector3 PointOfInterrest; 
 
-    void Start()
-    {
-    }
-
     void Update()
     {
         //By default following the player
         PointOfInterrest = Player.Instance.transform.position;
 
         FollowPointOfInterrest();
+        SendHideObjectRayCast();
+    }
+
+    void SendHideObjectRayCast()
+    {
+        RaycastHit[] hit = Physics.RaycastAll(transform.position, (Player.Instance.transform.position - transform.position).normalized, Vector3.Distance(transform.position, Player.Instance.transform.position));
+        foreach (var item in hit)
+        {
+            FadeObject fadeObject;
+            if (!item.collider.TryGetComponent<FadeObject>(out fadeObject))
+                continue;
+
+            fadeObject.Fade();
+        }
     }
 
     void FollowPointOfInterrest()
