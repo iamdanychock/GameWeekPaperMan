@@ -11,7 +11,7 @@ namespace Com.IsartDigital.PaperMan
         [SerializeField] float Z_OFFSET = -8;
         [SerializeField] float Y_OFFSET = 4;
         [SerializeField] float MAX_ZOOM = 1.2f;
-        [SerializeField] float TIME_BEFORE_ZOOMING = 1.5f;
+        [SerializeField] float TIME_BEFORE_ZOOMING = 2f;
         [SerializeField] float ZOOM_EASING_IN = .5f;
         [SerializeField] float ZOOM_EASING_OUT = 1f;
 
@@ -21,7 +21,7 @@ namespace Com.IsartDigital.PaperMan
         [SerializeField] bool IGNORE_Z = false;
 
         float startFOV;
-        float zoomTime = 0;
+        float zoomTimer = 0;
 
         public float leftLimit;
         public float rightLimit;
@@ -56,6 +56,13 @@ namespace Com.IsartDigital.PaperMan
         void ManageFOV()
         {
             bool isMoving = Player.Instance.RigidComponent.velocity != Vector3.zero;
+            zoomTimer += Time.deltaTime;
+
+            if (isMoving)
+                zoomTimer = 0;
+
+            if (zoomTimer < TIME_BEFORE_ZOOMING && !isMoving)
+                return;
 
             float ease = isMoving ? ZOOM_EASING_OUT : ZOOM_EASING_IN;
 
