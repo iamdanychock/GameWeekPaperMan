@@ -16165,6 +16165,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerTest
       objectReference: {fileID: 0}
+    - target: {fileID: 7243558917304966707, guid: 24b5568f22911054cb1b21517eb260a0, type: 3}
+      propertyPath: m_Size.x
+      value: 2.1534336
+      objectReference: {fileID: 0}
+    - target: {fileID: 7243558917304966707, guid: 24b5568f22911054cb1b21517eb260a0, type: 3}
+      propertyPath: m_Size.y
+      value: 3.0429866
+      objectReference: {fileID: 0}
+    - target: {fileID: 7243558917304966707, guid: 24b5568f22911054cb1b21517eb260a0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1270933911, guid: 23b856beaf02ad94bb02d638b195d590, type: 3}
+    - target: {fileID: 7243558917304966707, guid: 24b5568f22911054cb1b21517eb260a0, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
