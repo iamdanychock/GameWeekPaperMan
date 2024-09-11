@@ -54,6 +54,14 @@ public class Player : MonoBehaviour
     void Update()
     {
         _state();
+
+        // DEBUG
+        #if UNITY_EDITOR
+        if (Input.GetButtonDown("DebugKill"))
+        {
+            Kill();
+        }
+        #endif
     }
 
     public void SetModNormal()
@@ -116,6 +124,11 @@ public class Player : MonoBehaviour
         }
 
         transform.position = Vector3.Lerp(transform.position, _zipline.transform.position + Vector3.up * ZIPLINE_Y_OFFSET, ZIPLINE_EASE * Time.deltaTime);
+    }
+
+    public void Kill()
+    {
+        transform.position = GameManager.Instance.GetPlayerPos();
     }
 
     private void OnDestroy()
