@@ -111,8 +111,7 @@ public class Player : MonoBehaviour
         }
         else if(Physics.Raycast(transform.position, Vector3.down, ON_GROUND_DISTANCE))
         {
-            
-            if (lastVel == Vector3.zero && _velocity != Vector3.zero)
+            if (lastVel == Vector3.zero && _velocity != Vector3.zero || isFalling)
                 _animatorComponent.SetTrigger(WALKING_ANIM);
             else if ((lastVel != Vector3.zero && _velocity == Vector3.zero) || isFalling)
                 _animatorComponent.SetTrigger(IDLE_ANIM);
@@ -126,11 +125,11 @@ public class Player : MonoBehaviour
 
         _spriteComponent.flipX = _spriteComponent.size.x > 0;
 
-        if(MathF.Abs(_spriteComponent.size.x) != _spriteStartSize.x || Mathf.Sign(_spriteComponent.size.x) != (_spriteLookingLeft ? 1 : -1))
-            _spriteComponent.size += Vector2.right * (_spriteLookingLeft ? 1 : -1) * SPRITE_TURN_CURVE.Evaluate(Mathf.InverseLerp(-_spriteStartSize.x,_spriteStartSize.x,_spriteComponent.size.x)) * SPRITE_TURN_SPEED * Time.deltaTime * _spriteStartSize;
-            
+        if (MathF.Abs(_spriteComponent.size.x) != _spriteStartSize.x || Mathf.Sign(_spriteComponent.size.x) != (_spriteLookingLeft ? 1 : -1))
+            _spriteComponent.size += Vector2.right * (_spriteLookingLeft ? 1 : -1) * SPRITE_TURN_CURVE.Evaluate(Mathf.InverseLerp(-_spriteStartSize.x, _spriteStartSize.x, _spriteComponent.size.x)) * SPRITE_TURN_SPEED * Time.deltaTime * _spriteStartSize;
+
         if (MathF.Abs(_spriteComponent.size.x) > _spriteStartSize.x)
-            _spriteComponent.size = Vector2.one * (_spriteLookingLeft ? 1 : -1) * _spriteStartSize;            
+            _spriteComponent.size = Vector2.one * (_spriteLookingLeft ? 1 : -1) * _spriteStartSize;    
 
         //Walk Particle
         _particleSystemMain.enabled = _velocity == Vector3.zero ? false : true;
@@ -149,8 +148,6 @@ public class Player : MonoBehaviour
 
         _particleSystemMain.enabled = false;
 
-        _animatorComponent.SetBool(WALKING_ANIM, false);
-        _animatorComponent.SetBool(IDLE_ANIM, false);
         _animatorComponent.SetTrigger(ZIPLINE_GRAB_ANIM);
 
         RigidComponent.isKinematic = true;
