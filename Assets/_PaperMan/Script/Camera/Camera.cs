@@ -23,6 +23,10 @@ namespace Com.IsartDigital.PaperMan
         float startFOV;
         float zoomTimer = 0;
 
+        const float SHAKE_VALUE_DIVIDOR = 10;
+        float shakeValue = 0;
+        float shakeTime = 0;
+
         public float leftLimit;
         public float rightLimit;
 
@@ -45,12 +49,27 @@ namespace Com.IsartDigital.PaperMan
 
         void Update()
         {
+            if (Input.GetKeyDown(KeyCode.R))
+                Shake(2, 1);
+
             //By default following the player
             PointOfInterrest = Player.Instance.transform.position;
 
             FollowPointOfInterrest();
             SendHideObjectRayCast();
             ManageFOV();
+
+            if (shakeValue > 0) Shake();
+        }
+
+        void Shake()
+        {
+            shakeValue -= Time.deltaTime * shakeTime;
+
+            if (shakeTime < 0)
+                shakeValue = 0;
+
+            transform.position += new Vector3(Random.Range(-shakeValue, shakeValue), Random.Range(-shakeValue, shakeValue), Random.Range(-shakeValue, shakeValue));
         }
 
         void ManageFOV()
@@ -96,6 +115,12 @@ namespace Com.IsartDigital.PaperMan
 
             //Apply with lerp to smooth movement
             transform.position = Vector3.Lerp(transform.position, PointOfInterrest, EASING * Time.deltaTime);
+        }
+
+        public void Shake(float seconds, float force)
+        {
+            shakeValue = force / SHAKE_VALUE_DIVIDOR;
+            shakeTime = shakeValue / seconds;
         }
 
         private void OnDestroy()
