@@ -11,8 +11,7 @@ public class Player : MonoBehaviour
     [SerializeField] float MAX_SPEED = 3f;
 
     [SerializeField] float ZIPLINE_EASE = 16;
-    [SerializeField] float ZIPLINE_RANGE = 3;
-    [SerializeField] float ZIPLINE_Y_OFFSET = -1;
+    [SerializeField] float ZIPLINE_Y_OFFSET = -2;
 
     const string INTERRACTION_INPUT = "Interact";
     const string HORIZONTAL_AXIS = "Horizontal";
@@ -29,6 +28,7 @@ public class Player : MonoBehaviour
     Zipline _zipline = null;
 
     Rigidbody _rigidComponent => GetComponent<Rigidbody>();
+    SpriteRenderer _spriteComponent => GetComponent<SpriteRenderer>();
     Animator _animatorComponent => GetComponent<Animator>();
     ParticleSystem.EmissionModule _particleSystemMain;
 
@@ -82,6 +82,10 @@ public class Player : MonoBehaviour
         //Animation handling 
         _animatorComponent.SetBool(IDLE_ANIM, _velocity == Vector3.zero);
         _animatorComponent.SetBool(WALKING_ANIM, _velocity != Vector3.zero);
+
+        //Flip sprite direction
+        if ((_velocity.x > 0 && _spriteComponent.flipX) || (_velocity.x < 0 && !_spriteComponent.flipX))
+            _spriteComponent.flipX = !_spriteComponent.flipX;
 
         //Walk Particle
         _particleSystemMain.enabled = _velocity == Vector3.zero ? false : true;
