@@ -11,14 +11,14 @@ public class Player : MonoBehaviour
     [SerializeField] float MAX_SPEED = 3f;
 
     [SerializeField] float ZIPLINE_EASE = 16;
-    [SerializeField] float ZIPLINE_RANGE = 3;
-    [SerializeField] float ZIPLINE_Y_OFFSET = -1;
+    [SerializeField] float ZIPLINE_Y_OFFSET = -2;
+
+    [SerializeField] float SPRITE_TURN_SPEED = 16;
+    [SerializeField] AnimationCurve SPRITE_TURN_CURVE;
 
     const string INTERRACTION_INPUT = "Interact";
     const string HORIZONTAL_AXIS = "Horizontal";
     const string VERTICAL_AXIS = "Vertical";
-
-    const string ZIPLINE_TAG = "Zipline";
 
     const string WALKING_ANIM = "Walking";
     const string ZIPLINE_GRAB_ANIM = "ZiplineGrab";
@@ -26,9 +26,14 @@ public class Player : MonoBehaviour
     const string ZIPLINE_RELEASE_ANIM = "ZiplineRelease";
     const string IDLE_ANIM = "Idle";
 
+    bool _spriteLookingLeft = false;
+    Vector2 _spriteStartSize;
+    float _spriteTurnLerp = 0;
+
     Zipline _zipline = null;
 
     Rigidbody _rigidComponent => GetComponent<Rigidbody>();
+    SpriteRenderer _spriteComponent => GetComponent<SpriteRenderer>();
     Animator _animatorComponent => GetComponent<Animator>();
     ParticleSystem.EmissionModule _particleSystemMain;
 
@@ -47,6 +52,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         _particleSystemMain = GetComponentInChildren<ParticleSystem>().emission;
+        _spriteStartSize = _spriteComponent.size;
 
         SetModNormal();
     }
@@ -81,6 +87,7 @@ public class Player : MonoBehaviour
 
     void NormalMovements()
     {
+        Vector3 lastVel = _velocity;
         _velocity = Vector3.zero;
 
         //Handle four different inputs
@@ -88,8 +95,22 @@ public class Player : MonoBehaviour
         _velocity.x += Input.GetAxis(HORIZONTAL_AXIS);
 
         //Animation handling 
-        _animatorComponent.SetBool(IDLE_ANIM, _velocity == Vector3.zero);
-        _animatorComponent.SetBool(WALKING_ANIM, _velocity != Vector3.zero);
+        if(lastVel == Vector3.zero && _velocity != Vector3.zero)
+            _animatorComponent.SetTrigger(WALKING_ANIM);
+        else if(lastVel != Vector3.zero && _velocity == Vector3.zero)
+            _animatorComponent.SetTrigger(IDLE_ANIM);
+
+        //Flip sprite direction
+        if ((_velocity.x > 0 && _spriteLookingLeft) || (_velocity.x < 0 && !_spriteLookingLeft))
+            _spriteLookingLeft = !_spriteLookingLeft;
+
+        _spriteComponent.flipX = _spriteComponent.size.x > 0;
+
+        if(MathF.Abs(_spriteComponent.size.x) != _spriteStartSize.x || Mathf.Sign(_spriteComponent.size.x) != (_spriteLookingLeft ? 1 : -1))
+            _spriteComponent.size += Vector2.right * (_spriteLookingLeft ? 1 : -1) * SPRITE_TURN_CURVE.Evaluate(Mathf.InverseLerp(-_spriteStartSize.x,_spriteStartSize.x,_spriteComponent.size.x)) * SPRITE_TURN_SPEED * Time.deltaTime * _spriteStartSize;
+            
+        if (MathF.Abs(_spriteComponent.size.x) > _spriteStartSize.x)
+            _spriteComponent.size = Vector2.one * (_spriteLookingLeft ? 1 : -1) * _spriteStartSize;            
 
         //Walk Particle
         _particleSystemMain.enabled = _velocity == Vector3.zero ? false : true;

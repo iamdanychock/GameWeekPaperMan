@@ -46,8 +46,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00c12bd87dfc5f64b877375fe0908711, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  outlineStrength: 1.1
   playerTag: Player
   interactionInput: Interact
+  activateOutline: 1
   itemValues:
     itemName: Rock
     itemDescription: This is a rock
@@ -139,9 +141,17 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -4092844578741883967, guid: 526684da4f039804daaf952ae7b2f859, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4092844578741883967, guid: 526684da4f039804daaf952ae7b2f859, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: e3a008c2c49828c43a081f24cf3a8152, type: 2}
+    - target: {fileID: -4092844578741883967, guid: 526684da4f039804daaf952ae7b2f859, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: -876546973899608171, guid: 31db643c5833f0043a08352d30b04bc1, type: 3}
     - target: {fileID: 919132149155446097, guid: 526684da4f039804daaf952ae7b2f859, type: 3}
       propertyPath: m_Name
       value: SK_DebugRock
