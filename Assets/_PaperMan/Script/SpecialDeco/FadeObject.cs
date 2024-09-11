@@ -5,9 +5,9 @@ using UnityEngine;
 public class FadeObject : MonoBehaviour
 {
     [SerializeField] float MIN_ALPHA = .3f;
-    [SerializeField] float FADING_EASE = 4;
+    [SerializeField] float FADING_EASE = 8;
 
-    const float TIME_BEFORE_FADING_IN = 1;
+    const float TIME_BEFORE_FADING_IN = .5f;
 
     bool fadingIn = false;
 
@@ -28,6 +28,7 @@ public class FadeObject : MonoBehaviour
         fadingIn = timeNoFadeCall > 0;
 
         materialColor.a = Mathf.Lerp(materialColor.a ,fadingIn ? MIN_ALPHA : 1, FADING_EASE * Time.deltaTime);
+        meshRenderer.material.color = materialColor;
     }
 
     public void Fade()
