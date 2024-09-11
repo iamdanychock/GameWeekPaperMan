@@ -12,6 +12,8 @@ public class Zipline : Interactable
 
     [SerializeField] AnimationCurve _curve;
 
+    [SerializeField] Zipline ziplineFriend;
+
     int _direction => _isUp ? -1 : 1;
     float _posOnCurve;
 
@@ -22,12 +24,21 @@ public class Zipline : Interactable
         if (_posOnCurve != 0 && _posOnCurve != 1)
             return;
 
+        Activate();
+        ziplineFriend?.Activate();
+
+        Player.Instance.SetModZipline(this);
+    }
+
+    public void Activate()
+    {
+        if (_posOnCurve != 0 && _posOnCurve != 1)
+            return;
+
         if (_posOnCurve > .5)
             _posOnCurve -= Time.deltaTime;
         else
             _posOnCurve += Time.deltaTime;
-
-        Player.Instance.SetModZipline(this);
     }
 
     protected override void Start()
@@ -37,6 +48,9 @@ public class Zipline : Interactable
         _posOnCurve = _isUp ? 1 : 0;
 
         _startPosition = transform.position;
+
+        if (_isUp)
+            transform.position = _startPosition + Vector3.up * UP_DISTANCE;
     }
 
     protected override void Update()
