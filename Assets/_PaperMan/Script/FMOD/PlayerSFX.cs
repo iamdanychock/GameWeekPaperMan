@@ -7,7 +7,8 @@ public class PlayerSFX : MonoBehaviour
 {
 
     #region Events
-    public EventReference footSteps;
+    [SerializeField] private EventReference _FootSteps;
+    [SerializeField] private EventReference _Fall;
 
     #endregion
 

@@ -344,6 +344,7 @@ MonoBehaviour:
   Banks:
   - Amb
   - musique
+  - SFX
   BanksToLoad:
   - Master
   LiveUpdatePort: 9264
