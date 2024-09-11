@@ -343,6 +343,7 @@ MonoBehaviour:
   - Master
   Banks:
   - Amb
+  - musique
   BanksToLoad:
   - Master
   LiveUpdatePort: 9264

@@ -4,13 +4,18 @@ using UnityEngine;
 using FMODUnity;
 using FMOD.Studio;
 using System;
-using static UnityEngine.Rendering.DebugUI;
 
 namespace Com.IsartDigital.PaperMan.Sound
 {
     public class AudioManager : MonoBehaviour
     {
         public static AudioManager instance { get; private set; }
+
+        [SerializeField] private EventReference _EnigmaReference;
+        [SerializeField] private EventReference _UIMusicReference;
+
+
+
 
         private Bus MusicBus;
         private Bus SFXBus;
@@ -37,6 +42,8 @@ namespace Com.IsartDigital.PaperMan.Sound
             //MasterBus.setVolume(SettingsSaveFile.masterVolumeValue);
             //MusicBus.setVolume(SettingsSaveFile.musicVolumeValue);
             //SFXBus.setVolume(SettingsSaveFile.SFXVolumeValue);
+
+            PlayEnigmaResolved();
 
 
         }
@@ -75,7 +82,7 @@ namespace Com.IsartDigital.PaperMan.Sound
         {
             _Music = CreateLoop(pMusic);
             _Music.start();
-
+            RuntimeManager.AttachInstanceToGameObject(_Music, GetComponent<Transform>());
         }
 
 
@@ -92,6 +99,25 @@ namespace Com.IsartDigital.PaperMan.Sound
             _AmbiantSound.setParameterByName(pParameterName, pValue);
 
         }
+
+
+        public void PlayUIMusic()
+        {
+            SetMusic(_EnigmaReference);
+
+        }
+
+        public void PlayEnigmaResolved()
+        {
+            SetMusic(_EnigmaReference);
+        }
+
+
+        public void StopMusic()
+        {
+            _Music.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        }
+
 
         void Update()
         {
