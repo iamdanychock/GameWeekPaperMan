@@ -392,6 +392,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Z_OFFSET: -8
   Y_OFFSET: 4
+  MAX_ZOOM: 1.5
+  ZOOM_EASING: 0.5
   EASING: 4
   IGNORE_Z: 1
   leftLimit: 0

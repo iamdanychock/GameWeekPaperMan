@@ -10,14 +10,23 @@ namespace Com.IsartDigital.PaperMan
 
         [SerializeField] float Z_OFFSET = -8;
         [SerializeField] float Y_OFFSET = 4;
+        [SerializeField] float MAX_ZOOM = 1.2f;
+        [SerializeField] float TIME_BEFORE_ZOOMING = 1.5f;
+        [SerializeField] float ZOOM_EASING_IN = .5f;
+        [SerializeField] float ZOOM_EASING_OUT = 1f;
 
         //4 mean the camera will reach the point in approximately 1/4 seconds
         [SerializeField] float EASING = 4f;
 
         [SerializeField] bool IGNORE_Z = false;
 
+        float startFOV;
+        float zoomTime = 0;
+
         public float leftLimit;
         public float rightLimit;
+
+        UnityEngine.Camera _cameraComponent => GetComponent<UnityEngine.Camera>();
 
         //The position that the camera follow
         public Vector3 PointOfInterrest;
@@ -27,6 +36,8 @@ namespace Com.IsartDigital.PaperMan
             if (Instance != null)
                 throw new UnityException("Double Singleton !");
             Instance = this;
+
+            startFOV = _cameraComponent.fieldOfView;
 
             leftLimit = float.NegativeInfinity;
             rightLimit = float.PositiveInfinity;
@@ -39,6 +50,16 @@ namespace Com.IsartDigital.PaperMan
 
             FollowPointOfInterrest();
             SendHideObjectRayCast();
+            ManageFOV();
+        }
+
+        void ManageFOV()
+        {
+            bool isMoving = Player.Instance.RigidComponent.velocity != Vector3.zero;
+
+            float ease = isMoving ? ZOOM_EASING_OUT : ZOOM_EASING_IN;
+
+            _cameraComponent.fieldOfView = Mathf.Lerp(_cameraComponent.fieldOfView, isMoving ? startFOV : startFOV / MAX_ZOOM, Time.deltaTime * ease);
         }
 
         void SendHideObjectRayCast()
