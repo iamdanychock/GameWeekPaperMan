@@ -20,6 +20,10 @@ public class Player : MonoBehaviour
     [Header("Death")]
     [SerializeField] private float deathDuration = 1f;
 
+    [Header("SmashGround")]
+    [SerializeField] private float smashGroundDuration = .2f;
+    [SerializeField] private float smashGroundForce = .2f;
+
     const string INTERRACTION_INPUT = "Interact";
     const string HORIZONTAL_AXIS = "Horizontal";
     const string VERTICAL_AXIS = "Vertical";
@@ -146,6 +150,9 @@ public class Player : MonoBehaviour
         }
         else if (onGround)
         {
+            if (isFalling)
+                SmashGround();
+
             if (isTouching && ((lastVel != Vector3.zero && _velocity == Vector3.zero) || isFalling))
                 _animatorComponent.SetTrigger(TOUCH_ANIM);
             else if ((lastVel == Vector3.zero && _velocity != Vector3.zero) || (_velocity != Vector3.zero && isFalling))
@@ -176,6 +183,13 @@ public class Player : MonoBehaviour
 
         //Clamp to max speed
         RigidComponent.velocity = new Vector3(Mathf.Clamp(RigidComponent.velocity.x, -MAX_SPEED, MAX_SPEED), RigidComponent.velocity.y, Mathf.Clamp(RigidComponent.velocity.z, -MAX_SPEED, MAX_SPEED));
+    }
+
+    void SmashGround()
+    {
+        Com.IsartDigital.PaperMan.Camera.Instance.Shake(smashGroundDuration,smashGroundForce);
+
+        transform.GetChild(1).GetComponent<ParticleSystem>().Play();
     }
 
     public void SetModZipline(Zipline ziplineToFollow)
