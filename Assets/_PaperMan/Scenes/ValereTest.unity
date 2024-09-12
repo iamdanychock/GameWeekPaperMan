@@ -240,17 +240,6 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
---- !u!114 &567105290 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8689240133840901454, guid: 5d3685e5d15c0774ca93c624d109a2d2, type: 3}
-  m_PrefabInstance: {fileID: 1670249231}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd743281a337e984e8b3eda658523f8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &652691182
 GameObject:
   m_ObjectHideFlags: 0
@@ -601,17 +590,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -0.097, y: 0, z: 0}
---- !u!114 &1143450153 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8689240133840901454, guid: 5d3685e5d15c0774ca93c624d109a2d2, type: 3}
-  m_PrefabInstance: {fileID: 1702938127}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd743281a337e984e8b3eda658523f8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1467013704
 GameObject:
   m_ObjectHideFlags: 0
@@ -717,99 +695,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -0.097, y: 0, z: 0}
---- !u!1001 &1670249231
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3029280899224548223, guid: 5d3685e5d15c0774ca93c624d109a2d2, type: 3}
-      propertyPath: m_Name
-      value: Zipline (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6415551026060383204, guid: 5d3685e5d15c0774ca93c624d109a2d2, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.54
-      objectReference: {fileID: 0}
-    - target: {fileID: 6415551026060383204, guid: 5d3685e5d15c0774ca93c624d109a2d2, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.11
-      objectReference: {fileID: 0}
-    - target: {fileID: 6415551026060383204, guid: 5d3685e5d15c0774ca93c624d109a2d2, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 5.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 6415551026060383204, guid: 5d3685e5d15c0774ca93c624d109a2d2, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6415551026060383204, guid: 5d3685e5d15c0774ca93c624d109a2d2, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6415551026060383204, guid: 5d3685e5d15c0774ca93c624d109a2d2, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6415551026060383204, guid: 5d3685e5d15c0774ca93c624d109a2d2, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6415551026060383204, guid: 5d3685e5d15c0774ca93c624d109a2d2, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6415551026060383204, guid: 5d3685e5d15c0774ca93c624d109a2d2, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6415551026060383204, guid: 5d3685e5d15c0774ca93c624d109a2d2, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8689240133840901454, guid: 5d3685e5d15c0774ca93c624d109a2d2, type: 3}
-      propertyPath: _isUp
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8689240133840901454, guid: 5d3685e5d15c0774ca93c624d109a2d2, type: 3}
-      propertyPath: UP_DISTANCE
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8689240133840901454, guid: 5d3685e5d15c0774ca93c624d109a2d2, type: 3}
-      propertyPath: SEC_TO_GO_UP
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8689240133840901454, guid: 5d3685e5d15c0774ca93c624d109a2d2, type: 3}
-      propertyPath: ziplineFriend
-      value: 
-      objectReference: {fileID: 1143450153}
-    - target: {fileID: 8689240133840901454, guid: 5d3685e5d15c0774ca93c624d109a2d2, type: 3}
-      propertyPath: _curve.m_Curve.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8689240133840901454, guid: 5d3685e5d15c0774ca93c624d109a2d2, type: 3}
-      propertyPath: _curve.m_Curve.Array.data[1].time
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8689240133840901454, guid: 5d3685e5d15c0774ca93c624d109a2d2, type: 3}
-      propertyPath: _curve.m_Curve.Array.data[1].value
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8689240133840901454, guid: 5d3685e5d15c0774ca93c624d109a2d2, type: 3}
-      propertyPath: _curve.m_Curve.Array.data[0].inSlope
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8689240133840901454, guid: 5d3685e5d15c0774ca93c624d109a2d2, type: 3}
-      propertyPath: _curve.m_Curve.Array.data[0].outSlope
-      value: 2
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 5d3685e5d15c0774ca93c624d109a2d2, type: 3}
 --- !u!1001 &1702938127
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -867,13 +752,17 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8689240133840901454, guid: 5d3685e5d15c0774ca93c624d109a2d2, type: 3}
+      propertyPath: CreateFriend
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8689240133840901454, guid: 5d3685e5d15c0774ca93c624d109a2d2, type: 3}
       propertyPath: SEC_TO_GO_UP
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8689240133840901454, guid: 5d3685e5d15c0774ca93c624d109a2d2, type: 3}
       propertyPath: ziplineFriend
       value: 
-      objectReference: {fileID: 567105290}
+      objectReference: {fileID: 0}
     - target: {fileID: 8689240133840901454, guid: 5d3685e5d15c0774ca93c624d109a2d2, type: 3}
       propertyPath: _curve.m_Curve.Array.size
       value: 2
@@ -1177,6 +1066,10 @@ PrefabInstance:
       value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 7917217074590891830, guid: 24b5568f22911054cb1b21517eb260a0, type: 3}
+      propertyPath: smashGroundForce
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7917217074590891830, guid: 24b5568f22911054cb1b21517eb260a0, type: 3}
       propertyPath: SPRITE_TURN_SPEED
       value: 16
       objectReference: {fileID: 0}
@@ -1196,6 +1089,5 @@ SceneRoots:
   - {fileID: 6724061861546571582}
   - {fileID: 1788531148}
   - {fileID: 1702938127}
-  - {fileID: 1670249231}
   - {fileID: 2024233489}
   - {fileID: 1023196213}
