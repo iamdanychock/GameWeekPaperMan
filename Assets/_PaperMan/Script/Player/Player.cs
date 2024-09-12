@@ -30,6 +30,12 @@ public class Player : MonoBehaviour
     const string IDLE_ANIM = "Idle";
     private const string DEATH_TRIGGER_ANIM = "kill";
 
+    const string PLAYER_TAG = "Player";
+    const string WOOD_TAG = "Wood";
+    const string CONCRETE_TAG = "Concrete";
+
+    public GROUND_SOUNDS GroundSound = GROUND_SOUNDS.NOTHING;
+
     const float ON_GROUND_DISTANCE = 2;
 
     bool _spriteLookingLeft = false;
@@ -38,6 +44,7 @@ public class Player : MonoBehaviour
 
     public bool isTouching = false;
     bool isFalling = false;
+    bool onGround = false;
 
     Zipline _zipline = null;
 
@@ -68,15 +75,42 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+        CheckOnGround();
+
         _state();
 
         // DEBUG
-        #if UNITY_EDITOR
+#if UNITY_EDITOR
         if (Input.GetButtonDown("DebugKill"))
         {
             Kill();
         }
-        #endif
+#endif
+    }
+
+    void CheckOnGround()
+    {
+        RaycastHit[] hits = Physics.RaycastAll(transform.position, Vector3.down, ON_GROUND_DISTANCE);
+
+        onGround = false;
+
+        foreach (RaycastHit item in hits)
+        {
+            if (item.collider.tag == PLAYER_TAG)
+                continue;
+
+            onGround = true;
+
+            GroundSound = item.collider.tag switch
+            {
+                WOOD_TAG => GROUND_SOUNDS.WOOD,
+                CONCRETE_TAG => GROUND_SOUNDS.CONCRETE,
+                _ => GROUND_SOUNDS.NOTHING
+            };
+        }
+
+        if (!onGround)
+            GroundSound = GROUND_SOUNDS.NOTHING;
     }
 
     public void SetModNormal()
@@ -104,12 +138,12 @@ public class Player : MonoBehaviour
         _velocity.x += Input.GetAxis(HORIZONTAL_AXIS);
 
         //Animation handling 
-        if (!Physics.Raycast(transform.position, Vector3.down, ON_GROUND_DISTANCE) && !isFalling)
+        if (!onGround && !isFalling)
         {
             isFalling = true;
             _animatorComponent.SetTrigger(FALL_ANIM);
         }
-        else if(Physics.Raycast(transform.position, Vector3.down, ON_GROUND_DISTANCE))
+        else if (onGround)
         {
             if (isTouching && ((lastVel != Vector3.zero && _velocity == Vector3.zero) || isFalling))
                 _animatorComponent.SetTrigger(TOUCH_ANIM);
@@ -131,7 +165,7 @@ public class Player : MonoBehaviour
             _spriteComponent.size += Vector2.right * (_spriteLookingLeft ? 1 : -1) * SPRITE_TURN_CURVE.Evaluate(Mathf.InverseLerp(-_spriteStartSize.x, _spriteStartSize.x, _spriteComponent.size.x)) * SPRITE_TURN_SPEED * Time.deltaTime * _spriteStartSize;
 
         if (MathF.Abs(_spriteComponent.size.x) > _spriteStartSize.x)
-            _spriteComponent.size = Vector2.one * (_spriteLookingLeft ? 1 : -1) * _spriteStartSize;    
+            _spriteComponent.size = Vector2.one * (_spriteLookingLeft ? 1 : -1) * _spriteStartSize;
 
         //Walk Particle
         _particleSystemMain.enabled = _velocity == Vector3.zero ? false : true;
@@ -157,7 +191,7 @@ public class Player : MonoBehaviour
 
     void DoActionZipline()
     {
-        if(_zipline == null)
+        if (_zipline == null)
         {
             SetModNormal();
             return;
@@ -198,4 +232,11 @@ public class Player : MonoBehaviour
     {
         Instance = null;
     }
+}
+
+public enum GROUND_SOUNDS
+{
+    WOOD,
+    CONCRETE,
+    NOTHING
 }
