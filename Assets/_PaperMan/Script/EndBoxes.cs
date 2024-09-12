@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class EndBoxes : MonoBehaviour
@@ -13,10 +14,21 @@ public class EndBoxes : MonoBehaviour
 
     public void DisableTv()
     {
-        if (++disabledTvs == nbTvsToDestroy)
-        {
-            animator.SetTrigger(animTriggerName);
-            Com.IsartDigital.PaperMan.Camera.Instance.Shake(screenshakeDuration, screenshakeForce);
-        }
+        if (++disabledTvs != nbTvsToDestroy)
+            return;
+
+
+        StartCoroutine(ChangePOICoroutine());
+    }
+
+    IEnumerator ChangePOICoroutine()
+    {
+        Com.IsartDigital.PaperMan.Camera.Instance.ChangePOI(3, new Vector3(228, 40, -2));
+
+        yield return new WaitForSeconds(1);
+
+        
+        animator.SetTrigger(animTriggerName);
+        Com.IsartDigital.PaperMan.Camera.Instance.Shake(screenshakeDuration, screenshakeForce);
     }
 }

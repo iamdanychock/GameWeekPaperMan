@@ -20211,6 +20211,18 @@ MonoBehaviour:
           m_StringArgument: Disable
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 381442632}
+        m_TargetAssemblyTypeName: Com.IsartDigital.PaperMan.Camera, Assembly-CSharp
+        m_MethodName: OnSecondFall
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Disable
+          m_BoolArgument: 0
+        m_CallState: 2
   PlayerInside: 0
   itemValues:
     itemName: situation3Indice2
@@ -21214,6 +21226,71 @@ Transform:
   - {fileID: 926216452}
   - {fileID: 2078687692}
   m_Father: {fileID: 2084493531}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1795643910
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1795643912}
+  - component: {fileID: 1795643911}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1795643911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1795643910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa291b6cd7caa5e4fa8ef61d5ae9aa40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _EnigmaReference:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  _UIMusicReference:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  _AmbReference:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+--- !u!4 &1795643912
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1795643910}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 23.186625, y: 0.36883375, z: -2.8266096}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1800191940
 GameObject:
@@ -25564,7 +25641,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6211578276725296177, guid: baacf500bf83f35498de7240401ffc57, type: 3}
       propertyPath: onTurnedOff.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6211578276725296177, guid: baacf500bf83f35498de7240401ffc57, type: 3}
       propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -25597,7 +25674,7 @@ PrefabInstance:
     - target: {fileID: 6211578276725296177, guid: baacf500bf83f35498de7240401ffc57, type: 3}
       propertyPath: onTurnedOff.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 3261857890534916278}
+      objectReference: {fileID: 381442632}
     - target: {fileID: 6211578276725296177, guid: baacf500bf83f35498de7240401ffc57, type: 3}
       propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Play
@@ -25624,7 +25701,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6211578276725296177, guid: baacf500bf83f35498de7240401ffc57, type: 3}
       propertyPath: onTurnedOff.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: Play
+      value: OnFirstFall
       objectReference: {fileID: 0}
     - target: {fileID: 6211578276725296177, guid: baacf500bf83f35498de7240401ffc57, type: 3}
       propertyPath: onTurnedOff.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -25636,10 +25713,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6211578276725296177, guid: baacf500bf83f35498de7240401ffc57, type: 3}
       propertyPath: onTurnedOff.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
-      value: UnityEngine.ParticleSystem, UnityEngine
+      value: Com.IsartDigital.PaperMan.Camera, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6211578276725296177, guid: baacf500bf83f35498de7240401ffc57, type: 3}
       propertyPath: onTurnedOff.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6211578276725296177, guid: baacf500bf83f35498de7240401ffc57, type: 3}
+      propertyPath: onTurnedOff.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_BoolArgument
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6211578276725296177, guid: baacf500bf83f35498de7240401ffc57, type: 3}
@@ -25769,11 +25850,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 23270a8f58eb00c4db5cf7b5d28d039f, type: 3}
---- !u!198 &3261857890534916278 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 591710198969563007, guid: 23270a8f58eb00c4db5cf7b5d28d039f, type: 3}
-  m_PrefabInstance: {fileID: 3261857890534916277}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -69,6 +69,22 @@ namespace Com.IsartDigital.PaperMan
             if (shakeValue > 0) Shake();
         }
 
+        public void OnFirstFall()
+        {
+            ChangePOI(3,new Vector3(49,3,0));
+        }
+
+        bool alreadyDid = false;
+        public void OnSecondFall()
+        {
+            if (alreadyDid)
+                return;
+
+            alreadyDid = true;
+
+            ChangePOI(3, new Vector3(98.64f, 33.56f, 0));
+        }
+
         public void ChangePOI(float seconds, Vector3 position)
         {
             StartCoroutine(ChangePOICoroutine(seconds,position));
