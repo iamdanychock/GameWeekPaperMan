@@ -498,8 +498,12 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8689240133840901454, guid: 5d3685e5d15c0774ca93c624d109a2d2, type: 3}
+      propertyPath: CreateFriend
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8689240133840901454, guid: 5d3685e5d15c0774ca93c624d109a2d2, type: 3}
       propertyPath: SEC_TO_GO_UP
-      value: 6
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8689240133840901454, guid: 5d3685e5d15c0774ca93c624d109a2d2, type: 3}
       propertyPath: _curve.m_Curve.Array.size
@@ -2963,6 +2967,7 @@ MonoBehaviour:
   onExited:
     m_PersistentCalls:
       m_Calls: []
+  PlayerInside: 0
   itemValues:
     itemName: situation4Indice2.1
     itemDescription: 
@@ -3182,6 +3187,7 @@ MonoBehaviour:
   onExited:
     m_PersistentCalls:
       m_Calls: []
+  PlayerInside: 0
 --- !u!1001 &284699446
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3993,8 +3999,12 @@ PrefabInstance:
       value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 8689240133840901454, guid: 5d3685e5d15c0774ca93c624d109a2d2, type: 3}
+      propertyPath: CreateFriend
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8689240133840901454, guid: 5d3685e5d15c0774ca93c624d109a2d2, type: 3}
       propertyPath: SEC_TO_GO_UP
-      value: 6
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8689240133840901454, guid: 5d3685e5d15c0774ca93c624d109a2d2, type: 3}
       propertyPath: _curve.m_Curve.Array.size
@@ -4115,8 +4125,12 @@ PrefabInstance:
       value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 8689240133840901454, guid: 5d3685e5d15c0774ca93c624d109a2d2, type: 3}
+      propertyPath: CreateFriend
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8689240133840901454, guid: 5d3685e5d15c0774ca93c624d109a2d2, type: 3}
       propertyPath: SEC_TO_GO_UP
-      value: 6
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8689240133840901454, guid: 5d3685e5d15c0774ca93c624d109a2d2, type: 3}
       propertyPath: _curve.m_Curve.Array.size
@@ -5926,6 +5940,7 @@ MonoBehaviour:
   onExited:
     m_PersistentCalls:
       m_Calls: []
+  PlayerInside: 0
   itemValues:
     itemName: situation4Indice1.1
     itemDescription: 
@@ -7022,6 +7037,7 @@ MonoBehaviour:
   onExited:
     m_PersistentCalls:
       m_Calls: []
+  PlayerInside: 0
   itemValues:
     itemName: situation4Indice1.2
     itemDescription: 
@@ -7765,8 +7781,12 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8689240133840901454, guid: 5d3685e5d15c0774ca93c624d109a2d2, type: 3}
+      propertyPath: CreateFriend
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8689240133840901454, guid: 5d3685e5d15c0774ca93c624d109a2d2, type: 3}
       propertyPath: SEC_TO_GO_UP
-      value: 6
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8689240133840901454, guid: 5d3685e5d15c0774ca93c624d109a2d2, type: 3}
       propertyPath: _curve.m_Curve.Array.size
@@ -10005,6 +10025,7 @@ MonoBehaviour:
   onExited:
     m_PersistentCalls:
       m_Calls: []
+  PlayerInside: 0
   itemValues:
     itemName: situation4Indice4.1
     itemDescription: 
@@ -10648,6 +10669,7 @@ MonoBehaviour:
   onExited:
     m_PersistentCalls:
       m_Calls: []
+  PlayerInside: 0
   itemValues:
     itemName: situationIndice3.2
     itemDescription: 
@@ -12701,6 +12723,7 @@ MonoBehaviour:
   onExited:
     m_PersistentCalls:
       m_Calls: []
+  PlayerInside: 0
   itemValues:
     itemName: situation2Indice1
     itemDescription: 
@@ -16449,8 +16472,12 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8689240133840901454, guid: 5d3685e5d15c0774ca93c624d109a2d2, type: 3}
+      propertyPath: CreateFriend
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8689240133840901454, guid: 5d3685e5d15c0774ca93c624d109a2d2, type: 3}
       propertyPath: SEC_TO_GO_UP
-      value: 6
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8689240133840901454, guid: 5d3685e5d15c0774ca93c624d109a2d2, type: 3}
       propertyPath: _curve.m_Curve.Array.size
@@ -16974,6 +17001,7 @@ MonoBehaviour:
   onExited:
     m_PersistentCalls:
       m_Calls: []
+  PlayerInside: 0
   itemValues:
     itemName: situation4Indice2.2
     itemDescription: 
@@ -17464,8 +17492,12 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8689240133840901454, guid: 5d3685e5d15c0774ca93c624d109a2d2, type: 3}
+      propertyPath: CreateFriend
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8689240133840901454, guid: 5d3685e5d15c0774ca93c624d109a2d2, type: 3}
       propertyPath: SEC_TO_GO_UP
-      value: 6
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8689240133840901454, guid: 5d3685e5d15c0774ca93c624d109a2d2, type: 3}
       propertyPath: _curve.m_Curve.Array.size
@@ -19406,6 +19438,7 @@ MonoBehaviour:
           m_StringArgument: Disable
           m_BoolArgument: 0
         m_CallState: 2
+  PlayerInside: 0
   itemValues:
     itemName: situation3Indice2
     itemDescription: 
@@ -19952,6 +19985,7 @@ MonoBehaviour:
   onExited:
     m_PersistentCalls:
       m_Calls: []
+  PlayerInside: 0
   itemValues:
     itemName: situation3Indice1
     itemDescription: 
@@ -22517,8 +22551,12 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8689240133840901454, guid: 5d3685e5d15c0774ca93c624d109a2d2, type: 3}
+      propertyPath: CreateFriend
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8689240133840901454, guid: 5d3685e5d15c0774ca93c624d109a2d2, type: 3}
       propertyPath: SEC_TO_GO_UP
-      value: 6
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8689240133840901454, guid: 5d3685e5d15c0774ca93c624d109a2d2, type: 3}
       propertyPath: _curve.m_Curve.Array.size
@@ -24108,6 +24146,7 @@ MonoBehaviour:
   onExited:
     m_PersistentCalls:
       m_Calls: []
+  PlayerInside: 0
   itemValues:
     itemName: situation4Indice4.2
     itemDescription: 

@@ -61,7 +61,7 @@ public class Zipline : Interactable
 
     void CreateFriendFunction()
     {
-        GameObject clone = Instantiate(gameObject);
+        GameObject clone = Instantiate(gameObject,transform.parent);
 
         Zipline component = clone.GetComponent<Zipline>();
 
