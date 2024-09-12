@@ -2973,6 +2973,7 @@ MonoBehaviour:
   playerTag: Player
   interactionInput: Interact
   activateOutline: 1
+  activateInteractUI: 1
   onInteract:
     m_PersistentCalls:
       m_Calls: []
@@ -3193,6 +3194,7 @@ MonoBehaviour:
   playerTag: Player
   interactionInput: Interact
   activateOutline: 1
+  activateInteractUI: 1
   onInteract:
     m_PersistentCalls:
       m_Calls: []
@@ -3607,6 +3609,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerStartPos: {fileID: 58673732}
   spawnYOffset: 1
+  uiInteractPrefab: {fileID: 2447886007207312540, guid: 5ddc747544605084aacbbbd80f78f4f4, type: 3}
   _Amb:
     Guid:
       Data1: 0
@@ -5946,6 +5949,7 @@ MonoBehaviour:
   playerTag: Player
   interactionInput: Interact
   activateOutline: 1
+  activateInteractUI: 1
   onInteract:
     m_PersistentCalls:
       m_Calls: []
@@ -7043,6 +7047,7 @@ MonoBehaviour:
   playerTag: Player
   interactionInput: Interact
   activateOutline: 1
+  activateInteractUI: 1
   onInteract:
     m_PersistentCalls:
       m_Calls: []
@@ -10050,6 +10055,7 @@ MonoBehaviour:
   playerTag: Player
   interactionInput: Interact
   activateOutline: 1
+  activateInteractUI: 1
   onInteract:
     m_PersistentCalls:
       m_Calls: []
@@ -10708,6 +10714,7 @@ MonoBehaviour:
   playerTag: Player
   interactionInput: Interact
   activateOutline: 1
+  activateInteractUI: 1
   onInteract:
     m_PersistentCalls:
       m_Calls: []
@@ -11093,6 +11100,7 @@ MonoBehaviour:
   playerTag: Player
   interactionInput: Interact
   activateOutline: 1
+  activateInteractUI: 1
   onInteract:
     m_PersistentCalls:
       m_Calls: []
@@ -11102,6 +11110,7 @@ MonoBehaviour:
   onExited:
     m_PersistentCalls:
       m_Calls: []
+  PlayerInside: 0
   itemValues:
     itemName: indice 3.1
     itemDescription: 
@@ -11319,6 +11328,7 @@ Transform:
   m_Children:
   - {fileID: 333335649}
   - {fileID: 1059117385}
+  - {fileID: 1183293688}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1038330178
@@ -12793,6 +12803,7 @@ MonoBehaviour:
   playerTag: Player
   interactionInput: Interact
   activateOutline: 1
+  activateInteractUI: 1
   onInteract:
     m_PersistentCalls:
       m_Calls: []
@@ -13098,6 +13109,51 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1177672497}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1183293687
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1183293688}
+  - component: {fileID: 1183293689}
+  m_Layer: 0
+  m_Name: ControllerListener
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1183293688
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1183293687}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1019590757}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1183293689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1183293687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd67d2740f9912f4ea76c6a9df7d5723, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentPlayerController: 1
 --- !u!1 &1187063065
 GameObject:
   m_ObjectHideFlags: 0
@@ -17079,6 +17135,7 @@ MonoBehaviour:
   playerTag: Player
   interactionInput: Interact
   activateOutline: 1
+  activateInteractUI: 1
   onInteract:
     m_PersistentCalls:
       m_Calls: []
@@ -19504,6 +19561,7 @@ MonoBehaviour:
   playerTag: Player
   interactionInput: Interact
   activateOutline: 1
+  activateInteractUI: 1
   onInteract:
     m_PersistentCalls:
       m_Calls: []
@@ -20063,6 +20121,7 @@ MonoBehaviour:
   playerTag: Player
   interactionInput: Interact
   activateOutline: 1
+  activateInteractUI: 1
   onInteract:
     m_PersistentCalls:
       m_Calls: []
@@ -24234,6 +24293,7 @@ MonoBehaviour:
   playerTag: Player
   interactionInput: Interact
   activateOutline: 1
+  activateInteractUI: 1
   onInteract:
     m_PersistentCalls:
       m_Calls: []
