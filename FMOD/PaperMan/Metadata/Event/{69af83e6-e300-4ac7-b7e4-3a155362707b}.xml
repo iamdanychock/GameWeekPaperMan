@@ -95,6 +95,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{4e51ca04-3763-4b6f-bfa5-66d6ec38bd6c}">
+		<property name="volume">
+			<value>-1</value>
+		</property>
 		<relationship name="modulators">
 			<destination>{5165275e-51bb-4fc0-9982-9e73244c0ec8}</destination>
 		</relationship>
@@ -187,7 +190,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{bb3ba995-1019-42fc-acb0-d99c3c61afd4}">
 		<property name="volume">
-			<value>-0.5</value>
+			<value>-2</value>
 		</property>
 		<property name="name">
 			<value>Audio 1</value>
@@ -404,25 +407,25 @@
 			<value>7</value>
 		</property>
 		<property name="frequencyA">
-			<value>5721.8877</value>
+			<value>5963.97363</value>
 		</property>
 		<property name="frequencyC">
 			<value>766.855774</value>
 		</property>
 		<property name="frequencyE">
-			<value>107.123421</value>
+			<value>123.843109</value>
 		</property>
 		<property name="qualityA">
 			<value>0.602344871</value>
 		</property>
 		<property name="gainA">
-			<value>4.65517426</value>
+			<value>-1.55172348</value>
 		</property>
 		<property name="gainC">
 			<value>-4.65517235</value>
 		</property>
 		<property name="gainE">
-			<value>3.62068892</value>
+			<value>-4.13793182</value>
 		</property>
 	</object>
 </objects>
