@@ -63,6 +63,7 @@ GameObject:
   - component: {fileID: 8465360430407959917}
   - component: {fileID: 8177472464629392643}
   - component: {fileID: 5444914649160624948}
+  - component: {fileID: 3474361627416875976}
   m_Layer: 5
   m_Name: DeathScreenEffect
   m_TagString: Untagged
@@ -174,6 +175,32 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3474361627416875976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6291280983216453188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c6ddbc2398bfbc41a69ffd34b34b091, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _DeathIn:
+    Guid:
+      Data1: 1406387257
+      Data2: 1201222551
+      Data3: -154832207
+      Data4: -755131615
+    Path: event:/SFX/Player/pl_lose_01
+  _DeathOut:
+    Guid:
+      Data1: 1617740931
+      Data2: 1279274709
+      Data3: -2093180498
+      Data4: -508906656
+    Path: event:/SFX/Player/pl_lose_02
 --- !u!1 &7779215527971547182
 GameObject:
   m_ObjectHideFlags: 0

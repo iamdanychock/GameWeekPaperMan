@@ -1,5 +1,32 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9067487181069827819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Interactions/paper_puton
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Interactions/paper_puton
+  Guid:
+    Data1: 1026924956
+    Data2: 1302170849
+    Data3: 1420615343
+    Data4: -442128221
+  Banks:
+  - {fileID: 8923114122521267038}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-8862494747125311897
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53,6 +80,33 @@ MonoBehaviour:
   - concrete
   - wood
   Exists: 1
+--- !u!114 &-7689006446754523721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Interactions/paper_take
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Interactions/paper_take
+  Guid:
+    Data1: -393630379
+    Data2: 1184525426
+    Data3: 233482112
+    Data4: 1943216703
+  Banks:
+  - {fileID: 8923114122521267038}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-7505599449093406657
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80,33 +134,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-6678824309864953653
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Amb/tv_amb
-  m_EditorClassIdentifier: 
-  Path: event:/Amb/tv_amb
-  Guid:
-    Data1: -1488836784
-    Data2: 1211760935
-    Data3: -462550091
-    Data4: -1255280071
-  Banks:
-  - {fileID: 4331503687608742679}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 182004
 --- !u!114 &-6534915157710970799
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -162,6 +189,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 388
+--- !u!114 &-5551165474384396632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Interactions/tape_puton
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Interactions/tape_puton
+  Guid:
+    Data1: -1311354159
+    Data2: 1272748248
+    Data3: 1238539689
+    Data4: -791975930
+  Banks:
+  - {fileID: 8923114122521267038}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-4641116212975413006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -204,10 +258,10 @@ MonoBehaviour:
   Path: FMOD/PaperMan/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638617348670019742
+  lastModified: 638617405387901486
   FileSizes:
   - Name: Desktop
-    Value: 1458
+    Value: 1954
   Exists: 1
 --- !u!114 &-2235310830588812118
 MonoBehaviour:
@@ -238,6 +292,60 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 120000
+--- !u!114 &-1575043547033728483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/pl_lose_02
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/pl_lose_02
+  Guid:
+    Data1: 1617740931
+    Data2: 1279274709
+    Data3: -2093180498
+    Data4: -508906656
+  Banks:
+  - {fileID: 8923114122521267038}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-282911167924106216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Interactions/bowl_puton
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Interactions/bowl_puton
+  Guid:
+    Data1: 1552787355
+    Data2: 1239433699
+    Data3: 754054285
+    Data4: -315983331
+  Banks:
+  - {fileID: 8923114122521267038}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -257,7 +365,6 @@ MonoBehaviour:
   - {fileID: 7436688076678086655}
   - {fileID: 8923114122521267038}
   EditorEvents:
-  - {fileID: -6678824309864953653}
   - {fileID: -2235310830588812118}
   - {fileID: -8862494747125311897}
   - {fileID: -6534915157710970799}
@@ -266,13 +373,79 @@ MonoBehaviour:
   - {fileID: 8518665908487791881}
   - {fileID: 4546098753027892278}
   - {fileID: -5750091605963517314}
+  - {fileID: 2080511202235074962}
+  - {fileID: 4144269686268657485}
+  - {fileID: 3141926449509324222}
+  - {fileID: -7689006446754523721}
+  - {fileID: 1613787897188182256}
+  - {fileID: -1575043547033728483}
+  - {fileID: 9009156202624585199}
+  - {fileID: -282911167924106216}
+  - {fileID: -9067487181069827819}
+  - {fileID: -5551165474384396632}
+  - {fileID: 6813381199282451755}
+  - {fileID: 739593298683731786}
   EditorParameters: []
   MasterBanks:
   - {fileID: 4669912215218507413}
   StringsBanks:
   - {fileID: -2604284439467036025}
-  cacheTime: 638617349408985971
+  cacheTime: 638617405411351081
   cacheVersion: 131619
+--- !u!114 &739593298683731786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Interactions/tape_take
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Interactions/tape_take
+  Guid:
+    Data1: -492975874
+    Data2: 1215612989
+    Data3: 1694641312
+    Data4: 1631463931
+  Banks:
+  - {fileID: 8923114122521267038}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &1613787897188182256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/ui_hovered
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/ui_hovered
+  Guid:
+    Data1: -20723873
+    Data2: 1252383110
+    Data3: -1044421199
+    Data4: -814109374
+  Banks:
+  - {fileID: 8923114122521267038}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &1652820175905582139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -297,6 +470,87 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &2080511202235074962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Amb/tv_amb
+  m_EditorClassIdentifier: 
+  Path: event:/Amb/tv_amb
+  Guid:
+    Data1: -1488836784
+    Data2: 1211760935
+    Data3: -462550091
+    Data4: -1255280071
+  Banks:
+  - {fileID: 4331503687608742679}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 182004
+--- !u!114 &3141926449509324222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/pl_lose_01
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/pl_lose_01
+  Guid:
+    Data1: 1406387257
+    Data2: 1201222551
+    Data3: -154832207
+    Data4: -755131615
+  Banks:
+  - {fileID: 8923114122521267038}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &4144269686268657485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Interactions/tape_play
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Interactions/tape_play
+  Guid:
+    Data1: 1926702871
+    Data2: 1074566831
+    Data3: 1368859276
+    Data4: -160100169
+  Banks:
+  - {fileID: 8923114122521267038}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &4331503687608742679
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -312,7 +566,7 @@ MonoBehaviour:
   Path: FMOD/PaperMan/Build/Desktop/Amb.bank
   Name: Amb
   StudioPath: bank:/Amb
-  lastModified: 638617348669198504
+  lastModified: 638617405387111126
   FileSizes:
   - Name: Desktop
     Value: 12888832
@@ -359,11 +613,38 @@ MonoBehaviour:
   Path: FMOD/PaperMan/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638617348669997512
+  lastModified: 638617405387854864
   FileSizes:
   - Name: Desktop
     Value: 6534016
   Exists: 1
+--- !u!114 &6813381199282451755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/ui_click
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/ui_click
+  Guid:
+    Data1: 970110685
+    Data2: 1219267416
+    Data3: 450132900
+    Data4: 262531829
+  Banks:
+  - {fileID: 8923114122521267038}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &7436688076678086655
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -379,7 +660,7 @@ MonoBehaviour:
   Path: FMOD/PaperMan/Build/Desktop/musique.bank
   Name: musique
   StudioPath: bank:/musique
-  lastModified: 638617348684616999
+  lastModified: 638617405402365511
   FileSizes:
   - Name: Desktop
     Value: 1300096
@@ -426,8 +707,35 @@ MonoBehaviour:
   Path: FMOD/PaperMan/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638617349408985971
+  lastModified: 638617405411351081
   FileSizes:
   - Name: Desktop
-    Value: 652288
+    Value: 1227584
   Exists: 1
+--- !u!114 &9009156202624585199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Interactions/bowl_take
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Interactions/bowl_take
+  Guid:
+    Data1: 721730182
+    Data2: 1159813871
+    Data3: 1398099087
+    Data4: -2067741713
+  Banks:
+  - {fileID: 8923114122521267038}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
