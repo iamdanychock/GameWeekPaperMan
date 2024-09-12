@@ -555,7 +555,7 @@
 			<value>21999.9902</value>
 		</property>
 		<property name="qualityA">
-			<value>0.686068952</value>
+			<value>0.665137947</value>
 		</property>
 		<relationship name="automators">
 			<destination>{3ec658af-4a87-484e-a389-e93ae7696c54}</destination>
@@ -657,7 +657,7 @@
 			<value>1</value>
 		</property>
 		<property name="value">
-			<value>290</value>
+			<value>900</value>
 		</property>
 	</object>
 </objects>
