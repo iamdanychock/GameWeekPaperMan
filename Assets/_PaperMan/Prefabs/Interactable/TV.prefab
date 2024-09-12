@@ -125,12 +125,13 @@ MonoBehaviour:
   playerTag: Player
   interactionInput: Interact
   activateOutline: 1
+  activateInteractUI: 1
   onInteract:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: SetTrigger
+        m_MethodName: 
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -147,6 +148,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   PlayerInside: 0
+  InterractionActive: 1
   meshRenderer: {fileID: 4586343055585167376}
   onOffValueName: _IsOn
   isOn: 1
@@ -178,6 +180,13 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   videoPlayer: {fileID: 7477485556901776585}
+  _ClickTVSoundReference:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   onTurnedOff:
     m_PersistentCalls:
       m_Calls: []
