@@ -30,6 +30,8 @@ namespace Com.IsartDigital.PaperMan
         public float leftLimit;
         public float rightLimit;
 
+        bool followingPlayer = true;
+
         UnityEngine.Camera _cameraComponent => GetComponent<UnityEngine.Camera>();
 
         //The position that the camera follow
@@ -49,17 +51,53 @@ namespace Com.IsartDigital.PaperMan
 
         void Update()
         {
+            #if UNITY_EDITOR
             if (Input.GetKeyDown(KeyCode.R))
                 Shake(2, 1);
+            #endif
 
-            //By default following the player
-            PointOfInterrest = Player.Instance.transform.position;
+            if (Input.GetKeyDown(KeyCode.T))
+                ChangePOI(5, new Vector3(23,0,-3));
+
+            if(followingPlayer)
+                PointOfInterrest = Player.Instance.transform.position;
 
             FollowPointOfInterrest();
             SendHideObjectRayCast();
             ManageFOV();
 
             if (shakeValue > 0) Shake();
+        }
+
+        public void OnFirstFall()
+        {
+            ChangePOI(2.4f,new Vector3(49,3,0));
+        }
+
+        bool alreadyDid = false;
+        public void OnSecondFall()
+        {
+            if (alreadyDid)
+                return;
+
+            alreadyDid = true;
+
+            ChangePOI(2.4f, new Vector3(98.64f, 33.56f, 0));
+        }
+
+        public void ChangePOI(float seconds, Vector3 position)
+        {
+            StartCoroutine(ChangePOICoroutine(seconds,position));
+        }
+
+        IEnumerator ChangePOICoroutine(float seconds, Vector3 position)
+        {
+            followingPlayer = false;
+            PointOfInterrest = position;
+
+            yield return new WaitForSeconds(seconds);
+
+            followingPlayer = true;
         }
 
         void Shake()
@@ -103,18 +141,20 @@ namespace Com.IsartDigital.PaperMan
 
         void FollowPointOfInterrest()
         {
-            //Offset the POI so the camera is looking at it instead of teleporting to it
-            PointOfInterrest += new Vector3(0, Y_OFFSET, Z_OFFSET);
+            Vector3 posToGo;
 
-            if (PointOfInterrest.x > rightLimit) PointOfInterrest.x = rightLimit;
-            else if (PointOfInterrest.x < leftLimit) PointOfInterrest.x = leftLimit;
+            //Offset the POI so the camera is looking at it instead of teleporting to it
+            posToGo = PointOfInterrest + new Vector3(0, Y_OFFSET, Z_OFFSET);
+
+            if (posToGo.x > rightLimit) posToGo.x = rightLimit;
+            else if (posToGo.x < leftLimit) posToGo.x = leftLimit;
 
             //Possibly ignore Z offset
             if (IGNORE_Z)
-                PointOfInterrest.z = Z_OFFSET;
+                posToGo.z = Z_OFFSET;
 
             //Apply with lerp to smooth movement
-            transform.position = Vector3.Lerp(transform.position, PointOfInterrest, EASING * Time.deltaTime);
+            transform.position = Vector3.Lerp(transform.position, posToGo, EASING * Time.deltaTime);
         }
 
         public void Shake(float seconds, float force)

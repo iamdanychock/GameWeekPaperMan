@@ -52,6 +52,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 47cabcaf484e6c54788778fafc1bf2aa, type: 2}
+    - target: {fileID: -3698028916114631362, guid: 6dd7cc57cb1c7cd4ab712610dd5bdab7, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 47cabcaf484e6c54788778fafc1bf2aa, type: 2}
     - target: {fileID: 919132149155446097, guid: 6dd7cc57cb1c7cd4ab712610dd5bdab7, type: 3}
       propertyPath: m_Name
       value: SM_TV_03

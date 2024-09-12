@@ -10,9 +10,9 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private Transform playerStartPos;
     [SerializeField] private float spawnYOffset = .5f;
+    [SerializeField] private GameObject uiInteractPrefab;
     private Checkpoint lastCheckpoint;
 
-    [SerializeField] public EventReference _Amb;
 
     private void Awake()
     {
@@ -23,7 +23,6 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        AudioManager.instance.SetAmbiance(_Amb);
 
     }
 
