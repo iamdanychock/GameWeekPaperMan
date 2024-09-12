@@ -56,6 +56,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_TV_02
       objectReference: {fileID: 0}
+    - target: {fileID: 6288467185157662487, guid: cd8d6d78142b9a346a66747c4d24c19e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 47cabcaf484e6c54788778fafc1bf2aa, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
