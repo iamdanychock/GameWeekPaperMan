@@ -5121,13 +5121,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerStartPos: {fileID: 1336993547}
   spawnYOffset: 0.5
-  _Amb:
-    Guid:
-      Data1: -1425916189
-      Data2: 1116213944
-      Data3: 881515904
-      Data4: -1050467514
-    Path: event:/Amb/amb_loop
 --- !u!1 &1477569717
 GameObject:
   m_ObjectHideFlags: 0

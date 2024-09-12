@@ -12,7 +12,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float spawnYOffset = .5f;
     private Checkpoint lastCheckpoint;
 
-    [SerializeField] public EventReference _Amb;
 
     private void Awake()
     {
@@ -23,7 +22,6 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        AudioManager.instance.SetAmbiance(_Amb);
 
     }
 

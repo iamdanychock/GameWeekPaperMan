@@ -204,7 +204,7 @@ MonoBehaviour:
   Path: FMOD/PaperMan/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638616919402715153
+  lastModified: 638617321739585111
   FileSizes:
   - Name: Desktop
     Value: 1458
@@ -231,7 +231,7 @@ MonoBehaviour:
   - {fileID: 4331503687608742679}
   - {fileID: 4669912215218507413}
   IsStream: 1
-  Is3D: 1
+  Is3D: 0
   IsOneShot: 0
   Parameters:
   - {fileID: 1652820175905582139}
@@ -271,7 +271,7 @@ MonoBehaviour:
   - {fileID: 4669912215218507413}
   StringsBanks:
   - {fileID: -2604284439467036025}
-  cacheTime: 638616919425421870
+  cacheTime: 638617321739585111
   cacheVersion: 131619
 --- !u!114 &1652820175905582139
 MonoBehaviour:
@@ -312,10 +312,10 @@ MonoBehaviour:
   Path: FMOD/PaperMan/Build/Desktop/Amb.bank
   Name: Amb
   StudioPath: bank:/Amb
-  lastModified: 638616919401938431
+  lastModified: 638617321738531183
   FileSizes:
   - Name: Desktop
-    Value: 12889088
+    Value: 12888832
   Exists: 1
 --- !u!114 &4546098753027892278
 MonoBehaviour:
@@ -359,10 +359,10 @@ MonoBehaviour:
   Path: FMOD/PaperMan/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638616919402679973
+  lastModified: 638617321739499270
   FileSizes:
   - Name: Desktop
-    Value: 6534272
+    Value: 6534016
   Exists: 1
 --- !u!114 &7436688076678086655
 MonoBehaviour:
