@@ -288,6 +288,14 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 162440394213998447, guid: c343de8b930969e448b161e39be39a3c, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ChangeMusicVolume
+      objectReference: {fileID: 0}
+    - target: {fileID: 888904631280141256, guid: c343de8b930969e448b161e39be39a3c, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ChangeSFXVolume
+      objectReference: {fileID: 0}
     - target: {fileID: 4756585639182895424, guid: c343de8b930969e448b161e39be39a3c, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -501,10 +509,58 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4194981576457562461, guid: 41619380d98e9f840aaf52bb65e2ce75, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4194981576457562461, guid: 41619380d98e9f840aaf52bb65e2ce75, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4194981576457562461, guid: 41619380d98e9f840aaf52bb65e2ce75, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4194981576457562461, guid: 41619380d98e9f840aaf52bb65e2ce75, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PlayUIClick
+      objectReference: {fileID: 0}
+    - target: {fileID: 4194981576457562461, guid: 41619380d98e9f840aaf52bb65e2ce75, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: Com.IsartDigital.PaperMan.Sound.AudioManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4194981576457562461, guid: 41619380d98e9f840aaf52bb65e2ce75, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6065012187241669634, guid: 41619380d98e9f840aaf52bb65e2ce75, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6065012187241669634, guid: 41619380d98e9f840aaf52bb65e2ce75, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6065012187241669634, guid: 41619380d98e9f840aaf52bb65e2ce75, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 8169145787691357219}
+    - target: {fileID: 6065012187241669634, guid: 41619380d98e9f840aaf52bb65e2ce75, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6065012187241669634, guid: 41619380d98e9f840aaf52bb65e2ce75, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PlayUIClick
+      objectReference: {fileID: 0}
+    - target: {fileID: 6065012187241669634, guid: 41619380d98e9f840aaf52bb65e2ce75, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: Com.IsartDigital.PaperMan.Sound.AudioManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6065012187241669634, guid: 41619380d98e9f840aaf52bb65e2ce75, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7663161202502437112, guid: 41619380d98e9f840aaf52bb65e2ce75, type: 3}
       propertyPath: m_Name
       value: UI_Pause_Menu
@@ -513,11 +569,79 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9185475316129453519, guid: 41619380d98e9f840aaf52bb65e2ce75, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9185475316129453519, guid: 41619380d98e9f840aaf52bb65e2ce75, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9185475316129453519, guid: 41619380d98e9f840aaf52bb65e2ce75, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9185475316129453519, guid: 41619380d98e9f840aaf52bb65e2ce75, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PlayUIClick
+      objectReference: {fileID: 0}
+    - target: {fileID: 9185475316129453519, guid: 41619380d98e9f840aaf52bb65e2ce75, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: Com.IsartDigital.PaperMan.Sound.AudioManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 9185475316129453519, guid: 41619380d98e9f840aaf52bb65e2ce75, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5301773436182958129, guid: 41619380d98e9f840aaf52bb65e2ce75, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1551060285237059855}
+    - targetCorrespondingSourceObject: {fileID: 4146748600656724229, guid: 41619380d98e9f840aaf52bb65e2ce75, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7223369594401336630}
+    - targetCorrespondingSourceObject: {fileID: 8819902279358081194, guid: 41619380d98e9f840aaf52bb65e2ce75, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2724390559369538152}
   m_SourcePrefab: {fileID: 100100000, guid: 41619380d98e9f840aaf52bb65e2ce75, type: 3}
+--- !u!1 &2134575586276802279 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5301773436182958129, guid: 41619380d98e9f840aaf52bb65e2ce75, type: 3}
+  m_PrefabInstance: {fileID: 6056259536580669142}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1551060285237059855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2134575586276802279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: Com.IsartDigital.PaperMan.Sound.AudioManager,
+            Assembly-CSharp
+          m_MethodName: PlayUIHover
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &2638905518626669774 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8111934420798794264, guid: 41619380d98e9f840aaf52bb65e2ce75, type: 3}
@@ -529,8 +653,78 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c74bb0b7606cf94aabd5153f55742f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &3344680916646463100 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8819902279358081194, guid: 41619380d98e9f840aaf52bb65e2ce75, type: 3}
+  m_PrefabInstance: {fileID: 6056259536580669142}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2724390559369538152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3344680916646463100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: Com.IsartDigital.PaperMan.Sound.AudioManager,
+            Assembly-CSharp
+          m_MethodName: PlayUIHover
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!224 &7189301121512017094 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4019920826663756304, guid: 41619380d98e9f840aaf52bb65e2ce75, type: 3}
   m_PrefabInstance: {fileID: 6056259536580669142}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &7890326440561373139 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4146748600656724229, guid: 41619380d98e9f840aaf52bb65e2ce75, type: 3}
+  m_PrefabInstance: {fileID: 6056259536580669142}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7223369594401336630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7890326440561373139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: Com.IsartDigital.PaperMan.Sound.AudioManager,
+            Assembly-CSharp
+          m_MethodName: PlayUIHover
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2

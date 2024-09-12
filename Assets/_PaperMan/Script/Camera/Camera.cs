@@ -82,8 +82,13 @@ namespace Com.IsartDigital.PaperMan
 
             alreadyDid = true;
 
-            ChangePOI(2.4f, new Vector3(98.64f, 33.56f, 0));
+            ChangePOI(2.4f, new Vector3(126.55f, 33.56f, 0));
         }
+
+        //public void OnThirdFall()
+        //{
+        //    ChangePOI(2.4f, new Vector3(254.2427f, 38.05067f, -2.329961f));
+        //}
 
         public void ChangePOI(float seconds, Vector3 position)
         {

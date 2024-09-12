@@ -47,18 +47,28 @@ namespace Com.IsartDigital.PaperMan.Sound
 
 
             //Temporary till the game starts
-            SetAmbiance(_AmbReference);
+            //SetAmbiance(_AmbReference);
 
 
         }
 
 
-        public void PlayOneShot(EventReference sound, Vector3 worldPos)
+        public void PlayOneShot(EventReference sound)
         {
             RuntimeManager.PlayOneShot(sound);
             
         }
 
+
+        public void PlayUIClick()
+        {
+            RuntimeManager.PlayOneShot("event:/SFX/ui_click");
+        }
+
+        public void PlayUIHover()
+        {
+            RuntimeManager.PlayOneShot("event:/SFX/ui_hovered");
+        }
 
         public void ChangeMusicVolume(float pVolume)
         {
