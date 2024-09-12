@@ -51,8 +51,10 @@ namespace Com.IsartDigital.PaperMan
 
         void Update()
         {
+            #if UNITY_EDITOR
             if (Input.GetKeyDown(KeyCode.R))
                 Shake(2, 1);
+            #endif
 
             if (Input.GetKeyDown(KeyCode.T))
                 ChangePOI(5, new Vector3(23,0,-3));
