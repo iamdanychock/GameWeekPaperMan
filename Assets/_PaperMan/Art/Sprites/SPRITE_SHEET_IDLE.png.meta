@@ -93,6 +93,32 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -100,10 +126,10 @@ TextureImporter:
       name: SPRITE_SHEET_IDLE_0
       rect:
         serializedVersion: 2
-        x: 7
-        y: 3
-        width: 1201
-        height: 2687
+        x: 0
+        y: 0
+        width: 1903
+        height: 2690
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,8 +137,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e2894b6d8f7deee4c9fe1c2eb8e65064
-      internalID: 436750921
+      spriteID: e0eb18fbbb2521548baa29ff4b15c510
+      internalID: -1270933911
       vertices: []
       indices: 
       edges: []
@@ -121,10 +147,10 @@ TextureImporter:
       name: SPRITE_SHEET_IDLE_1
       rect:
         serializedVersion: 2
-        x: 1334
-        y: 3
-        width: 1200
-        height: 2687
+        x: 1903
+        y: 0
+        width: 1903
+        height: 2690
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,8 +158,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9391b75909411bd44986c513399d8c8d
-      internalID: -2040853198
+      spriteID: f012ca789c6221e468659ca3d3530f9c
+      internalID: 1230548873
       vertices: []
       indices: 
       edges: []
@@ -141,7 +167,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 4d90225c5c3790244890a71a45386679
     internalID: 0
     vertices: []
     indices: 
@@ -149,8 +175,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      SPRITE_SHEET_IDLE_0: 436750921
-      SPRITE_SHEET_IDLE_1: -2040853198
+      SPRITE_SHEET_IDLE_0: -1270933911
+      SPRITE_SHEET_IDLE_1: 1230548873
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

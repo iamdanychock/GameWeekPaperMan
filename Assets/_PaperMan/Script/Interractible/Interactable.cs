@@ -6,7 +6,7 @@ namespace Com.IsartDigital.PaperMan
 {
     public abstract class Interactable : MonoBehaviour
     {
-        [SerializeField] private float outlineStrength = 1.1f;
+        [SerializeField] public float outlineStrength = 1.1f;
 
         [SerializeField] private string playerTag = "Player";
         [SerializeField] private string interactionInput = "Interact";
@@ -21,6 +21,8 @@ namespace Com.IsartDigital.PaperMan
 
         private Action doAction;
         protected bool canInteract = true;
+
+        public bool PlayerInside = false;
 
         protected virtual void Start()
         {
@@ -50,6 +52,8 @@ namespace Com.IsartDigital.PaperMan
 
             onEntered?.Invoke();
             ChangeOutlineSizeAllChildrens(transform, outlineStrength);
+
+            PlayerInside = true;
         }
 
         protected virtual void PlayerExited()
@@ -57,7 +61,11 @@ namespace Com.IsartDigital.PaperMan
             doAction = null;
 
             onExited?.Invoke();
+            Player.Instance.isTouching = false;
+
             ChangeOutlineSizeAllChildrens(transform, 1f);
+
+            PlayerInside = false;
         }
 
         private void DoActionPlayerIn()
@@ -65,9 +73,11 @@ namespace Com.IsartDigital.PaperMan
             // the player interact with this object
             if (Input.GetButtonDown(interactionInput) && canInteract)
                 Interact();
+
+            Player.Instance.isTouching = true;
         }
 
-        private void ChangeOutlineSizeAllChildrens(Transform _transform, float newOutlineSize)
+        public void ChangeOutlineSizeAllChildrens(Transform _transform, float newOutlineSize)
         {
             MeshRenderer meshRenderer = _transform.GetComponent<MeshRenderer>();
 
