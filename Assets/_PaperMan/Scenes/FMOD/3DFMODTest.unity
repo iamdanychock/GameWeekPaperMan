@@ -1658,10 +1658,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4675859759456822695, guid: 24b5568f22911054cb1b21517eb260a0, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1228993953}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 24b5568f22911054cb1b21517eb260a0, type: 3}
 --- !u!1 &549004681
 GameObject:
@@ -4256,39 +4253,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4675859759456822695, guid: 24b5568f22911054cb1b21517eb260a0, type: 3}
   m_PrefabInstance: {fileID: 543325377}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1228993953
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1228993945}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b771ced05ed19446ad5da8b5c25673f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _FootSteps:
-    Guid:
-      Data1: -954195735
-      Data2: 1242021779
-      Data3: 1144513709
-      Data4: 1409879424
-    Path: event:/SFX/Player/footsteps
-  _Fall:
-    Guid:
-      Data1: 1871906474
-      Data2: 1177357891
-      Data3: 2072323514
-      Data4: 1969872979
-    Path: event:/SFX/Player/fall
-  _Presence:
-    Guid:
-      Data1: -1844762985
-      Data2: 1194222834
-      Data3: 1571510656
-      Data4: -1607446626
-    Path: event:/SFX/Player/presence
 --- !u!1 &1242927890
 GameObject:
   m_ObjectHideFlags: 0

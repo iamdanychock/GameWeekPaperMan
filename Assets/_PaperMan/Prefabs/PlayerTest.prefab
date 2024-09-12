@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2854700759113054533}
   - component: {fileID: 7243558917304966707}
   - component: {fileID: 6373034392306182948}
+  - component: {fileID: 8356438497385620747}
   m_Layer: 0
   m_Name: PlayerTest
   m_TagString: Player
@@ -232,6 +233,39 @@ CapsuleCollider:
   m_Height: 1.9487543
   m_Direction: 1
   m_Center: {x: -0.030000001, y: -0.36799622, z: 0}
+--- !u!114 &8356438497385620747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4675859759456822695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b771ced05ed19446ad5da8b5c25673f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _FootSteps:
+    Guid:
+      Data1: -954195735
+      Data2: 1242021779
+      Data3: 1144513709
+      Data4: 1409879424
+    Path: event:/SFX/Player/footsteps
+  _Fall:
+    Guid:
+      Data1: 1871906474
+      Data2: 1177357891
+      Data3: 2072323514
+      Data4: 1969872979
+    Path: event:/SFX/Player/fall
+  _Presence:
+    Guid:
+      Data1: -1844762985
+      Data2: 1194222834
+      Data3: 1571510656
+      Data4: -1607446626
+    Path: event:/SFX/Player/presence
 --- !u!1 &7615784621542850786
 GameObject:
   m_ObjectHideFlags: 0
