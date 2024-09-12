@@ -176,7 +176,7 @@ public class Player : MonoBehaviour
             _spriteComponent.size = Vector2.one * (_spriteLookingLeft ? 1 : -1) * _spriteStartSize;
 
         //Walk Particle
-        _particleSystemMain.enabled = _velocity == Vector3.zero ? false : true;
+        _particleSystemMain.enabled = _velocity == Vector3.zero || !onGround ? false : true;
 
         //Apply inputs to velocity
         RigidComponent.velocity += _velocity;
