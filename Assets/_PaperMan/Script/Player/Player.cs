@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
 
     [SerializeField] float ZIPLINE_EASE = 16;
     [SerializeField] float ZIPLINE_Y_OFFSET = -2;
+    [SerializeField] float ZIPLINE_Z_OFFSET = .5f;
 
     [SerializeField] float SPRITE_TURN_SPEED = 16;
     [SerializeField] AnimationCurve SPRITE_TURN_CURVE;
@@ -197,7 +198,7 @@ public class Player : MonoBehaviour
             return;
         }
 
-        transform.position = Vector3.Lerp(transform.position, _zipline.transform.position + Vector3.up * ZIPLINE_Y_OFFSET, ZIPLINE_EASE * Time.deltaTime);
+        transform.position = Vector3.Lerp(transform.position, _zipline.transform.position + Vector3.up * ZIPLINE_Y_OFFSET + (Vector3.forward * ZIPLINE_Z_OFFSET), ZIPLINE_EASE * Time.deltaTime);
     }
 
     /// <summary>
