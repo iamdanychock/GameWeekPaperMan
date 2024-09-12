@@ -4,6 +4,7 @@ using Com.IsartDigital.PaperMan;
 using UnityEngine.Video;
 using UnityEngine.Events;
 using UnityEngine.Purchasing.MiniJSON;
+using FMODUnity;
 
 public class Television : Interactable
 {
@@ -15,6 +16,7 @@ public class Television : Interactable
     [SerializeField] private float turningOffDuration = .5f;
     [SerializeField] private AnimationCurve turnOffCurve;
     [SerializeField] private VideoPlayer videoPlayer;
+    [SerializeField] private EventReference _ClickTVSoundReference;
     private bool isInAnimation = false;
     private bool startOnOffState;
 
@@ -44,6 +46,8 @@ public class Television : Interactable
         isOn = startOnOffState;
         isInAnimation = false;
         meshRenderer.sharedMaterial.SetFloat(onOffValueName, isOn ? 1 : 0);
+        if (isOn)
+            InterractionActive = true;
     }
 
     protected override void Interact()
@@ -51,8 +55,12 @@ public class Television : Interactable
         if (isInAnimation) return;
 
         // turn off or on
-        if (!(!isOn && canBeTurnOn)) 
+        if (!(!isOn && canBeTurnOn))
+        {
+            RuntimeManager.PlayOneShot(_ClickTVSoundReference,transform.position);
             StartCoroutine(TurnOnOff(isOn));
+
+        }
     }
 
     /// <summary>
@@ -61,6 +69,8 @@ public class Television : Interactable
     private IEnumerator TurnOnOff(bool isGoingOff)
     {
         if (meshRenderer == null) yield break;
+
+        InterractionActive = !isGoingOff;
 
         // get the mat and disable values
         Material mat = meshRenderer.sharedMaterial;

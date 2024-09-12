@@ -10,8 +10,9 @@ public class Player : MonoBehaviour
 
      PlayerSFX _SFX => GetComponent<PlayerSFX>();
 
-    [SerializeField] float ACCELERATION = 3f;
-    [SerializeField] float MAX_SPEED = 3f;
+    [SerializeField] float ACCELERATION = 6f;
+    [SerializeField] float MAX_SPEED = 6f;
+    [SerializeField] float GRAVITY_INCREMENT = 6.9f;
 
     [SerializeField] float ZIPLINE_EASE = 16;
     [SerializeField] float ZIPLINE_Y_OFFSET = -2;
@@ -27,6 +28,8 @@ public class Player : MonoBehaviour
     [Header("SmashGround")]
     [SerializeField] private float smashGroundDuration = .2f;
     [SerializeField] private float smashGroundForce = .2f;
+
+    [SerializeField] public UiInteract interactUI;
 
     const string INTERRACTION_INPUT = "Interact";
     const string HORIZONTAL_AXIS = "Horizontal";
@@ -54,6 +57,8 @@ public class Player : MonoBehaviour
     public bool isTouching = false;
     bool isFalling = false;
     bool onGround = false;
+
+    Vector3 groundNormal;
 
     Zipline _zipline = null;
 
@@ -103,12 +108,19 @@ public class Player : MonoBehaviour
     {
         RaycastHit[] hits = Physics.RaycastAll(transform.position, Vector3.down, ON_GROUND_DISTANCE);
 
+        bool babby = true;
         onGround = false;
 
         foreach (RaycastHit item in hits)
         {
             if (item.collider.tag == PLAYER_TAG)
                 continue;
+
+            if (babby)
+            {
+                groundNormal = item.normal;
+                babby = false;
+            }
 
             onGround = true;
 
@@ -198,11 +210,18 @@ public class Player : MonoBehaviour
         if (MathF.Abs(_spriteComponent.size.x) > _spriteStartSize.x)
             _spriteComponent.size = Vector2.one * (_spriteLookingLeft ? 1 : -1) * _spriteStartSize;
 
+        
+
         //Walk Particle
         _particleSystemMain.enabled = _velocity == Vector3.zero || !onGround ? false : true;
 
         //Apply inputs to velocity
         RigidComponent.velocity += _velocity;
+
+        if (onGround && groundNormal != Vector3.up && _velocity == Vector3.zero)
+            RigidComponent.velocity = Vector3.zero;
+        else
+            RigidComponent.AddForce(Vector3.down * GRAVITY_INCREMENT, ForceMode.Acceleration);
 
         //Clamp to max speed
         RigidComponent.velocity = new Vector3(Mathf.Clamp(RigidComponent.velocity.x, -MAX_SPEED, MAX_SPEED), RigidComponent.velocity.y, Mathf.Clamp(RigidComponent.velocity.z, -MAX_SPEED, MAX_SPEED));
