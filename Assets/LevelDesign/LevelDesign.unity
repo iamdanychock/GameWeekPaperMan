@@ -3316,13 +3316,6 @@ MonoBehaviour:
   playerStartPos: {fileID: 58673732}
   spawnYOffset: 1
   uiInteractPrefab: {fileID: 2447886007207312540, guid: 5ddc747544605084aacbbbd80f78f4f4, type: 3}
-  _Amb:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
 --- !u!4 &333335649
 Transform:
   m_ObjectHideFlags: 0
@@ -25896,6 +25889,26 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6211578276725296177, guid: baacf500bf83f35498de7240401ffc57, type: 3}
+      propertyPath: _ClickTVSoundReference.Path
+      value: event:/SFX/Interactions/switchoff
+      objectReference: {fileID: 0}
+    - target: {fileID: 6211578276725296177, guid: baacf500bf83f35498de7240401ffc57, type: 3}
+      propertyPath: _ClickTVSoundReference.Guid.Data1
+      value: -2064809338
+      objectReference: {fileID: 0}
+    - target: {fileID: 6211578276725296177, guid: baacf500bf83f35498de7240401ffc57, type: 3}
+      propertyPath: _ClickTVSoundReference.Guid.Data2
+      value: 1331742963
+      objectReference: {fileID: 0}
+    - target: {fileID: 6211578276725296177, guid: baacf500bf83f35498de7240401ffc57, type: 3}
+      propertyPath: _ClickTVSoundReference.Guid.Data3
+      value: 273420948
+      objectReference: {fileID: 0}
+    - target: {fileID: 6211578276725296177, guid: baacf500bf83f35498de7240401ffc57, type: 3}
+      propertyPath: _ClickTVSoundReference.Guid.Data4
+      value: 787617589
+      objectReference: {fileID: 0}
+    - target: {fileID: 6211578276725296177, guid: baacf500bf83f35498de7240401ffc57, type: 3}
       propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.size
       value: 0
       objectReference: {fileID: 0}
@@ -26118,4 +26131,3 @@ SceneRoots:
   - {fileID: 193942860}
   - {fileID: 1019590757}
   - {fileID: 1014261671}
-  - {fileID: 1795643912}

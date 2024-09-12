@@ -4,6 +4,7 @@ using Com.IsartDigital.PaperMan;
 using UnityEngine.Video;
 using UnityEngine.Events;
 using UnityEngine.Purchasing.MiniJSON;
+using FMODUnity;
 
 public class Television : Interactable
 {
@@ -15,6 +16,7 @@ public class Television : Interactable
     [SerializeField] private float turningOffDuration = .5f;
     [SerializeField] private AnimationCurve turnOffCurve;
     [SerializeField] private VideoPlayer videoPlayer;
+    [SerializeField] private EventReference _ClickTVSoundReference;
     private bool isInAnimation = false;
     private bool startOnOffState;
 
@@ -53,8 +55,12 @@ public class Television : Interactable
         if (isInAnimation) return;
 
         // turn off or on
-        if (!(!isOn && canBeTurnOn)) 
+        if (!(!isOn && canBeTurnOn))
+        {
+            RuntimeManager.PlayOneShot(_ClickTVSoundReference,transform.position);
             StartCoroutine(TurnOnOff(isOn));
+
+        }
     }
 
     /// <summary>
