@@ -13,6 +13,8 @@ namespace Com.IsartDigital.PaperMan.Sound
 
         [SerializeField] private EventReference _EnigmaReference;
         [SerializeField] private EventReference _UIMusicReference;
+        [SerializeField] private EventReference _AmbReference;
+
 
 
 
@@ -43,12 +45,14 @@ namespace Com.IsartDigital.PaperMan.Sound
             //MusicBus.setVolume(SettingsSaveFile.musicVolumeValue);
             //SFXBus.setVolume(SettingsSaveFile.SFXVolumeValue);
 
-            PlayEnigmaResolved();
+
+            //Temporary till the game starts
+            SetAmbiance(_AmbReference);
 
 
         }
 
-      
+
         public void PlayOneShot(EventReference sound, Vector3 worldPos)
         {
             RuntimeManager.PlayOneShot(sound);
@@ -97,10 +101,12 @@ namespace Com.IsartDigital.PaperMan.Sound
         public void UpdateAmbiance(string pParameterName, int pValue)
         {
             _AmbiantSound.setParameterByName(pParameterName, pValue);
-
         }
 
-
+        public void UpdateAmbianceGlobal(string pParameterName, int pValue)
+        {
+            FMODUnity.RuntimeManager.StudioSystem.setParameterByName(pParameterName, pValue);
+        }
         public void PlayUIMusic()
         {
             SetMusic(_EnigmaReference);

@@ -1,5 +1,7 @@
+using Com.IsartDigital.PaperMan.Sound;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -23,10 +25,13 @@ public class PauseManager : MonoBehaviour
         if (gameObject.activeInHierarchy)
         {
             PauseGame();
+            AudioManager.instance.UpdateAmbianceGlobal("pause_state", 1);
         }
         else
         {
             ResumeGame();
+            AudioManager.instance.UpdateAmbianceGlobal("pause_state", 0);
+
         }
 
     }

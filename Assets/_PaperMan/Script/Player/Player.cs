@@ -8,6 +8,8 @@ public class Player : MonoBehaviour
 {
     public static Player Instance;
 
+     PlayerSFX _SFX => GetComponent<PlayerSFX>();
+
     [SerializeField] float ACCELERATION = 3f;
     [SerializeField] float MAX_SPEED = 3f;
 
@@ -169,9 +171,16 @@ public class Player : MonoBehaviour
             if (isTouching && ((lastVel != Vector3.zero && _velocity == Vector3.zero) || isFalling))
                 _animatorComponent.SetTrigger(TOUCH_ANIM);
             else if ((lastVel == Vector3.zero && _velocity != Vector3.zero) || (_velocity != Vector3.zero && isFalling))
+            {
                 _animatorComponent.SetTrigger(WALKING_ANIM);
+                _SFX.PlayPresence();
+            }
             else if (!isTouching && ((lastVel != Vector3.zero && _velocity == Vector3.zero) || isFalling))
+            {
+                _SFX.StopPresence();
                 _animatorComponent.SetTrigger(IDLE_ANIM);
+
+            }
 
             isFalling = false;
         }
@@ -234,9 +243,10 @@ public class Player : MonoBehaviour
     public void Kill()
     {
         // init death values and deactivate the rigidbody
+        UIManager.instance.OnPlayerDying();
+
         RigidComponent.isKinematic = true;
         deathElapsedTime = 0;
-
         _state = DoActionDeath;
     }
 
@@ -249,6 +259,8 @@ public class Player : MonoBehaviour
         if (deathElapsedTime > deathDuration)
         {
             // set the player pos when is alive again
+            UIManager.instance.OnPlayerSpawning();
+
             transform.position = GameManager.Instance.GetPlayerPos();
             _animatorComponent.SetTrigger(DEATH_TRIGGER_ANIM);
 
