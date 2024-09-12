@@ -135,6 +135,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-7392091563851027062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Amb/enviro_lightbulb
+  m_EditorClassIdentifier: 
+  Path: event:/Amb/enviro_lightbulb
+  Guid:
+    Data1: 414041099
+    Data2: 1149627743
+    Data3: 352986543
+    Data4: 513239850
+  Banks:
+  - {fileID: 4331503687608742679}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-6534915157710970799
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -283,10 +310,10 @@ MonoBehaviour:
   Path: FMOD/PaperMan/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638617412896442112
+  lastModified: 638617486673335910
   FileSizes:
   - Name: Desktop
-    Value: 2030
+    Value: 2132
   Exists: 1
 --- !u!114 &-2235310830588812118
 MonoBehaviour:
@@ -411,13 +438,15 @@ MonoBehaviour:
   - {fileID: -5551165474384396632}
   - {fileID: 6813381199282451755}
   - {fileID: 739593298683731786}
+  - {fileID: -7392091563851027062}
+  - {fileID: 7970798883044700781}
   EditorParameters:
   - {fileID: 6059438701024612928}
   MasterBanks:
   - {fileID: 4669912215218507413}
   StringsBanks:
   - {fileID: -2604284439467036025}
-  cacheTime: 638617412899334668
+  cacheTime: 638617495477228189
   cacheVersion: 131619
 --- !u!114 &739593298683731786
 MonoBehaviour:
@@ -488,7 +517,7 @@ MonoBehaviour:
   Name: amb_state
   StudioPath: 
   Min: 0
-  Max: 3
+  Max: 2
   Default: 0
   ID:
     data1: 1088058702
@@ -618,10 +647,10 @@ MonoBehaviour:
   Path: FMOD/PaperMan/Build/Desktop/Amb.bank
   Name: Amb
   StudioPath: bank:/Amb
-  lastModified: 638617412895631312
+  lastModified: 638617495477228189
   FileSizes:
   - Name: Desktop
-    Value: 12890592
+    Value: 12918752
   Exists: 1
 --- !u!114 &4437597482421320083
 MonoBehaviour:
@@ -689,10 +718,10 @@ MonoBehaviour:
   Path: FMOD/PaperMan/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638617412896401996
+  lastModified: 638617486673311078
   FileSizes:
   - Name: Desktop
-    Value: 6535584
+    Value: 6535840
   Exists: 1
 --- !u!114 &6059438701024612928
 MonoBehaviour:
@@ -760,11 +789,38 @@ MonoBehaviour:
   Path: FMOD/PaperMan/Build/Desktop/musique.bank
   Name: musique
   StudioPath: bank:/musique
-  lastModified: 638617412897172972
+  lastModified: 638617486686627883
   FileSizes:
   - Name: Desktop
-    Value: 1301440
+    Value: 1301568
   Exists: 1
+--- !u!114 &7970798883044700781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Amb/enviro_plank_break
+  m_EditorClassIdentifier: 
+  Path: event:/Amb/enviro_plank_break
+  Guid:
+    Data1: 1827026275
+    Data2: 1218366512
+    Data3: 1252313253
+    Data4: -1193810221
+  Banks:
+  - {fileID: 4331503687608742679}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 95
+  Length: 0
 --- !u!114 &8518665908487791881
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -807,10 +863,10 @@ MonoBehaviour:
   Path: FMOD/PaperMan/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638617412899334668
+  lastModified: 638617486695871829
   FileSizes:
   - Name: Desktop
-    Value: 1227584
+    Value: 1227776
   Exists: 1
 --- !u!114 &9009156202624585199
 MonoBehaviour:

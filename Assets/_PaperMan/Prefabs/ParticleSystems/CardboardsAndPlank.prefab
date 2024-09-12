@@ -285,6 +285,13 @@ MonoBehaviour:
   boxParticles:
   - {fileID: 5811156905797585435}
   - {fileID: 591710198969563007}
+  _PlanksBreakSoundReference:
+    Guid:
+      Data1: 1827026275
+      Data2: 1218366512
+      Data3: 1252313253
+      Data4: -1193810221
+    Path: event:/Amb/enviro_plank_break
 --- !u!1001 &702747679730004336
 PrefabInstance:
   m_ObjectHideFlags: 0
