@@ -2666,6 +2666,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   PlayerInside: 0
+  InterractionActive: 1
   itemValues:
     itemName: situation4Indice2.1
     itemDescription: 
@@ -2886,6 +2887,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   PlayerInside: 0
+  InterractionActive: 1
 --- !u!1001 &284699446
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5601,6 +5603,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   PlayerInside: 0
+  InterractionActive: 1
   itemValues:
     itemName: situation4Indice1.1
     itemDescription: 
@@ -6853,6 +6856,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   PlayerInside: 0
+  InterractionActive: 1
   itemValues:
     itemName: situation4Indice1.2
     itemDescription: 
@@ -9966,6 +9970,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   PlayerInside: 0
+  InterractionActive: 1
   itemValues:
     itemName: situation4Indice4.1
     itemDescription: 
@@ -10624,6 +10629,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   PlayerInside: 0
+  InterractionActive: 1
   itemValues:
     itemName: situationIndice3.2
     itemDescription: 
@@ -11009,6 +11015,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   PlayerInside: 0
+  InterractionActive: 1
   itemValues:
     itemName: indice 3.1
     itemDescription: 
@@ -12886,6 +12893,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   PlayerInside: 0
+  InterractionActive: 1
   itemValues:
     itemName: situation2Indice1
     itemDescription: 
@@ -16482,6 +16490,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1518494434}
     m_Modifications:
+    - target: {fileID: 128347275954723379, guid: 24b5568f22911054cb1b21517eb260a0, type: 3}
+      propertyPath: m_Drag
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3866937353129909060, guid: 24b5568f22911054cb1b21517eb260a0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -23.626099
@@ -16547,8 +16559,20 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7917217074590891830, guid: 24b5568f22911054cb1b21517eb260a0, type: 3}
+      propertyPath: MAX_SPEED
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7917217074590891830, guid: 24b5568f22911054cb1b21517eb260a0, type: 3}
+      propertyPath: ACCELERATION
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7917217074590891830, guid: 24b5568f22911054cb1b21517eb260a0, type: 3}
       propertyPath: ZIPLINE_Z_OFFSET
       value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7917217074590891830, guid: 24b5568f22911054cb1b21517eb260a0, type: 3}
+      propertyPath: GRAVITY_INCREMENT
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17347,6 +17371,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   PlayerInside: 0
+  InterractionActive: 1
   itemValues:
     itemName: situation4Indice2.2
     itemDescription: 
@@ -20224,6 +20249,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   PlayerInside: 0
+  InterractionActive: 1
   itemValues:
     itemName: situation3Indice2
     itemDescription: 
@@ -20737,6 +20763,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   PlayerInside: 0
+  InterractionActive: 1
   itemValues:
     itemName: situation3Indice1
     itemDescription: 
@@ -24855,6 +24882,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   PlayerInside: 0
+  InterractionActive: 1
   itemValues:
     itemName: situation4Indice4.2
     itemDescription: 
@@ -25858,3 +25886,4 @@ SceneRoots:
   - {fileID: 193942860}
   - {fileID: 1019590757}
   - {fileID: 1014261671}
+  - {fileID: 1795643912}
