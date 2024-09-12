@@ -86,7 +86,7 @@ public class Player : MonoBehaviour
         _particleSystemMain = GetComponentInChildren<ParticleSystem>().emission;
         _spriteStartSize = _spriteComponent.size;
 
-        SetModNormal();
+        SetModVoid();
     }
 
     void Update()
@@ -139,11 +139,23 @@ public class Player : MonoBehaviour
     void SetModVoid()
     {
         _state = DoActionVoid;
+
+        RigidComponent.isKinematic = true;
     }
 
     void DoActionVoid()
     {
+        transform.localPosition = Vector3.zero;
+    }
 
+    public void SetAnimIdle()
+    {
+        _animatorComponent.SetTrigger(IDLE_ANIM);
+    }
+
+    public void SetAnimFlying()
+    {
+        _animatorComponent.SetTrigger(FALL_ANIM);
     }
 
     public void SetModNormal()
@@ -227,7 +239,7 @@ public class Player : MonoBehaviour
         RigidComponent.velocity = new Vector3(Mathf.Clamp(RigidComponent.velocity.x, -MAX_SPEED, MAX_SPEED), RigidComponent.velocity.y, Mathf.Clamp(RigidComponent.velocity.z, -MAX_SPEED, MAX_SPEED));
     }
 
-    void SmashGround()
+    public void SmashGround()
     {
         Com.IsartDigital.PaperMan.Camera.Instance.Shake(smashGroundDuration,smashGroundForce);
         _SFX.PlayFall();
