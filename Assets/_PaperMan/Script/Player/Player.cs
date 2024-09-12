@@ -12,12 +12,17 @@ public class Player : MonoBehaviour
 
     [SerializeField] float ZIPLINE_EASE = 16;
     [SerializeField] float ZIPLINE_Y_OFFSET = -2;
+    [SerializeField] float ZIPLINE_Z_OFFSET = .5f;
 
     [SerializeField] float SPRITE_TURN_SPEED = 16;
     [SerializeField] AnimationCurve SPRITE_TURN_CURVE;
 
     [Header("Death")]
     [SerializeField] private float deathDuration = 1f;
+
+    [Header("SmashGround")]
+    [SerializeField] private float smashGroundDuration = .2f;
+    [SerializeField] private float smashGroundForce = .2f;
 
     const string INTERRACTION_INPUT = "Interact";
     const string HORIZONTAL_AXIS = "Horizontal";
@@ -145,6 +150,9 @@ public class Player : MonoBehaviour
         }
         else if (onGround)
         {
+            if (isFalling)
+                SmashGround();
+
             if (isTouching && ((lastVel != Vector3.zero && _velocity == Vector3.zero) || isFalling))
                 _animatorComponent.SetTrigger(TOUCH_ANIM);
             else if ((lastVel == Vector3.zero && _velocity != Vector3.zero) || (_velocity != Vector3.zero && isFalling))
@@ -168,13 +176,20 @@ public class Player : MonoBehaviour
             _spriteComponent.size = Vector2.one * (_spriteLookingLeft ? 1 : -1) * _spriteStartSize;
 
         //Walk Particle
-        _particleSystemMain.enabled = _velocity == Vector3.zero ? false : true;
+        _particleSystemMain.enabled = _velocity == Vector3.zero || !onGround ? false : true;
 
         //Apply inputs to velocity
         RigidComponent.velocity += _velocity;
 
         //Clamp to max speed
         RigidComponent.velocity = new Vector3(Mathf.Clamp(RigidComponent.velocity.x, -MAX_SPEED, MAX_SPEED), RigidComponent.velocity.y, Mathf.Clamp(RigidComponent.velocity.z, -MAX_SPEED, MAX_SPEED));
+    }
+
+    void SmashGround()
+    {
+        Com.IsartDigital.PaperMan.Camera.Instance.Shake(smashGroundDuration,smashGroundForce);
+
+        transform.GetChild(1).GetComponent<ParticleSystem>().Play();
     }
 
     public void SetModZipline(Zipline ziplineToFollow)
@@ -197,7 +212,7 @@ public class Player : MonoBehaviour
             return;
         }
 
-        transform.position = Vector3.Lerp(transform.position, _zipline.transform.position + Vector3.up * ZIPLINE_Y_OFFSET, ZIPLINE_EASE * Time.deltaTime);
+        transform.position = Vector3.Lerp(transform.position, _zipline.transform.position + Vector3.up * ZIPLINE_Y_OFFSET + (Vector3.forward * ZIPLINE_Z_OFFSET), ZIPLINE_EASE * Time.deltaTime);
     }
 
     /// <summary>
