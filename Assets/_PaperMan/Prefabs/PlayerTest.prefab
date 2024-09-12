@@ -50,7 +50,7 @@ Rigidbody:
   m_GameObject: {fileID: 4675859759456822695}
   serializedVersion: 4
   m_Mass: 1
-  m_Drag: 2
+  m_Drag: 5
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
@@ -85,6 +85,7 @@ MonoBehaviour:
   ZIPLINE_EASE: 16
   ZIPLINE_Y_OFFSET: -2
   ZIPLINE_Z_OFFSET: 0.5
+  ZIPLINE_X_OFFSET: 0.5
   SPRITE_TURN_SPEED: 16
   SPRITE_TURN_CURVE:
     serializedVersion: 2
@@ -123,7 +124,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4675859759456822695}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 9adac9136f637c5468f47a782435c5c0, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
