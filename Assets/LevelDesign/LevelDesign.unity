@@ -2671,6 +2671,27 @@ MonoBehaviour:
     itemDescription: 
     itemScale: 30
     itemObject: {fileID: 919132149155446097, guid: 526684da4f039804daaf952ae7b2f859, type: 3}
+    itemSoundTake:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    itemSoundDrop:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    itemCassette:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
 --- !u!1 &276376723
 GameObject:
   m_ObjectHideFlags: 0
@@ -5606,6 +5627,27 @@ MonoBehaviour:
     itemDescription: 
     itemScale: 30
     itemObject: {fileID: 919132149155446097, guid: 526684da4f039804daaf952ae7b2f859, type: 3}
+    itemSoundTake:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    itemSoundDrop:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    itemCassette:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
 --- !u!1 &549997156
 GameObject:
   m_ObjectHideFlags: 0
@@ -6858,6 +6900,27 @@ MonoBehaviour:
     itemDescription: 
     itemScale: 30
     itemObject: {fileID: 919132149155446097, guid: 526684da4f039804daaf952ae7b2f859, type: 3}
+    itemSoundTake:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    itemSoundDrop:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    itemCassette:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
 --- !u!1001 &677390581
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9971,6 +10034,27 @@ MonoBehaviour:
     itemDescription: 
     itemScale: 30
     itemObject: {fileID: 919132149155446097, guid: 526684da4f039804daaf952ae7b2f859, type: 3}
+    itemSoundTake:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    itemSoundDrop:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    itemCassette:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
 --- !u!1 &927635670
 GameObject:
   m_ObjectHideFlags: 0
@@ -10629,6 +10713,27 @@ MonoBehaviour:
     itemDescription: 
     itemScale: 30
     itemObject: {fileID: 919132149155446097, guid: 526684da4f039804daaf952ae7b2f859, type: 3}
+    itemSoundTake:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    itemSoundDrop:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    itemCassette:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
 --- !u!1 &959055105
 GameObject:
   m_ObjectHideFlags: 0
@@ -11014,6 +11119,27 @@ MonoBehaviour:
     itemDescription: 
     itemScale: 30
     itemObject: {fileID: 919132149155446097, guid: 526684da4f039804daaf952ae7b2f859, type: 3}
+    itemSoundTake:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    itemSoundDrop:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    itemCassette:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
 --- !u!1 &986286434
 GameObject:
   m_ObjectHideFlags: 0
@@ -12891,6 +13017,27 @@ MonoBehaviour:
     itemDescription: 
     itemScale: 30
     itemObject: {fileID: 919132149155446097, guid: 526684da4f039804daaf952ae7b2f859, type: 3}
+    itemSoundTake:
+      Guid:
+        Data1: 721730182
+        Data2: 1159813871
+        Data3: 1398099087
+        Data4: -2067741713
+      Path: event:/SFX/Interactions/bowl_take
+    itemSoundDrop:
+      Guid:
+        Data1: 1552787355
+        Data2: 1239433699
+        Data3: 754054285
+        Data4: -315983331
+      Path: event:/SFX/Interactions/bowl_puton
+    itemCassette:
+      Guid:
+        Data1: 1926702871
+        Data2: 1074566831
+        Data3: 1368859276
+        Data4: -160100169
+      Path: event:/SFX/Interactions/tape_play
 --- !u!1 &1159315858
 GameObject:
   m_ObjectHideFlags: 0
@@ -17352,6 +17499,27 @@ MonoBehaviour:
     itemDescription: 
     itemScale: 30
     itemObject: {fileID: 919132149155446097, guid: 526684da4f039804daaf952ae7b2f859, type: 3}
+    itemSoundTake:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    itemSoundDrop:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    itemCassette:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
 --- !u!1001 &1471620502
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20229,6 +20397,27 @@ MonoBehaviour:
     itemDescription: 
     itemScale: 30
     itemObject: {fileID: 919132149155446097, guid: 526684da4f039804daaf952ae7b2f859, type: 3}
+    itemSoundTake:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    itemSoundDrop:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    itemCassette:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
 --- !u!1001 &1705472537
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20742,6 +20931,27 @@ MonoBehaviour:
     itemDescription: 
     itemScale: 30
     itemObject: {fileID: 919132149155446097, guid: 526684da4f039804daaf952ae7b2f859, type: 3}
+    itemSoundTake:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    itemSoundDrop:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    itemCassette:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
 --- !u!1001 &1729643970
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21226,71 +21436,6 @@ Transform:
   - {fileID: 926216452}
   - {fileID: 2078687692}
   m_Father: {fileID: 2084493531}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1795643910
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1795643912}
-  - component: {fileID: 1795643911}
-  m_Layer: 0
-  m_Name: AudioManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1795643911
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1795643910}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa291b6cd7caa5e4fa8ef61d5ae9aa40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _EnigmaReference:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
-  _UIMusicReference:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
-  _AmbReference:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
---- !u!4 &1795643912
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1795643910}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 23.186625, y: 0.36883375, z: -2.8266096}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1800191940
 GameObject:
@@ -24860,6 +25005,27 @@ MonoBehaviour:
     itemDescription: 
     itemScale: 30
     itemObject: {fileID: 919132149155446097, guid: 526684da4f039804daaf952ae7b2f859, type: 3}
+    itemSoundTake:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    itemSoundDrop:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    itemCassette:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
 --- !u!1 &2084493530
 GameObject:
   m_ObjectHideFlags: 0
