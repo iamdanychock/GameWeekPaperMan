@@ -145,7 +145,7 @@ public class Player : MonoBehaviour
 
     void DoActionVoid()
     {
-
+        transform.localPosition = Vector3.zero;
     }
 
     public void SetAnimIdle()
