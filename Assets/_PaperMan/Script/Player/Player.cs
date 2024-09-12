@@ -230,7 +230,7 @@ public class Player : MonoBehaviour
     void SmashGround()
     {
         Com.IsartDigital.PaperMan.Camera.Instance.Shake(smashGroundDuration,smashGroundForce);
-
+        _SFX.PlayFall();
         transform.GetChild(1).GetComponent<ParticleSystem>().Play();
     }
 

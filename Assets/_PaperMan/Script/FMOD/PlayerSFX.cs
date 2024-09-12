@@ -36,7 +36,7 @@ public class PlayerSFX : MonoBehaviour
 
                 break;
             case GROUND_SOUNDS.NOTHING:
-                _EventInstance.setParameterByName("footstep_state", 0);
+                _EventInstance.setParameterByName("footstep_state", 1);
                 break;
         }
 
@@ -66,7 +66,10 @@ public class PlayerSFX : MonoBehaviour
         _EventInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
     }
 
-
+    public void PlayFall()
+    {
+        PlaySFX(_Fall);
+    }
     
 
 
