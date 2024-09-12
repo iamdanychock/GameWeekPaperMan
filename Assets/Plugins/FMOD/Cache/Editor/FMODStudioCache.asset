@@ -130,6 +130,33 @@ MonoBehaviour:
   IsGlobal: 1
   Labels: []
   Exists: 1
+--- !u!114 &-7715219422810232058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Amb/video6
+  m_EditorClassIdentifier: 
+  Path: event:/Amb/video6
+  Guid:
+    Data1: 1266796923
+    Data2: 1341214309
+    Data3: 1701360533
+    Data4: 537917810
+  Banks:
+  - {fileID: 6460941661829706626}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-7344790999017223653
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -328,11 +355,38 @@ MonoBehaviour:
   Path: FMOD/PaperMan/Build/Desktop/Amb.bank
   Name: Amb
   StudioPath: bank:/Amb
-  lastModified: 638617764480113603
+  lastModified: 638617789071230388
   FileSizes:
   - Name: Desktop
-    Value: 12918752
+    Value: 13103360
   Exists: 1
+--- !u!114 &-3926712472644517765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Amb/video5
+  m_EditorClassIdentifier: 
+  Path: event:/Amb/video5
+  Guid:
+    Data1: -109915544
+    Data2: 1081470057
+    Data3: -1055805768
+    Data4: -290212963
+  Banks:
+  - {fileID: 6460941661829706626}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-3829974889167726576
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -430,10 +484,10 @@ MonoBehaviour:
   Path: FMOD/PaperMan/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638617764481037091
+  lastModified: 638617783081744360
   FileSizes:
   - Name: Desktop
-    Value: 2132
+    Value: 2522
   Exists: 1
 --- !u!114 &-1883371227022549874
 MonoBehaviour:
@@ -611,14 +665,76 @@ MonoBehaviour:
   - {fileID: 4575601767631121037}
   - {fileID: -7835377092359027887}
   - {fileID: -2954500237042726116}
+  - {fileID: 6934574937518759832}
+  - {fileID: 783293713578804609}
+  - {fileID: -3926712472644517765}
+  - {fileID: -7715219422810232058}
+  - {fileID: 7266652943365147029}
+  - {fileID: 3821365862039295456}
+  - {fileID: 2870759825988305909}
+  - {fileID: 3558951647362708170}
   EditorParameters:
   - {fileID: -7767021959614843765}
   MasterBanks:
   - {fileID: 4669912215218507413}
   StringsBanks:
   - {fileID: -2604284439467036025}
-  cacheTime: 638617764505763615
+  cacheTime: 638617789071230388
   cacheVersion: 131619
+--- !u!114 &783293713578804609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Amb/video3
+  m_EditorClassIdentifier: 
+  Path: event:/Amb/video3
+  Guid:
+    Data1: 783497250
+    Data2: 1218859676
+    Data3: -579751538
+    Data4: 259046242
+  Banks:
+  - {fileID: 6460941661829706626}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &2870759825988305909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Amb/video2
+  m_EditorClassIdentifier: 
+  Path: event:/Amb/video2
+  Guid:
+    Data1: 1693379827
+    Data2: 1220209625
+    Data3: -82048612
+    Data4: 1785036971
+  Banks:
+  - {fileID: 6460941661829706626}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &2941683462736176396
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -646,6 +762,60 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &3558951647362708170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Amb/tvoff
+  m_EditorClassIdentifier: 
+  Path: event:/Amb/tvoff
+  Guid:
+    Data1: 919803448
+    Data2: 1221121342
+    Data3: 966082451
+    Data4: 1617851990
+  Banks:
+  - {fileID: -3946375091570109478}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 10000
+  Length: 0
+--- !u!114 &3821365862039295456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Amb/video1
+  m_EditorClassIdentifier: 
+  Path: event:/Amb/video1
+  Guid:
+    Data1: -1603325559
+    Data2: 1154980782
+    Data3: -117334370
+    Data4: 1574306831
+  Banks:
+  - {fileID: 6460941661829706626}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &3866961085480925643
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -661,10 +831,10 @@ MonoBehaviour:
   Path: FMOD/PaperMan/Build/Desktop/musique.bank
   Name: musique
   StudioPath: bank:/musique
-  lastModified: 638617764495392239
+  lastModified: 638617783082197397
   FileSizes:
   - Name: Desktop
-    Value: 1301568
+    Value: 1894848
   Exists: 1
 --- !u!114 &4229609866410308930
 MonoBehaviour:
@@ -738,10 +908,10 @@ MonoBehaviour:
   Path: FMOD/PaperMan/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638617764481000731
+  lastModified: 638617783081682794
   FileSizes:
   - Name: Desktop
-    Value: 6535840
+    Value: 6536768
   Exists: 1
 --- !u!114 &6075618099398776580
 MonoBehaviour:
@@ -809,11 +979,65 @@ MonoBehaviour:
   Path: FMOD/PaperMan/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638617764505763615
+  lastModified: 638617783082975133
   FileSizes:
   - Name: Desktop
-    Value: 1228064
+    Value: 1890272
   Exists: 1
+--- !u!114 &6934574937518759832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/end_cinematic
+  m_EditorClassIdentifier: 
+  Path: event:/Music/end_cinematic
+  Guid:
+    Data1: -2061272917
+    Data2: 1213432901
+    Data3: -947328126
+    Data4: 968809293
+  Banks:
+  - {fileID: 3866961085480925643}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &7266652943365147029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Amb/video4
+  m_EditorClassIdentifier: 
+  Path: event:/Amb/video4
+  Guid:
+    Data1: 1967763588
+    Data2: 1144699077
+    Data3: -175624568
+    Data4: -276368891
+  Banks:
+  - {fileID: 6460941661829706626}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &7310604401558437371
 MonoBehaviour:
   m_ObjectHideFlags: 0
