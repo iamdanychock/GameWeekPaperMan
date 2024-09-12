@@ -42,6 +42,6 @@ Material:
     - _QueueControl: 0
     m_Colors:
     - _BlinkColor: {r: 0.15218934, g: 0.22648779, b: 0.5660378, a: 1}
-    - _BlinkValueMinMax: {r: 0.3, g: 0.5, b: 0, a: 0}
+    - _BlinkValueMinMax: {r: 0.21, g: 0.5, b: 0, a: 0}
     - _MaterialColor: {r: 1, g: 1, b: 1, a: 0}
   m_BuildTextureStacks: []

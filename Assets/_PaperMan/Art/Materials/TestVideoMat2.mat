@@ -110,7 +110,7 @@ Material:
     - _HueShift: 0.025
     - _ImageSaturation: 3.92
     - _ImageValue: 0.8
-    - _IsOn: 0
+    - _IsOn: 1
     - _LineSize: 0
     - _Metallic: 0
     - _MovingSpeed: 0.4

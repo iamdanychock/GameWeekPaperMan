@@ -44,3 +44,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa291b6cd7caa5e4fa8ef61d5ae9aa40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _EnigmaReference:
+    Guid:
+      Data1: -1580096389
+      Data2: 1091946968
+      Data3: 2112169097
+      Data4: 1536552204
+    Path: event:/Music/jingle_enigma
+  _UIMusicReference:
+    Guid:
+      Data1: 1773110246
+      Data2: 1254613760
+      Data3: 356181175
+      Data4: 2070962771
+    Path: event:/Music/menu_music
+  _AmbReference:
+    Guid:
+      Data1: -1425916189
+      Data2: 1116213944
+      Data3: 881515904
+      Data4: -1050467514
+    Path: event:/Amb/amb_loop

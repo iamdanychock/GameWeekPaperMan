@@ -5,6 +5,8 @@ using UnityEngine.EventSystems;
 using System.Threading.Tasks;
 using System;
 using TMPro;
+using FMODUnity;
+using FMOD.Studio;
 
 namespace Com.IsartDigital.PaperMan
 {
@@ -18,6 +20,7 @@ namespace Com.IsartDigital.PaperMan
         [SerializeField] private Transform cameraTransform;
         [SerializeField] private TextMeshProUGUI itemName;
         [SerializeField] private TextMeshProUGUI itemDescription;
+        [NonSerialized] private EventReference itemSoundDrop;
 
         [Space]
         [SerializeField] private float rotationSpeed = .01f;
@@ -32,7 +35,7 @@ namespace Com.IsartDigital.PaperMan
         private Coroutine animCoroutine;
 
         public bool isActivated = false;
-        private bool canRotate = false;
+        public bool canRotate = false;
 
         private void Awake()
         {
@@ -93,6 +96,7 @@ namespace Com.IsartDigital.PaperMan
             // set the texts
             itemName.text = item.itemName;
             itemDescription.text = item.itemDescription;
+            itemSoundDrop = item.itemSoundDrop;
         }
 
         private void ChangeLayerAllChildren(Transform _transform, int _layer)
@@ -154,6 +158,12 @@ namespace Com.IsartDigital.PaperMan
             else canvas.gameObject.SetActive(false);
 
             canRotate = false;
+            PlayItemSoundDrop();
+        }
+
+        public void PlayItemSoundDrop()
+        {
+            RuntimeManager.PlayOneShot(itemSoundDrop, transform.position);
         }
 
         private void OnDestroy()
@@ -168,6 +178,10 @@ namespace Com.IsartDigital.PaperMan
             public string itemDescription;
             public float itemScale;
             public GameObject itemObject;
+            public EventReference itemSoundTake;
+            public EventReference itemSoundDrop;
+            public EventReference itemCassette;
+
         }
     }
 }
