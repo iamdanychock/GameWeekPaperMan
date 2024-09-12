@@ -87,6 +87,9 @@
 		<relationship name="automators">
 			<destination>{5e800745-2d52-425b-aa57-a3ccc8846d78}</destination>
 		</relationship>
+		<relationship name="modulators">
+			<destination>{24ee67a5-9e3a-40a5-9f96-cb11993a07d1}</destination>
+		</relationship>
 		<relationship name="effectChain">
 			<destination>{eb1a684c-dfc2-4262-9be0-c3728fcefca3}</destination>
 		</relationship>
@@ -145,6 +148,23 @@
 		<relationship name="automationCurves">
 			<destination>{37bf4974-6cc5-4aa4-88db-6f675497010a}</destination>
 		</relationship>
+	</object>
+	<object class="ADSRModulator" id="{24ee67a5-9e3a-40a5-9f96-cb11993a07d1}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>volume</value>
+		</property>
+		<property name="initialValue">
+			<value>-80</value>
+		</property>
+		<property name="attackTime">
+			<value>506.410309</value>
+		</property>
+		<property name="peakValue">
+			<value>1.15555573</value>
+		</property>
+		<property name="finalValue">
+			<value>-80</value>
+		</property>
 	</object>
 	<object class="MixerBusEffectChain" id="{eb1a684c-dfc2-4262-9be0-c3728fcefca3}">
 		<relationship name="effects">
@@ -261,7 +281,7 @@
 			<value>1</value>
 		</property>
 		<property name="value">
-			<value>480</value>
+			<value>900</value>
 		</property>
 	</object>
 </objects>
