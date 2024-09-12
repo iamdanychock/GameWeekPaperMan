@@ -24,6 +24,8 @@ namespace Com.IsartDigital.PaperMan
 
         public bool PlayerInside = false;
 
+        public bool InterractionActive = true;
+
         protected virtual void Start()
         {
 
@@ -48,6 +50,9 @@ namespace Com.IsartDigital.PaperMan
 
         protected virtual void PlayerEntered()
         {
+            if (!InterractionActive)
+                return;
+
             doAction = DoActionPlayerIn;
 
             onEntered?.Invoke();
@@ -70,6 +75,12 @@ namespace Com.IsartDigital.PaperMan
 
         private void DoActionPlayerIn()
         {
+            if (!InterractionActive)
+            {
+                PlayerExited();
+                return;
+            }
+
             // the player interact with this object
             if (Input.GetButtonDown(interactionInput) && canInteract)
                 Interact();
