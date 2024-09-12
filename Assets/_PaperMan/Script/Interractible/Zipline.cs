@@ -46,6 +46,7 @@ public class Zipline : Interactable
 
     protected override void Start()
     {
+        Debug.Log(CreateFriend);
         base.Start();
 
         _posOnCurve = _isUp ? 1 : 0;
@@ -61,7 +62,7 @@ public class Zipline : Interactable
 
     void CreateFriendFunction()
     {
-        GameObject clone = Instantiate(gameObject);
+        GameObject clone = Instantiate(gameObject,transform.parent);
 
         Zipline component = clone.GetComponent<Zipline>();
 

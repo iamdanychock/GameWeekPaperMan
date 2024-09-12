@@ -118,6 +118,16 @@ public class Player : MonoBehaviour
             GroundSound = GROUND_SOUNDS.NOTHING;
     }
 
+    void SetModVoid()
+    {
+        _state = DoActionVoid;
+    }
+
+    void DoActionVoid()
+    {
+
+    }
+
     public void SetModNormal()
     {
         RigidComponent.isKinematic = false;
