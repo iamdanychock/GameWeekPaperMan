@@ -335,7 +335,7 @@ MonoBehaviour:
   - {fileID: 6460941661829706626}
   IsStream: 1
   Is3D: 0
-  IsOneShot: 0
+  IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
@@ -679,7 +679,7 @@ MonoBehaviour:
   - {fileID: 4669912215218507413}
   StringsBanks:
   - {fileID: -2604284439467036025}
-  cacheTime: 638617789071230388
+  cacheTime: 638617838623033775
   cacheVersion: 131619
 --- !u!114 &783293713578804609
 MonoBehaviour:
@@ -831,7 +831,7 @@ MonoBehaviour:
   Path: FMOD/PaperMan/Build/Desktop/musique.bank
   Name: musique
   StudioPath: bank:/musique
-  lastModified: 638617783082197397
+  lastModified: 638617838619136932
   FileSizes:
   - Name: Desktop
     Value: 1894848
@@ -979,10 +979,10 @@ MonoBehaviour:
   Path: FMOD/PaperMan/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638617783082975133
+  lastModified: 638617838623033775
   FileSizes:
   - Name: Desktop
-    Value: 1890272
+    Value: 1889664
   Exists: 1
 --- !u!114 &6934574937518759832
 MonoBehaviour:

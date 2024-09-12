@@ -47,7 +47,7 @@ namespace Com.IsartDigital.PaperMan.Sound
 
 
             //Temporary till the game starts
-            //SetAmbiance(_AmbReference);
+            SetAmbiance(_AmbReference);
 
 
         }
