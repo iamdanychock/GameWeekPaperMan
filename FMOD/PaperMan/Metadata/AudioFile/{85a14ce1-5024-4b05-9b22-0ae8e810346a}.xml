@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{85a14ce1-5024-4b05-9b22-0ae8e810346a}">
+		<property name="assetPath">
+			<value>_amb_enviro/enviro2/enviro2_close_loop.ogg</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>120</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{e5760a8c-c8ab-4fd3-acbe-a80350240b5e}</destination>
+		</relationship>
+	</object>
+</objects>

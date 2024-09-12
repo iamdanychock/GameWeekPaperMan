@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="DataFile" id="{69e6db59-d365-466d-abe8-fb51762c6eb5}">
+		<property name="assetPath">
+			<value>_musique/test/menu_music_intro_120bpm.wav.reapeaks</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{e5760a8c-c8ab-4fd3-acbe-a80350240b5e}</destination>
+		</relationship>
+	</object>
+</objects>

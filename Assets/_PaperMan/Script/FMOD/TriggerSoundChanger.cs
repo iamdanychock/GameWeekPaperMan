@@ -8,24 +8,43 @@ using UnityEngine;
 public class TriggerSoundChanger : MonoBehaviour
 {
 
-    [SerializeField] private int _SoundParameter;
+    [SerializeField] private int _SoundParameterLeft;
+    [SerializeField] private int _SoundParameterRight;
+
     [SerializeField] private string _SoundReference;
 
     private AudioManager audioManager => AudioManager.instance;
 
+    private BoxCollider triggerCollider => GetComponent<BoxCollider>();
 
-    private void OnTriggerExit(Collider other)
+    public void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
-        {
-            audioManager.UpdateAmbiance(_SoundReference, _SoundParameter);
-        }
 
+        Vector3 relativePosition = triggerCollider.transform.InverseTransformPoint(other.transform.position);
+
+        if (relativePosition.x > 0)
+        {
+            RightEnter();
+        }
+        else if (relativePosition.x < 0)
+        {
+            LeftEnter();
+        }
     }
 
+    void RightEnter()
+    {
+        audioManager.UpdateAmbiance(_SoundReference, _SoundParameterLeft);
+    }
 
+    void LeftEnter()
+    {
+        audioManager.UpdateAmbiance(_SoundReference, _SoundParameterRight);
 
-
-
-
+    }
 }
+
+
+
+
+

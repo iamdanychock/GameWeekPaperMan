@@ -8,9 +8,9 @@ using UnityEngine.UI;
 public class SettingsManager : MonoBehaviour
 {
 
-    [SerializeField] private Scrollbar _MasterScrollbar;
-    [SerializeField] private Scrollbar _SFXScrollbar;
-    [SerializeField] private Scrollbar _MusicScrollbar;
+    [SerializeField] private Slider _MasterSlider;
+    [SerializeField] private Slider _SFXSlider;
+    [SerializeField] private Slider _MusicSlider;
 
 
 
@@ -24,10 +24,12 @@ public class SettingsManager : MonoBehaviour
 
     void Start()
     {
-        _MasterScrollbar.value = SettingsSaveFile.masterVolumeValue;
-        _SFXScrollbar.value = SettingsSaveFile.SFXVolumeValue;
-        _MusicScrollbar.value = SettingsSaveFile.musicVolumeValue;
+        _MasterSlider.value = SettingsSaveFile.masterVolumeValue;
+        _SFXSlider.value = SettingsSaveFile.SFXVolumeValue;
+        _MusicSlider.value = SettingsSaveFile.musicVolumeValue;
 
+
+        
 
         if (Screen.fullScreen)
             _ScreenSizeButton.GetComponentInChildren<TextMeshProUGUI>().text = "Full Screen";
