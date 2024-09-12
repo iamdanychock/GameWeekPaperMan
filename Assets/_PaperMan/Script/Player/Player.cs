@@ -7,6 +7,8 @@ public class Player : MonoBehaviour
 {
     public static Player Instance;
 
+     PlayerSFX _SFX => GetComponent<PlayerSFX>();
+
     [SerializeField] float ACCELERATION = 3f;
     [SerializeField] float MAX_SPEED = 3f;
 
@@ -148,9 +150,16 @@ public class Player : MonoBehaviour
             if (isTouching && ((lastVel != Vector3.zero && _velocity == Vector3.zero) || isFalling))
                 _animatorComponent.SetTrigger(TOUCH_ANIM);
             else if ((lastVel == Vector3.zero && _velocity != Vector3.zero) || (_velocity != Vector3.zero && isFalling))
+            {
                 _animatorComponent.SetTrigger(WALKING_ANIM);
+                _SFX.PlayPresence();
+            }
             else if (!isTouching && ((lastVel != Vector3.zero && _velocity == Vector3.zero) || isFalling))
+            {
+                _SFX.StopPresence();
                 _animatorComponent.SetTrigger(IDLE_ANIM);
+
+            }
 
             isFalling = false;
         }
