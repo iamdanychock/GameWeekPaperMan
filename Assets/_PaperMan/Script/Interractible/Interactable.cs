@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Com.IsartDigital.PaperMan
 {
@@ -11,6 +12,9 @@ namespace Com.IsartDigital.PaperMan
         [SerializeField] private string interactionInput = "Interact";
 
         [SerializeField] private bool activateOutline = true;
+        [SerializeField] private UnityEvent onInteract;
+        [SerializeField] private UnityEvent onEntered;
+        [SerializeField] private UnityEvent onExited;
 
         const string OUTLINE_SHADER = "Outline";
         const string OUTLINE_SCALE = "_Scale";
@@ -44,12 +48,16 @@ namespace Com.IsartDigital.PaperMan
         {
             doAction = DoActionPlayerIn;
 
+            onEntered?.Invoke();
             ChangeOutlineSizeAllChildrens(transform, outlineStrength);
         }
 
         protected virtual void PlayerExited()
         {
             doAction = null;
+
+            onExited?.Invoke();
+            Player.Instance.isTouching = false;
 
             ChangeOutlineSizeAllChildrens(transform, 1f);
         }
@@ -59,6 +67,8 @@ namespace Com.IsartDigital.PaperMan
             // the player interact with this object
             if (Input.GetButtonDown(interactionInput) && canInteract)
                 Interact();
+
+            Player.Instance.isTouching = true;
         }
 
         private void ChangeOutlineSizeAllChildrens(Transform _transform, float newOutlineSize)
@@ -78,6 +88,9 @@ namespace Com.IsartDigital.PaperMan
                 ChangeOutlineSizeAllChildrens(child, newOutlineSize);
         }
 
-        protected abstract void Interact();
+        protected virtual void Interact()
+        {
+            onInteract?.Invoke();
+        }
     }
 }
