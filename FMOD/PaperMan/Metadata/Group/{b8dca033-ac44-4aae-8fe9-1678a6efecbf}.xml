@@ -16,54 +16,15 @@
 	</object>
 	<object class="MixerBusEffectChain" id="{88e8a595-4cb9-4d57-bdab-3e32f2b96a9a}">
 		<relationship name="effects">
+			<destination>{2293e89e-2ae5-4365-8f0e-9d9203670d45}</destination>
 			<destination>{f02dd331-4016-4c1b-9601-1cbbf661489d}</destination>
-			<destination>{57d1f021-9166-43b8-9254-4dad8c792afb}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{a11186f8-66f9-41e6-b0aa-8a60e1ca78a0}" />
+	<object class="Sidechain" id="{2293e89e-2ae5-4365-8f0e-9d9203670d45}">
+		<property name="level">
+			<value>-5</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{f02dd331-4016-4c1b-9601-1cbbf661489d}" />
-	<object class="MultibandEqEffect" id="{57d1f021-9166-43b8-9254-4dad8c792afb}">
-		<property name="frequencyA">
-			<value>21999.9902</value>
-		</property>
-		<property name="qualityA">
-			<value>0.665137947</value>
-		</property>
-		<relationship name="automators">
-			<destination>{cab8c7cc-27b3-4bb2-be8c-5031f2ef72f3}</destination>
-		</relationship>
-	</object>
-	<object class="Automator" id="{cab8c7cc-27b3-4bb2-be8c-5031f2ef72f3}">
-		<property name="nameOfPropertyBeingAutomated">
-			<value>frequencyA</value>
-		</property>
-		<relationship name="automationCurves">
-			<destination>{956c9123-4b94-4a19-a206-9c42427d655c}</destination>
-		</relationship>
-	</object>
-	<object class="AutomationCurve" id="{956c9123-4b94-4a19-a206-9c42427d655c}">
-		<relationship name="parameter">
-			<destination>{b2645a16-bd57-4421-ba1c-04779fa3f70e}</destination>
-		</relationship>
-		<relationship name="automationPoints">
-			<destination>{160c8feb-51dc-44be-9a1a-5456816eec8a}</destination>
-			<destination>{b97a2ee1-bb96-43bb-a503-2697f04fa678}</destination>
-		</relationship>
-	</object>
-	<object class="AutomationPoint" id="{160c8feb-51dc-44be-9a1a-5456816eec8a}">
-		<property name="position">
-			<value>0</value>
-		</property>
-		<property name="value">
-			<value>22000</value>
-		</property>
-	</object>
-	<object class="AutomationPoint" id="{b97a2ee1-bb96-43bb-a503-2697f04fa678}">
-		<property name="position">
-			<value>1</value>
-		</property>
-		<property name="value">
-			<value>260</value>
-		</property>
-	</object>
 </objects>

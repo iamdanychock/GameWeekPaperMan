@@ -341,7 +341,10 @@ MonoBehaviour:
   Plugins: []
   MasterBanks:
   - Master
-  Banks: []
+  Banks:
+  - Amb
+  - musique
+  - SFX
   BanksToLoad:
   - Master
   LiveUpdatePort: 9264
