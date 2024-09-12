@@ -152,8 +152,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd743281a337e984e8b3eda658523f8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  outlineStrength: 1.1
+  playerTag: Player
+  interactionInput: Interact
+  activateOutline: 1
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
+  onEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  onExited:
+    m_PersistentCalls:
+      m_Calls: []
+  PlayerInside: 0
   UP_DISTANCE: 0
   SEC_TO_GO_UP: 1
+  CreateFriend: 0
   _isUp: 0
   _curve:
     serializedVersion: 2
@@ -161,6 +176,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  _ZiplineSound:
+    Guid:
+      Data1: 529553970
+      Data2: 1274634384
+      Data3: 1514531742
+      Data4: 1510119295
+    Path: event:/SFX/Interactions/zipline
 --- !u!65 &7497991123683566470
 BoxCollider:
   m_ObjectHideFlags: 0
