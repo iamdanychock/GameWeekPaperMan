@@ -5,7 +5,7 @@
 			<value>amb_loop</value>
 		</property>
 		<property name="outputFormat">
-			<value>2</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{6f9c35e7-fd17-4810-8e8f-3e98c876ce1c}</destination>
@@ -555,7 +555,6 @@
 	<object class="MixerBusEffectChain" id="{620dd46e-368f-4fd0-b855-daf5a23d0949}">
 		<relationship name="effects">
 			<destination>{1ad1194e-5882-4988-ae4f-861a5204bb4e}</destination>
-			<destination>{c10a978b-f545-4cb1-a2cb-62039f6567eb}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{448028b3-218b-4bf3-88b4-2b90211bb808}" />
@@ -998,7 +997,6 @@
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{1ad1194e-5882-4988-ae4f-861a5204bb4e}" />
-	<object class="SpatialiserEffect" id="{c10a978b-f545-4cb1-a2cb-62039f6567eb}" />
 	<object class="AutomationPoint" id="{1bf7e31e-971b-4a3e-b21d-04fb1f24ebf0}">
 		<property name="position">
 			<value>0</value>
