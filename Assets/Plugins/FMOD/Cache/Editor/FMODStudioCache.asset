@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-9067487181069827819
+--- !u!114 &-7885784647427246684
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10,291 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Interactions/paper_puton
+  m_Name: event:/Music/menu_music_loop
   m_EditorClassIdentifier: 
-  Path: event:/SFX/Interactions/paper_puton
+  Path: event:/Music/menu_music_loop
   Guid:
-    Data1: 1026924956
-    Data2: 1302170849
-    Data3: 1420615343
-    Data4: -442128221
+    Data1: -1353869257
+    Data2: 1100878764
+    Data3: -1292347501
+    Data4: -676498732
   Banks:
-  - {fileID: 8923114122521267038}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-8862494747125311897
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/jingle_enigma
-  m_EditorClassIdentifier: 
-  Path: event:/Music/jingle_enigma
-  Guid:
-    Data1: -1580096389
-    Data2: 1091946968
-    Data3: 2112169097
-    Data4: 1536552204
-  Banks:
-  - {fileID: 7436688076678086655}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
-  Parameters:
-  - {fileID: 4437597482421320083}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 11000
---- !u!114 &-8432423170764537918
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/footsteps/footstep_state
-  m_EditorClassIdentifier: 
-  Name: footstep_state
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 2979730042
-    data2: 2704877921
-  Type: 2
-  IsGlobal: 0
-  Labels:
-  - concrete
-  - wood
-  Exists: 1
---- !u!114 &-7689006446754523721
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Interactions/paper_take
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/Interactions/paper_take
-  Guid:
-    Data1: -393630379
-    Data2: 1184525426
-    Data3: 233482112
-    Data4: 1943216703
-  Banks:
-  - {fileID: 8923114122521267038}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-7505599449093406657
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Interactions/switchoff
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/Interactions/switchoff
-  Guid:
-    Data1: -2064809338
-    Data2: 1331742963
-    Data3: 273420948
-    Data4: 787617589
-  Banks:
-  - {fileID: 8923114122521267038}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-7392091563851027062
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Amb/enviro_lightbulb
-  m_EditorClassIdentifier: 
-  Path: event:/Amb/enviro_lightbulb
-  Guid:
-    Data1: 414041099
-    Data2: 1149627743
-    Data3: 352986543
-    Data4: 513239850
-  Banks:
-  - {fileID: 4331503687608742679}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-6534915157710970799
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/menu_music
-  m_EditorClassIdentifier: 
-  Path: event:/Music/menu_music
-  Guid:
-    Data1: 1773110246
-    Data2: 1254613760
-    Data3: 356181175
-    Data4: 2070962771
-  Banks:
-  - {fileID: 7436688076678086655}
+  - {fileID: 4669912215218507413}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 98896
---- !u!114 &-5750091605963517314
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Player/footsteps
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/Player/footsteps
-  Guid:
-    Data1: -954195735
-    Data2: 1242021779
-    Data3: 1144513709
-    Data4: 1409879424
-  Banks:
-  - {fileID: 8923114122521267038}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters:
-  - {fileID: -8432423170764537918}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 388
---- !u!114 &-5551165474384396632
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Interactions/tape_puton
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/Interactions/tape_puton
-  Guid:
-    Data1: -1311354159
-    Data2: 1272748248
-    Data3: 1238539689
-    Data4: -791975930
-  Banks:
-  - {fileID: 8923114122521267038}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-4641116212975413006
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Interactions/zipline
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/Interactions/zipline
-  Guid:
-    Data1: 529553970
-    Data2: 1274634384
-    Data3: 1514531742
-    Data4: 1510119295
-  Banks:
-  - {fileID: 8923114122521267038}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-4567218084194839321
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/tv_amb/pause_state
-  m_EditorClassIdentifier: 
-  Name: pause_state
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 2181330691
-    data2: 3496660919
-  Type: 0
-  IsGlobal: 1
-  Labels: []
-  Exists: 1
+  Length: 92133
 --- !u!114 &-2604284439467036025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -310,12 +42,12 @@ MonoBehaviour:
   Path: FMOD/PaperMan/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638617532844595414
+  lastModified: 638616648765491588
   FileSizes:
   - Name: Desktop
-    Value: 2132
+    Value: 928
   Exists: 1
---- !u!114 &-2235310830588812118
+--- !u!114 &-137916262942914349
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -325,80 +57,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Amb/amb_loop
+  m_Name: event:/Music/music_radio_station_rock_loop
   m_EditorClassIdentifier: 
-  Path: event:/Amb/amb_loop
+  Path: event:/Music/music_radio_station_rock_loop
   Guid:
-    Data1: -1425916189
-    Data2: 1116213944
-    Data3: 881515904
-    Data4: -1050467514
+    Data1: 1744438431
+    Data2: 1091613361
+    Data3: -1687862653
+    Data4: 1299993459
   Banks:
-  - {fileID: 4331503687608742679}
   - {fileID: 4669912215218507413}
   IsStream: 1
-  Is3D: 0
+  Is3D: 1
   IsOneShot: 0
-  Parameters:
-  - {fileID: 1652820175905582139}
-  - {fileID: 3802240632965102112}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 120000
---- !u!114 &-1575043547033728483
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Player/pl_lose_02
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/Player/pl_lose_02
-  Guid:
-    Data1: 1617740931
-    Data2: 1279274709
-    Data3: -2093180498
-    Data4: -508906656
-  Banks:
-  - {fileID: 8923114122521267038}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
---- !u!114 &-282911167924106216
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Interactions/bowl_puton
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/Interactions/bowl_puton
-  Guid:
-    Data1: 1552787355
-    Data2: 1239433699
-    Data3: 754054285
-    Data4: -315983331
-  Banks:
-  - {fileID: 8923114122521267038}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
+  Length: 32000
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -414,295 +89,17 @@ MonoBehaviour:
   EditorBanks:
   - {fileID: -2604284439467036025}
   - {fileID: 4669912215218507413}
-  - {fileID: 4331503687608742679}
-  - {fileID: 7436688076678086655}
-  - {fileID: 8923114122521267038}
   EditorEvents:
-  - {fileID: -2235310830588812118}
-  - {fileID: -8862494747125311897}
-  - {fileID: -6534915157710970799}
-  - {fileID: -4641116212975413006}
-  - {fileID: -7505599449093406657}
-  - {fileID: 8518665908487791881}
-  - {fileID: 4546098753027892278}
-  - {fileID: -5750091605963517314}
-  - {fileID: 2080511202235074962}
-  - {fileID: 4144269686268657485}
-  - {fileID: 3141926449509324222}
-  - {fileID: -7689006446754523721}
-  - {fileID: 1613787897188182256}
-  - {fileID: -1575043547033728483}
-  - {fileID: 9009156202624585199}
-  - {fileID: -282911167924106216}
-  - {fileID: -9067487181069827819}
-  - {fileID: -5551165474384396632}
-  - {fileID: 6813381199282451755}
-  - {fileID: 739593298683731786}
-  - {fileID: -7392091563851027062}
-  - {fileID: 7970798883044700781}
-  EditorParameters:
-  - {fileID: 6059438701024612928}
+  - {fileID: -7885784647427246684}
+  - {fileID: 7094458707124506670}
+  - {fileID: -137916262942914349}
+  EditorParameters: []
   MasterBanks:
   - {fileID: 4669912215218507413}
   StringsBanks:
   - {fileID: -2604284439467036025}
-  cacheTime: 638617532869806297
+  cacheTime: 638616648765491588
   cacheVersion: 131619
---- !u!114 &739593298683731786
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Interactions/tape_take
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/Interactions/tape_take
-  Guid:
-    Data1: -492975874
-    Data2: 1215612989
-    Data3: 1694641312
-    Data4: 1631463931
-  Banks:
-  - {fileID: 8923114122521267038}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &1613787897188182256
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/ui_hovered
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/ui_hovered
-  Guid:
-    Data1: -20723873
-    Data2: 1252383110
-    Data3: -1044421199
-    Data4: -814109374
-  Banks:
-  - {fileID: 8923114122521267038}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &1652820175905582139
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/amb_loop/amb_state
-  m_EditorClassIdentifier: 
-  Name: amb_state
-  StudioPath: 
-  Min: 0
-  Max: 2
-  Default: 0
-  ID:
-    data1: 1088058702
-    data2: 1635050984
-  Type: 0
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
---- !u!114 &2080511202235074962
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Amb/tv_amb
-  m_EditorClassIdentifier: 
-  Path: event:/Amb/tv_amb
-  Guid:
-    Data1: -1488836784
-    Data2: 1211760935
-    Data3: -462550091
-    Data4: -1255280071
-  Banks:
-  - {fileID: 4331503687608742679}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 0
-  Parameters:
-  - {fileID: -4567218084194839321}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 182004
---- !u!114 &3141926449509324222
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Player/pl_lose_01
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/Player/pl_lose_01
-  Guid:
-    Data1: 1406387257
-    Data2: 1201222551
-    Data3: -154832207
-    Data4: -755131615
-  Banks:
-  - {fileID: 8923114122521267038}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &3802240632965102112
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/amb_loop/pause_state
-  m_EditorClassIdentifier: 
-  Name: pause_state
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 2181330691
-    data2: 3496660919
-  Type: 0
-  IsGlobal: 1
-  Labels: []
-  Exists: 1
---- !u!114 &4144269686268657485
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Interactions/tape_play
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/Interactions/tape_play
-  Guid:
-    Data1: 1926702871
-    Data2: 1074566831
-    Data3: 1368859276
-    Data4: -160100169
-  Banks:
-  - {fileID: 8923114122521267038}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &4331503687608742679
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Amb.bank
-  m_EditorClassIdentifier: 
-  Path: FMOD/PaperMan/Build/Desktop/Amb.bank
-  Name: Amb
-  StudioPath: bank:/Amb
-  lastModified: 638617532843747455
-  FileSizes:
-  - Name: Desktop
-    Value: 12918752
-  Exists: 1
---- !u!114 &4437597482421320083
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/jingle_enigma/pause_state
-  m_EditorClassIdentifier: 
-  Name: pause_state
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 2181330691
-    data2: 3496660919
-  Type: 0
-  IsGlobal: 1
-  Labels: []
-  Exists: 1
---- !u!114 &4546098753027892278
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Player/fall
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/Player/fall
-  Guid:
-    Data1: 1871906474
-    Data2: 1177357891
-    Data3: 2072323514
-    Data4: 1969872979
-  Banks:
-  - {fileID: 8923114122521267038}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 501
 --- !u!114 &4669912215218507413
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -718,36 +115,12 @@ MonoBehaviour:
   Path: FMOD/PaperMan/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638617532844559974
+  lastModified: 638616648765481599
   FileSizes:
   - Name: Desktop
-    Value: 6535840
+    Value: 1514464
   Exists: 1
---- !u!114 &6059438701024612928
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/pause_state
-  m_EditorClassIdentifier: 
-  Name: pause_state
-  StudioPath: parameter:/pause_state
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 2181330691
-    data2: 3496660919
-  Type: 0
-  IsGlobal: 1
-  Labels: []
-  Exists: 1
---- !u!114 &6813381199282451755
+--- !u!114 &7094458707124506670
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -757,139 +130,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/ui_click
+  m_Name: event:/SFX/ui_okay
   m_EditorClassIdentifier: 
-  Path: event:/SFX/ui_click
+  Path: event:/SFX/ui_okay
   Guid:
-    Data1: 970110685
-    Data2: 1219267416
-    Data3: 450132900
-    Data4: 262531829
+    Data1: 1472717450
+    Data2: 1235520097
+    Data3: -117749072
+    Data4: 1561112974
   Banks:
-  - {fileID: 8923114122521267038}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &7436688076678086655
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/musique.bank
-  m_EditorClassIdentifier: 
-  Path: FMOD/PaperMan/Build/Desktop/musique.bank
-  Name: musique
-  StudioPath: bank:/musique
-  lastModified: 638617532859511385
-  FileSizes:
-  - Name: Desktop
-    Value: 1301568
-  Exists: 1
---- !u!114 &7970798883044700781
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Amb/enviro_plank_break
-  m_EditorClassIdentifier: 
-  Path: event:/Amb/enviro_plank_break
-  Guid:
-    Data1: 1827026275
-    Data2: 1218366512
-    Data3: 1252313253
-    Data4: -1193810221
-  Banks:
-  - {fileID: 4331503687608742679}
+  - {fileID: 4669912215218507413}
   IsStream: 0
   Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 95
-  Length: 0
---- !u!114 &8518665908487791881
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Player/presence
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/Player/presence
-  Guid:
-    Data1: -1844762985
-    Data2: 1194222834
-    Data3: 1571510656
-    Data4: -1607446626
-  Banks:
-  - {fileID: 8923114122521267038}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 68128
---- !u!114 &8923114122521267038
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/SFX.bank
-  m_EditorClassIdentifier: 
-  Path: FMOD/PaperMan/Build/Desktop/SFX.bank
-  Name: SFX
-  StudioPath: bank:/SFX
-  lastModified: 638617532869806297
-  FileSizes:
-  - Name: Desktop
-    Value: 1228064
-  Exists: 1
---- !u!114 &9009156202624585199
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Interactions/bowl_take
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/Interactions/bowl_take
-  Guid:
-    Data1: 721730182
-    Data2: 1159813871
-    Data3: 1398099087
-    Data4: -2067741713
-  Banks:
-  - {fileID: 8923114122521267038}
-  IsStream: 0
-  Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 1

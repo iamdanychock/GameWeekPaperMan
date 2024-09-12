@@ -3316,13 +3316,6 @@ MonoBehaviour:
   playerStartPos: {fileID: 58673732}
   spawnYOffset: 1
   uiInteractPrefab: {fileID: 2447886007207312540, guid: 5ddc747544605084aacbbbd80f78f4f4, type: 3}
-  _Amb:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
 --- !u!4 &333335649
 Transform:
   m_ObjectHideFlags: 0
@@ -4452,6 +4445,10 @@ PrefabInstance:
     - target: {fileID: 7257053887232902637, guid: 1c02caa78c12cbd458e1ded75223b63d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7360576181264621746, guid: 1c02caa78c12cbd458e1ded75223b63d, type: 3}
+      propertyPath: rotationSpeedController
+      value: 0.7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -26118,4 +26115,3 @@ SceneRoots:
   - {fileID: 193942860}
   - {fileID: 1019590757}
   - {fileID: 1014261671}
-  - {fileID: 1795643912}
