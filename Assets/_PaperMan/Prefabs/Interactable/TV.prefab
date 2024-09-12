@@ -146,6 +146,7 @@ MonoBehaviour:
   onExited:
     m_PersistentCalls:
       m_Calls: []
+  PlayerInside: 0
   meshRenderer: {fileID: 4586343055585167376}
   onOffValueName: _IsOn
   isOn: 1
@@ -384,6 +385,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 6394878613165874b851ddcadb45fc46, type: 2}
+  - {fileID: -876546973899608171, guid: 31db643c5833f0043a08352d30b04bc1, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
