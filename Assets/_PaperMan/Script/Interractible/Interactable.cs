@@ -78,8 +78,7 @@ namespace Com.IsartDigital.PaperMan
             PlayerInside = false;
 
             // disable or not the interact ui
-            if (activateInteractUI)
-                Player.Instance.interactUI.Disable();
+            Player.Instance.interactUI.Disable();
         }
 
         private void DoActionPlayerIn()
