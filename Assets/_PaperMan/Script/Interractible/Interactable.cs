@@ -57,6 +57,8 @@ namespace Com.IsartDigital.PaperMan
             doAction = null;
 
             onExited?.Invoke();
+            Player.Instance.isTouching = false;
+
             ChangeOutlineSizeAllChildrens(transform, 1f);
         }
 
@@ -65,6 +67,8 @@ namespace Com.IsartDigital.PaperMan
             // the player interact with this object
             if (Input.GetButtonDown(interactionInput) && canInteract)
                 Interact();
+
+            Player.Instance.isTouching = true;
         }
 
         private void ChangeOutlineSizeAllChildrens(Transform _transform, float newOutlineSize)
