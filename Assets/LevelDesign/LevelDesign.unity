@@ -2876,7 +2876,7 @@ Transform:
   m_GameObject: {fileID: 272092657}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 198, y: 34.5, z: -4}
+  m_LocalPosition: {x: 197.48, y: 34.5, z: -3.74}
   m_LocalScale: {x: 1, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2901,8 +2901,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.9250641, y: 1, z: 2.354757}
-  m_Center: {x: -0.058677673, y: 0, z: 0.3328265}
+  m_Size: {x: 1.7828674, y: 1, z: 1.973243}
+  m_Center: {x: -0.129776, y: 0, z: 0.14206946}
 --- !u!23 &272092660
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10346,6 +10346,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 943369281}
+  - component: {fileID: 943369282}
   m_Layer: 0
   m_Name: Lampiottes
   m_TagString: Untagged
@@ -10415,6 +10416,19 @@ Transform:
   - {fileID: 1192967486}
   m_Father: {fileID: 2009466545}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &943369282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 943369280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6640a844bcf3124aa7b84afe0c973f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightStringTransform: {fileID: 943369281}
 --- !u!1001 &945057836
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16945,7 +16959,7 @@ Transform:
   m_GameObject: {fileID: 1468248631}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 200, y: 34.5, z: -3}
+  m_LocalPosition: {x: 200.86, y: 34.5, z: -2.48}
   m_LocalScale: {x: 1, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -24853,7 +24867,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6211578276725296177, guid: baacf500bf83f35498de7240401ffc57, type: 3}
       propertyPath: onTurnedOff.m_PersistentCalls.m_Calls.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6211578276725296177, guid: baacf500bf83f35498de7240401ffc57, type: 3}
       propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -24865,7 +24879,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6211578276725296177, guid: baacf500bf83f35498de7240401ffc57, type: 3}
       propertyPath: onTurnedOff.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6211578276725296177, guid: baacf500bf83f35498de7240401ffc57, type: 3}
       propertyPath: onTurnedOff.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
@@ -24882,7 +24896,7 @@ PrefabInstance:
     - target: {fileID: 6211578276725296177, guid: baacf500bf83f35498de7240401ffc57, type: 3}
       propertyPath: onTurnedOff.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 3261857890534916279}
+      objectReference: {fileID: 943369282}
     - target: {fileID: 6211578276725296177, guid: baacf500bf83f35498de7240401ffc57, type: 3}
       propertyPath: onTurnedOff.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
@@ -24909,7 +24923,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6211578276725296177, guid: baacf500bf83f35498de7240401ffc57, type: 3}
       propertyPath: onTurnedOff.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: Play
+      value: ChangeStateAllLights
       objectReference: {fileID: 0}
     - target: {fileID: 6211578276725296177, guid: baacf500bf83f35498de7240401ffc57, type: 3}
       propertyPath: onTurnedOff.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
@@ -24921,11 +24935,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6211578276725296177, guid: baacf500bf83f35498de7240401ffc57, type: 3}
       propertyPath: onTurnedOff.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: UnityEngine.ParticleSystem, UnityEngine
+      value: ManageLightString, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6211578276725296177, guid: baacf500bf83f35498de7240401ffc57, type: 3}
       propertyPath: onTurnedOff.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
       value: UnityEngine.ParticleSystem, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6211578276725296177, guid: baacf500bf83f35498de7240401ffc57, type: 3}
+      propertyPath: onTurnedOff.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6211578276725296177, guid: baacf500bf83f35498de7240401ffc57, type: 3}
       propertyPath: onTurnedOff.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
@@ -25005,10 +25023,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 600797759}
     m_Modifications:
-    - target: {fileID: 5900899655996203789, guid: 23270a8f58eb00c4db5cf7b5d28d039f, type: 3}
-      propertyPath: mainCamera
-      value: 
-      objectReference: {fileID: 381442632}
     - target: {fileID: 6433553521632319331, guid: 23270a8f58eb00c4db5cf7b5d28d039f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 49
@@ -25061,11 +25075,6 @@ PrefabInstance:
 --- !u!198 &3261857890534916278 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 591710198969563007, guid: 23270a8f58eb00c4db5cf7b5d28d039f, type: 3}
-  m_PrefabInstance: {fileID: 3261857890534916277}
-  m_PrefabAsset: {fileID: 0}
---- !u!198 &3261857890534916279 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 5811156905797585435, guid: 23270a8f58eb00c4db5cf7b5d28d039f, type: 3}
   m_PrefabInstance: {fileID: 3261857890534916277}
   m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807

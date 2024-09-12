@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -181,7 +182,7 @@ public class Player : MonoBehaviour
     }
 
     private float deathElapsedTime = 0;
-    private void DoActionDeath()
+    private /*async*/ void DoActionDeath()
     {
         deathElapsedTime += Time.deltaTime;
 
@@ -190,12 +191,17 @@ public class Player : MonoBehaviour
         {
             // set the player pos when is alive again
             transform.position = GameManager.Instance.GetPlayerPos();
-            RigidComponent.isKinematic = false;
             _animatorComponent.SetTrigger(DEATH_TRIGGER_ANIM);
 
             // reset the player as normal
             onRespawn?.Invoke();
             SetModNormal();
+
+            // add a delay before enabling the kinematic because it can make the player not tp to the wanted position
+            //RigidComponent.detectCollisions = false;
+            //await Task.Delay(100);
+            //RigidComponent.detectCollisions = true;
+            RigidComponent.isKinematic = false;
         }
     }
 
