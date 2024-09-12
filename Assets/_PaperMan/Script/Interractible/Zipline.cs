@@ -42,6 +42,7 @@ public class Zipline : Interactable
             _posOnCurve += Time.deltaTime;
 
         ChangeOutlineSizeAllChildrens(transform, 1);
+        
     }
 
     protected override void Start()
@@ -91,6 +92,9 @@ public class Zipline : Interactable
             if(PlayerInside)
                 ChangeOutlineSizeAllChildrens(transform, outlineStrength);
         }
+
+        foreach (PoleyGraphics item in PoleyGraphics.Poleys)
+            item.DesacOutline();
 
         transform.position = Vector3.Lerp(_startPosition,_startPosition + Vector3.up * UP_DISTANCE, _curve.Evaluate(_posOnCurve));
 
