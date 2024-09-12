@@ -7,12 +7,13 @@ public class Zipline : Interactable
 {
     [SerializeField] float UP_DISTANCE;
     [SerializeField] float SEC_TO_GO_UP = 1;
+    [SerializeField] public bool CreateFriend = false;
 
     [SerializeField] bool _isUp = false;
 
     [SerializeField] AnimationCurve _curve;
 
-    [SerializeField] Zipline ziplineFriend;
+    Zipline ziplineFriend;
 
     int _direction => _isUp ? -1 : 1;
     float _posOnCurve;
@@ -51,6 +52,22 @@ public class Zipline : Interactable
 
         if (_isUp)
             transform.position = _startPosition + Vector3.up * UP_DISTANCE;
+
+        if(CreateFriend)
+            CreateFriendFunction();
+    }
+
+    void CreateFriendFunction()
+    {
+        GameObject clone = Instantiate(gameObject);
+
+        Zipline component = clone.GetComponent<Zipline>();
+
+        component.CreateFriend = false;
+        component._isUp = !_isUp;
+
+        ziplineFriend = component;
+        component.ziplineFriend = this;
     }
 
     protected override void Update()
