@@ -49,8 +49,10 @@ namespace Com.IsartDigital.PaperMan
 
         void Update()
         {
+            #if UNITY_EDITOR
             if (Input.GetKeyDown(KeyCode.R))
                 Shake(2, 1);
+            #endif
 
             //By default following the player
             PointOfInterrest = Player.Instance.transform.position;

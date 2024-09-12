@@ -41,6 +41,8 @@ public class Player : MonoBehaviour
 
     Zipline _zipline = null;
 
+    public Action onRespawn;
+
     public Rigidbody RigidComponent => GetComponent<Rigidbody>();
     SpriteRenderer _spriteComponent => GetComponent<SpriteRenderer>();
     Animator _animatorComponent => GetComponent<Animator>();
@@ -183,6 +185,7 @@ public class Player : MonoBehaviour
     {
         deathElapsedTime += Time.deltaTime;
 
+        // check if respawn the player
         if (deathElapsedTime > deathDuration)
         {
             // set the player pos when is alive again
@@ -190,6 +193,8 @@ public class Player : MonoBehaviour
             RigidComponent.isKinematic = false;
             _animatorComponent.SetTrigger(DEATH_TRIGGER_ANIM);
 
+            // reset the player as normal
+            onRespawn?.Invoke();
             SetModNormal();
         }
     }
