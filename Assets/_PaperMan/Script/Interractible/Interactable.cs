@@ -12,6 +12,7 @@ namespace Com.IsartDigital.PaperMan
         [SerializeField] private string interactionInput = "Interact";
 
         [SerializeField] private bool activateOutline = true;
+        [SerializeField] private bool activateInteractUI = true;
         [SerializeField] private UnityEvent onInteract;
         [SerializeField] private UnityEvent onEntered;
         [SerializeField] private UnityEvent onExited;
@@ -59,6 +60,10 @@ namespace Com.IsartDigital.PaperMan
             ChangeOutlineSizeAllChildrens(transform, outlineStrength);
 
             PlayerInside = true;
+
+            // show or not the interact ui
+            if (activateInteractUI)
+                Player.Instance.interactUI.Activate();
         }
 
         protected virtual void PlayerExited()
@@ -71,6 +76,9 @@ namespace Com.IsartDigital.PaperMan
             ChangeOutlineSizeAllChildrens(transform, 1f);
 
             PlayerInside = false;
+
+            // disable or not the interact ui
+            Player.Instance.interactUI.Disable();
         }
 
         private void DoActionPlayerIn()

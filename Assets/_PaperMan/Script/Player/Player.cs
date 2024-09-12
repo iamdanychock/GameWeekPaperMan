@@ -28,6 +28,8 @@ public class Player : MonoBehaviour
     [SerializeField] private float smashGroundDuration = .2f;
     [SerializeField] private float smashGroundForce = .2f;
 
+    [SerializeField] public UiInteract interactUI;
+
     const string INTERRACTION_INPUT = "Interact";
     const string HORIZONTAL_AXIS = "Horizontal";
     const string VERTICAL_AXIS = "Vertical";

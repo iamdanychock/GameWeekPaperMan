@@ -71,7 +71,7 @@ namespace Com.IsartDigital.PaperMan
 
         public void OnFirstFall()
         {
-            ChangePOI(3,new Vector3(49,3,0));
+            ChangePOI(2.4f,new Vector3(49,3,0));
         }
 
         bool alreadyDid = false;
@@ -82,7 +82,7 @@ namespace Com.IsartDigital.PaperMan
 
             alreadyDid = true;
 
-            ChangePOI(3, new Vector3(98.64f, 33.56f, 0));
+            ChangePOI(2.4f, new Vector3(98.64f, 33.56f, 0));
         }
 
         public void ChangePOI(float seconds, Vector3 position)
