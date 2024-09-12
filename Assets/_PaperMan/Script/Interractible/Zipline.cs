@@ -40,6 +40,8 @@ public class Zipline : Interactable
             _posOnCurve -= Time.deltaTime;
         else
             _posOnCurve += Time.deltaTime;
+
+        ChangeOutlineSizeAllChildrens(transform, 1);
     }
 
     protected override void Start()
@@ -85,9 +87,28 @@ public class Zipline : Interactable
             _posOnCurve = Mathf.RoundToInt(_posOnCurve);
 
             _isUp = !_isUp;
+
+            if(PlayerInside)
+                ChangeOutlineSizeAllChildrens(transform, outlineStrength);
         }
 
         transform.position = Vector3.Lerp(_startPosition,_startPosition + Vector3.up * UP_DISTANCE, _curve.Evaluate(_posOnCurve));
 
+    }
+
+    protected override void PlayerEntered()
+    {
+        if (!(_posOnCurve == 0 || _posOnCurve == 1))
+            return;
+
+        base.PlayerEntered();
+    }
+
+    protected override void PlayerExited()
+    {
+        if (!(_posOnCurve == 0 || _posOnCurve == 1))
+            return;
+
+        base.PlayerExited();
     }
 }
