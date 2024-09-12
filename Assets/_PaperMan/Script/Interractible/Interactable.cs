@@ -1,22 +1,31 @@
 using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Com.IsartDigital.PaperMan
 {
     public abstract class Interactable : MonoBehaviour
     {
-        [SerializeField] private float outlineStrength = 1.1f;
+        [SerializeField] public float outlineStrength = 1.1f;
 
         [SerializeField] private string playerTag = "Player";
         [SerializeField] private string interactionInput = "Interact";
 
         [SerializeField] private bool activateOutline = true;
+        [SerializeField] private bool activateInteractUI = true;
+        [SerializeField] private UnityEvent onInteract;
+        [SerializeField] private UnityEvent onEntered;
+        [SerializeField] private UnityEvent onExited;
 
         const string OUTLINE_SHADER = "Outline";
         const string OUTLINE_SCALE = "_Scale";
 
         private Action doAction;
         protected bool canInteract = true;
+
+        public bool PlayerInside = false;
+
+        public bool InterractionActive = true;
 
         protected virtual void Start()
         {
@@ -42,26 +51,52 @@ namespace Com.IsartDigital.PaperMan
 
         protected virtual void PlayerEntered()
         {
+            if (!InterractionActive)
+                return;
+
             doAction = DoActionPlayerIn;
 
+            onEntered?.Invoke();
             ChangeOutlineSizeAllChildrens(transform, outlineStrength);
+
+            PlayerInside = true;
+
+            // show or not the interact ui
+            if (activateInteractUI)
+                Player.Instance.interactUI.Activate();
         }
 
         protected virtual void PlayerExited()
         {
             doAction = null;
 
+            onExited?.Invoke();
+            Player.Instance.isTouching = false;
+
             ChangeOutlineSizeAllChildrens(transform, 1f);
+
+            PlayerInside = false;
+
+            // disable or not the interact ui
+            Player.Instance.interactUI.Disable();
         }
 
         private void DoActionPlayerIn()
         {
+            if (!InterractionActive)
+            {
+                PlayerExited();
+                return;
+            }
+
             // the player interact with this object
             if (Input.GetButtonDown(interactionInput) && canInteract)
                 Interact();
+
+            Player.Instance.isTouching = true;
         }
 
-        private void ChangeOutlineSizeAllChildrens(Transform _transform, float newOutlineSize)
+        public void ChangeOutlineSizeAllChildrens(Transform _transform, float newOutlineSize)
         {
             MeshRenderer meshRenderer = _transform.GetComponent<MeshRenderer>();
 
@@ -78,6 +113,9 @@ namespace Com.IsartDigital.PaperMan
                 ChangeOutlineSizeAllChildrens(child, newOutlineSize);
         }
 
-        protected abstract void Interact();
+        protected virtual void Interact()
+        {
+            onInteract?.Invoke();
+        }
     }
 }

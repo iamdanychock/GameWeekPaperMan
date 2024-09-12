@@ -5,7 +5,7 @@
 			<value>tape_play</value>
 		</property>
 		<property name="outputFormat">
-			<value>0</value>
+			<value>2</value>
 		</property>
 		<relationship name="folder">
 			<destination>{72139294-cfaf-49c2-abeb-90c8b6e5832e}</destination>
@@ -97,6 +97,7 @@
 	<object class="MixerBusEffectChain" id="{de436985-416b-447b-add2-6f63743a9368}">
 		<relationship name="effects">
 			<destination>{ea7a3b90-2afd-4bb2-b6df-9556a8b577c4}</destination>
+			<destination>{c1bcddb0-13ec-45d9-bc95-73ce46ea7e06}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{20177ab0-6fbb-443b-ab1b-2f561f3a7ccf}" />
@@ -112,4 +113,5 @@
 	</object>
 	<object class="MixerBusFader" id="{8277bc63-6e97-4536-b7fd-7c90f68ed705}" />
 	<object class="MixerBusFader" id="{ea7a3b90-2afd-4bb2-b6df-9556a8b577c4}" />
+	<object class="SpatialiserEffect" id="{c1bcddb0-13ec-45d9-bc95-73ce46ea7e06}" />
 </objects>
