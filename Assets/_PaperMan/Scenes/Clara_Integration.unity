@@ -6397,6 +6397,7 @@ MonoBehaviour:
   playerTag: Player
   interactionInput: Interact
   activateOutline: 1
+  activateInteractUI: 1
   onInteract:
     m_PersistentCalls:
       m_Calls: []
@@ -6407,11 +6408,33 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   PlayerInside: 0
+  InterractionActive: 1
   itemValues:
     itemName: situation4Indice2.1
     itemDescription: 
     itemScale: 30
     itemObject: {fileID: 919132149155446097, guid: 526684da4f039804daaf952ae7b2f859, type: 3}
+    itemSoundTake:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    itemSoundDrop:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    itemCassette:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
 --- !u!1 &276376723
 GameObject:
   m_ObjectHideFlags: 0
@@ -7498,6 +7521,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerStartPos: {fileID: 58673732}
   spawnYOffset: 1
+  uiInteractPrefab: {fileID: 0}
 --- !u!4 &333335649
 Transform:
   m_ObjectHideFlags: 0
@@ -11662,6 +11686,7 @@ MonoBehaviour:
   playerTag: Player
   interactionInput: Interact
   activateOutline: 1
+  activateInteractUI: 1
   onInteract:
     m_PersistentCalls:
       m_Calls: []
@@ -11672,11 +11697,33 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   PlayerInside: 0
+  InterractionActive: 1
   itemValues:
     itemName: situation4Indice1.1
     itemDescription: 
     itemScale: 30
     itemObject: {fileID: 919132149155446097, guid: 526684da4f039804daaf952ae7b2f859, type: 3}
+    itemSoundTake:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    itemSoundDrop:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    itemCassette:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
 --- !u!1 &549997156
 GameObject:
   m_ObjectHideFlags: 0
@@ -14495,6 +14542,7 @@ MonoBehaviour:
   playerTag: Player
   interactionInput: Interact
   activateOutline: 1
+  activateInteractUI: 1
   onInteract:
     m_PersistentCalls:
       m_Calls: []
@@ -14505,11 +14553,33 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   PlayerInside: 0
+  InterractionActive: 1
   itemValues:
     itemName: situation4Indice1.2
     itemDescription: 
     itemScale: 30
     itemObject: {fileID: 919132149155446097, guid: 526684da4f039804daaf952ae7b2f859, type: 3}
+    itemSoundTake:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    itemSoundDrop:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    itemCassette:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
 --- !u!1001 &675468340
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20044,6 +20114,7 @@ MonoBehaviour:
   playerTag: Player
   interactionInput: Interact
   activateOutline: 1
+  activateInteractUI: 1
   onInteract:
     m_PersistentCalls:
       m_Calls: []
@@ -20054,11 +20125,33 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   PlayerInside: 0
+  InterractionActive: 1
   itemValues:
     itemName: situation4Indice4.1
     itemDescription: 
     itemScale: 30
     itemObject: {fileID: 919132149155446097, guid: 526684da4f039804daaf952ae7b2f859, type: 3}
+    itemSoundTake:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    itemSoundDrop:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    itemCassette:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
 --- !u!1 &927635670
 GameObject:
   m_ObjectHideFlags: 0
@@ -21085,6 +21178,7 @@ MonoBehaviour:
   playerTag: Player
   interactionInput: Interact
   activateOutline: 1
+  activateInteractUI: 1
   onInteract:
     m_PersistentCalls:
       m_Calls: []
@@ -21095,11 +21189,33 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   PlayerInside: 0
+  InterractionActive: 1
   itemValues:
     itemName: situationIndice3.2
     itemDescription: 
     itemScale: 30
     itemObject: {fileID: 919132149155446097, guid: 526684da4f039804daaf952ae7b2f859, type: 3}
+    itemSoundTake:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    itemSoundDrop:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    itemCassette:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
 --- !u!1001 &955320748
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25028,6 +25144,7 @@ MonoBehaviour:
   playerTag: Player
   interactionInput: Interact
   activateOutline: 1
+  activateInteractUI: 1
   onInteract:
     m_PersistentCalls:
       m_Calls: []
@@ -25038,11 +25155,33 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   PlayerInside: 0
+  InterractionActive: 1
   itemValues:
     itemName: situation2Indice1
     itemDescription: 
     itemScale: 30
     itemObject: {fileID: 919132149155446097, guid: 526684da4f039804daaf952ae7b2f859, type: 3}
+    itemSoundTake:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    itemSoundDrop:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    itemCassette:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
 --- !u!1 &1159315858
 GameObject:
   m_ObjectHideFlags: 0
@@ -30586,11 +30725,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3866937353129909060, guid: 24b5568f22911054cb1b21517eb260a0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 210.3
+      value: -20.2
       objectReference: {fileID: 0}
     - target: {fileID: 3866937353129909060, guid: 24b5568f22911054cb1b21517eb260a0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 37.26
+      value: 6.6
       objectReference: {fileID: 0}
     - target: {fileID: 3866937353129909060, guid: 24b5568f22911054cb1b21517eb260a0, type: 3}
       propertyPath: m_LocalPosition.z
@@ -32310,6 +32449,7 @@ MonoBehaviour:
   playerTag: Player
   interactionInput: Interact
   activateOutline: 1
+  activateInteractUI: 1
   onInteract:
     m_PersistentCalls:
       m_Calls: []
@@ -32320,11 +32460,33 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   PlayerInside: 0
+  InterractionActive: 1
   itemValues:
     itemName: situation4Indice2.2
     itemDescription: 
     itemScale: 30
     itemObject: {fileID: 919132149155446097, guid: 526684da4f039804daaf952ae7b2f859, type: 3}
+    itemSoundTake:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    itemSoundDrop:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    itemCassette:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
 --- !u!4 &1470498847 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 545587734689352626, guid: d1583148357cb9a4aa499c45f4d6a181, type: 3}
@@ -37050,6 +37212,7 @@ MonoBehaviour:
   playerTag: Player
   interactionInput: Interact
   activateOutline: 1
+  activateInteractUI: 1
   onInteract:
     m_PersistentCalls:
       m_Calls: []
@@ -37072,11 +37235,33 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   PlayerInside: 0
+  InterractionActive: 1
   itemValues:
     itemName: situation3Indice2
     itemDescription: 
     itemScale: 30
     itemObject: {fileID: 919132149155446097, guid: 526684da4f039804daaf952ae7b2f859, type: 3}
+    itemSoundTake:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    itemSoundDrop:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    itemCassette:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
 --- !u!1001 &1699620995
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38050,6 +38235,7 @@ MonoBehaviour:
   playerTag: Player
   interactionInput: Interact
   activateOutline: 1
+  activateInteractUI: 1
   onInteract:
     m_PersistentCalls:
       m_Calls: []
@@ -38060,11 +38246,33 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   PlayerInside: 0
+  InterractionActive: 1
   itemValues:
     itemName: situation3Indice1
     itemDescription: 
     itemScale: 30
     itemObject: {fileID: 919132149155446097, guid: 526684da4f039804daaf952ae7b2f859, type: 3}
+    itemSoundTake:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    itemSoundDrop:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    itemCassette:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
 --- !u!1001 &1727613424
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45756,6 +45964,7 @@ MonoBehaviour:
   playerTag: Player
   interactionInput: Interact
   activateOutline: 1
+  activateInteractUI: 1
   onInteract:
     m_PersistentCalls:
       m_Calls: []
@@ -45766,11 +45975,33 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   PlayerInside: 0
+  InterractionActive: 1
   itemValues:
     itemName: situation4Indice4.2
     itemDescription: 
     itemScale: 30
     itemObject: {fileID: 919132149155446097, guid: 526684da4f039804daaf952ae7b2f859, type: 3}
+    itemSoundTake:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    itemSoundDrop:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    itemCassette:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
 --- !u!1001 &2081605573
 PrefabInstance:
   m_ObjectHideFlags: 0
