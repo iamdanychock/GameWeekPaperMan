@@ -10451,6 +10451,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lightStringTransform: {fileID: 943369281}
+  ClosestLight: {fileID: 677390582}
 --- !u!1001 &945057836
 PrefabInstance:
   m_ObjectHideFlags: 0
