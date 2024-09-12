@@ -69,6 +69,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  _ZiplineSound:
+    Guid:
+      Data1: 529553970
+      Data2: 1274634384
+      Data3: 1514531742
+      Data4: 1510119295
+    Path: event:/SFX/Interactions/zipline
 --- !u!65 &7497991123683566470
 BoxCollider:
   m_ObjectHideFlags: 0
