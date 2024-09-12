@@ -53,8 +53,15 @@ MonoBehaviour:
     Path: event:/Music/jingle_enigma
   _UIMusicReference:
     Guid:
-      Data1: -1353869257
-      Data2: 1100878764
-      Data3: -1292347501
-      Data4: -676498732
-    Path: event:/Music/menu_music_loop
+      Data1: 1773110246
+      Data2: 1254613760
+      Data3: 356181175
+      Data4: 2070962771
+    Path: event:/Music/menu_music
+  _AmbReference:
+    Guid:
+      Data1: -1425916189
+      Data2: 1116213944
+      Data3: 881515904
+      Data4: -1050467514
+    Path: event:/Amb/amb_loop

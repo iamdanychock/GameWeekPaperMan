@@ -8,12 +8,15 @@ public class Player : MonoBehaviour
 {
     public static Player Instance;
 
+     PlayerSFX _SFX => GetComponent<PlayerSFX>();
+
     [SerializeField] float ACCELERATION = 3f;
     [SerializeField] float MAX_SPEED = 3f;
 
     [SerializeField] float ZIPLINE_EASE = 16;
     [SerializeField] float ZIPLINE_Y_OFFSET = -2;
-    [SerializeField] float ZIPLINE_Z_OFFSET = .5f;
+    [SerializeField] float ZIPLINE_Z_OFFSET = -1f;
+    [SerializeField] float ZIPLINE_X_OFFSET = .5f;
 
     [SerializeField] float SPRITE_TURN_SPEED = 16;
     [SerializeField] AnimationCurve SPRITE_TURN_CURVE;
@@ -171,9 +174,16 @@ public class Player : MonoBehaviour
             if (isTouching && ((lastVel != Vector3.zero && _velocity == Vector3.zero) || isFalling))
                 _animatorComponent.SetTrigger(TOUCH_ANIM);
             else if ((lastVel == Vector3.zero && _velocity != Vector3.zero) || (_velocity != Vector3.zero && isFalling))
+            {
                 _animatorComponent.SetTrigger(WALKING_ANIM);
+                _SFX.PlayPresence();
+            }
             else if (!isTouching && ((lastVel != Vector3.zero && _velocity == Vector3.zero) || isFalling))
+            {
+                _SFX.StopPresence();
                 _animatorComponent.SetTrigger(IDLE_ANIM);
+
+            }
 
             isFalling = false;
         }
@@ -227,7 +237,7 @@ public class Player : MonoBehaviour
             return;
         }
 
-        transform.position = Vector3.Lerp(transform.position, _zipline.transform.position + Vector3.up * ZIPLINE_Y_OFFSET + (Vector3.forward * ZIPLINE_Z_OFFSET), ZIPLINE_EASE * Time.deltaTime);
+        transform.position = Vector3.Lerp(transform.position, _zipline.transform.position + Vector3.up * ZIPLINE_Y_OFFSET + (Vector3.forward * ZIPLINE_Z_OFFSET) + (Vector3.right * ZIPLINE_X_OFFSET * (_spriteComponent.flipX ? -1 : 1)), ZIPLINE_EASE * Time.deltaTime);
     }
 
     /// <summary>
@@ -236,9 +246,10 @@ public class Player : MonoBehaviour
     public void Kill()
     {
         // init death values and deactivate the rigidbody
+        UIManager.instance.OnPlayerDying();
+
         RigidComponent.isKinematic = true;
         deathElapsedTime = 0;
-
         _state = DoActionDeath;
     }
 
@@ -251,6 +262,8 @@ public class Player : MonoBehaviour
         if (deathElapsedTime > deathDuration)
         {
             // set the player pos when is alive again
+            UIManager.instance.OnPlayerSpawning();
+
             transform.position = GameManager.Instance.GetPlayerPos();
             _animatorComponent.SetTrigger(DEATH_TRIGGER_ANIM);
 

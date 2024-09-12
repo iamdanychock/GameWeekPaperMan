@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Com.IsartDigital.PaperMan;
+using FMODUnity;
+using FMOD.Studio;
 
 public class Zipline : Interactable
 {
@@ -13,7 +15,11 @@ public class Zipline : Interactable
 
     [SerializeField] AnimationCurve _curve;
 
+    [SerializeField] private EventReference _ZiplineSound;
+
     Zipline ziplineFriend;
+
+    private EventInstance _ZiplineSoundInstance;
 
     int _direction => _isUp ? -1 : 1;
     float _posOnCurve;
@@ -42,6 +48,8 @@ public class Zipline : Interactable
             _posOnCurve += Time.deltaTime;
 
         ChangeOutlineSizeAllChildrens(transform, 1);
+
+        PlayZipline();
     }
 
     protected override void Start()
@@ -72,6 +80,9 @@ public class Zipline : Interactable
         component.ziplineFriend = this;
     }
 
+
+
+
     protected override void Update()
     {
         base.Update();
@@ -92,6 +103,9 @@ public class Zipline : Interactable
                 ChangeOutlineSizeAllChildrens(transform, outlineStrength);
         }
 
+        foreach (PoleyGraphics item in PoleyGraphics.Poleys)
+            item.DesacOutline();
+
         transform.position = Vector3.Lerp(_startPosition,_startPosition + Vector3.up * UP_DISTANCE, _curve.Evaluate(_posOnCurve));
 
     }
@@ -110,5 +124,12 @@ public class Zipline : Interactable
             return;
 
         base.PlayerExited();
+    }
+
+
+    private void PlayZipline()
+    {
+        _ZiplineSoundInstance = RuntimeManager.CreateInstance(_ZiplineSound);
+        _ZiplineSoundInstance.start();
     }
 }

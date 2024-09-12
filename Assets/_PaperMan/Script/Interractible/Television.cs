@@ -44,6 +44,8 @@ public class Television : Interactable
         isOn = startOnOffState;
         isInAnimation = false;
         meshRenderer.sharedMaterial.SetFloat(onOffValueName, isOn ? 1 : 0);
+        if (isOn)
+            InterractionActive = true;
     }
 
     protected override void Interact()
@@ -61,6 +63,8 @@ public class Television : Interactable
     private IEnumerator TurnOnOff(bool isGoingOff)
     {
         if (meshRenderer == null) yield break;
+
+        InterractionActive = !isGoingOff;
 
         // get the mat and disable values
         Material mat = meshRenderer.sharedMaterial;
