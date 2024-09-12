@@ -48,9 +48,10 @@ MonoBehaviour:
   Banks:
   - {fileID: 7436688076678086655}
   IsStream: 1
-  Is3D: 1
+  Is3D: 0
   IsOneShot: 1
-  Parameters: []
+  Parameters:
+  - {fileID: 4437597482421320083}
   MinDistance: 1
   MaxDistance: 20
   Length: 11000
@@ -243,6 +244,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-4567218084194839321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/tv_amb/pause_state
+  m_EditorClassIdentifier: 
+  Name: pause_state
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2181330691
+    data2: 3496660919
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &-2604284439467036025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -258,10 +283,10 @@ MonoBehaviour:
   Path: FMOD/PaperMan/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638617405387901486
+  lastModified: 638617412896442112
   FileSizes:
   - Name: Desktop
-    Value: 1954
+    Value: 2030
   Exists: 1
 --- !u!114 &-2235310830588812118
 MonoBehaviour:
@@ -289,6 +314,7 @@ MonoBehaviour:
   IsOneShot: 0
   Parameters:
   - {fileID: 1652820175905582139}
+  - {fileID: 3802240632965102112}
   MinDistance: 1
   MaxDistance: 20
   Length: 120000
@@ -385,12 +411,13 @@ MonoBehaviour:
   - {fileID: -5551165474384396632}
   - {fileID: 6813381199282451755}
   - {fileID: 739593298683731786}
-  EditorParameters: []
+  EditorParameters:
+  - {fileID: 6059438701024612928}
   MasterBanks:
   - {fileID: 4669912215218507413}
   StringsBanks:
   - {fileID: -2604284439467036025}
-  cacheTime: 638617405411351081
+  cacheTime: 638617412899334668
   cacheVersion: 131619
 --- !u!114 &739593298683731786
 MonoBehaviour:
@@ -493,7 +520,8 @@ MonoBehaviour:
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
-  Parameters: []
+  Parameters:
+  - {fileID: -4567218084194839321}
   MinDistance: 1
   MaxDistance: 20
   Length: 182004
@@ -524,6 +552,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &3802240632965102112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/amb_loop/pause_state
+  m_EditorClassIdentifier: 
+  Name: pause_state
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2181330691
+    data2: 3496660919
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &4144269686268657485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -566,10 +618,34 @@ MonoBehaviour:
   Path: FMOD/PaperMan/Build/Desktop/Amb.bank
   Name: Amb
   StudioPath: bank:/Amb
-  lastModified: 638617405387111126
+  lastModified: 638617412895631312
   FileSizes:
   - Name: Desktop
-    Value: 12888832
+    Value: 12890592
+  Exists: 1
+--- !u!114 &4437597482421320083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/jingle_enigma/pause_state
+  m_EditorClassIdentifier: 
+  Name: pause_state
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2181330691
+    data2: 3496660919
+  Type: 0
+  IsGlobal: 1
+  Labels: []
   Exists: 1
 --- !u!114 &4546098753027892278
 MonoBehaviour:
@@ -613,10 +689,34 @@ MonoBehaviour:
   Path: FMOD/PaperMan/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638617405387854864
+  lastModified: 638617412896401996
   FileSizes:
   - Name: Desktop
-    Value: 6534016
+    Value: 6535584
+  Exists: 1
+--- !u!114 &6059438701024612928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/pause_state
+  m_EditorClassIdentifier: 
+  Name: pause_state
+  StudioPath: parameter:/pause_state
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2181330691
+    data2: 3496660919
+  Type: 0
+  IsGlobal: 1
+  Labels: []
   Exists: 1
 --- !u!114 &6813381199282451755
 MonoBehaviour:
@@ -660,10 +760,10 @@ MonoBehaviour:
   Path: FMOD/PaperMan/Build/Desktop/musique.bank
   Name: musique
   StudioPath: bank:/musique
-  lastModified: 638617405402365511
+  lastModified: 638617412897172972
   FileSizes:
   - Name: Desktop
-    Value: 1300096
+    Value: 1301440
   Exists: 1
 --- !u!114 &8518665908487791881
 MonoBehaviour:
@@ -707,7 +807,7 @@ MonoBehaviour:
   Path: FMOD/PaperMan/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638617405411351081
+  lastModified: 638617412899334668
   FileSizes:
   - Name: Desktop
     Value: 1227584

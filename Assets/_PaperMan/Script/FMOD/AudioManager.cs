@@ -47,7 +47,7 @@ namespace Com.IsartDigital.PaperMan.Sound
 
 
             //Temporary till the game starts
-            //SetAmbiance(_AmbReference);
+            SetAmbiance(_AmbReference);
 
 
         }
@@ -101,10 +101,12 @@ namespace Com.IsartDigital.PaperMan.Sound
         public void UpdateAmbiance(string pParameterName, int pValue)
         {
             _AmbiantSound.setParameterByName(pParameterName, pValue);
-
         }
 
-
+        public void UpdateAmbianceGlobal(string pParameterName, int pValue)
+        {
+            FMODUnity.RuntimeManager.StudioSystem.setParameterByName(pParameterName, pValue);
+        }
         public void PlayUIMusic()
         {
             SetMusic(_EnigmaReference);

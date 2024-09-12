@@ -17,6 +17,8 @@ public class UIManager : MonoBehaviour
     [SerializeField] private PauseManager _pauseManager;
     [SerializeField] private Animator _DeathAnimator;
 
+    
+
 
     private void Awake()
     {
