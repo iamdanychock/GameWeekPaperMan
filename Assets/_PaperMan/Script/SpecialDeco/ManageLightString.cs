@@ -1,9 +1,11 @@
+using FMODUnity;
 using System.Collections;
 using UnityEngine;
 
 public class ManageLightString : MonoBehaviour
 {
     [SerializeField] private Transform lightStringTransform;
+    [SerializeField] private Transform ClosestLight;
 
     const float WAIT_TIME = 2;
 
@@ -25,12 +27,25 @@ public class ManageLightString : MonoBehaviour
         ChangeStateLightAndChildren(lightStringTransform, turnOn);
     }
 
+    private void PlayLightBulbAmb()
+    {
+
+        GameObject posSound;
+
+        if (ClosestLight != null)
+            posSound = ClosestLight.gameObject;
+        else
+            posSound = gameObject;
+
+        RuntimeManager.PlayOneShotAttached("event:/Amb/enviro_lightbulb", posSound);
+    }
+
     private void ChangeStateLightAndChildren(Transform parent, bool turnOn)
     {
         // change the light state
         if (parent.TryGetComponent(out Light light))
             light.enabled = turnOn;
-
+        PlayLightBulbAmb();
         // repeat the method on the children
         foreach (Transform child in parent)
             ChangeStateLightAndChildren(child, turnOn);

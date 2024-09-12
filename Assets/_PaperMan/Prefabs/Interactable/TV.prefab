@@ -31,10 +31,9 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 31, y: 2.9978461, z: 2.7598276}
-  m_LocalScale: {x: 8.003241, y: 5.6560564, z: 6.365419}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 3182497944514821328}
   - {fileID: 8508639477784397423}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -45,7 +44,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1147519049541958959}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 3906832884256009306, guid: 4d9ff4f4eaee4e449a406a511f2a4595, type: 3}
 --- !u!23 &8524759249189697025
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -66,7 +65,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c5a17cdb3aba5cd43ae4d02d73230e0d, type: 2}
+  - {fileID: 2100000, guid: 47cabcaf484e6c54788778fafc1bf2aa, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -107,7 +106,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 6.4048243, y: 5.805398, z: 6.340023}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &6211578276725296177
 MonoBehaviour:
@@ -125,12 +124,13 @@ MonoBehaviour:
   playerTag: Player
   interactionInput: Interact
   activateOutline: 1
+  activateInteractUI: 1
   onInteract:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: SetTrigger
+        m_MethodName: 
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -147,6 +147,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   PlayerInside: 0
+  InterractionActive: 1
   meshRenderer: {fileID: 4586343055585167376}
   onOffValueName: _IsOn
   isOn: 1
@@ -178,6 +179,13 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   videoPlayer: {fileID: 7477485556901776585}
+  _ClickTVSoundReference:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   onTurnedOff:
     m_PersistentCalls:
       m_Calls: []
@@ -200,8 +208,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.4087099, y: 0.58894694, z: 0.2149579}
-  m_Center: {x: -0.3952688, y: -0.20552704, z: -0.6143772}
+  m_Size: {x: 3.405342, y: 0.99045134, z: 2.691264}
+  m_Center: {x: 1.4732132, y: -2.4001167, z: 3.418448}
 --- !u!1 &7281474700059839612
 GameObject:
   m_ObjectHideFlags: 0
@@ -229,13 +237,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7281474700059839612}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.000002041459, y: 0.7070359, z: -0.70717776, w: 0.0000020712614}
-  m_LocalPosition: {x: 0.08871395, y: 0.018060954, z: -0.5074022}
-  m_LocalScale: {x: 0.06229477, y: 0.15709884, z: 0.07107041}
+  m_LocalRotation: {x: 0.008726558, y: 0, z: 0, w: 0.999962}
+  m_LocalPosition: {x: -0.13776779, y: 0.18304968, z: 2.6928113}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7225124158209145111}
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: -180}
+  m_LocalEulerAnglesHint: {x: 1, y: 0, z: 0}
 --- !u!33 &4129534874991532335
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -243,7 +251,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7281474700059839612}
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: -6198525040401489066, guid: 4d9ff4f4eaee4e449a406a511f2a4595, type: 3}
 --- !u!23 &4586343055585167376
 MeshRenderer:
   m_ObjectHideFlags: 0
