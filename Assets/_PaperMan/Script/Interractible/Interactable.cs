@@ -63,7 +63,7 @@ namespace Com.IsartDigital.PaperMan
 
             // show or not the interact ui
             if (activateInteractUI)
-                Player.Instance.interactUI.Activate();
+                Player.Instance.interactUI.Activate(transform);
         }
 
         protected virtual void PlayerExited()

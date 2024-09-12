@@ -16,13 +16,13 @@ namespace Com.IsartDigital.PaperMan
         /// </summary>
         protected override void Interact()
         {
-            PlayItemSoundTake();
             if (Object3DContainer.Instance)
             {
                 if (Object3DContainer.Instance.isActivated)
                      Object3DContainer.Instance.Hide3DObject();
                 else Object3DContainer.Instance.Show3DObject(itemValues);
             }
+            PlayItemSoundTake();
         }
 
         public void PlayItemSoundTake()

@@ -6,11 +6,14 @@ public class UiInteract : MonoBehaviour
     [SerializeField] private string setControllerTriggerName = "SetController";
     [SerializeField] private string setKeyboardTriggerName = "SetKeyboard";
     [SerializeField] private string noneTriggerName = "none";
+    [SerializeField] private float yOffset = 5f;
     private Canvas canvas;
     private Animator animator;
 
     private bool isInKeyboard = true;
     private bool isActivated = false;
+
+    private Transform targetTransform;
 
     private void Start()
     {
@@ -27,6 +30,12 @@ public class UiInteract : MonoBehaviour
         ControllerListener.Instance.onKeyboardActivation += OnKeyboardActivated;
     }
 
+    private void Update()
+    {
+        if (targetTransform)
+            transform.position = targetTransform.position + Vector3.up * yOffset;
+    }
+
     private void OnKeyboardActivated()
     {
         isInKeyboard = true;
@@ -39,8 +48,10 @@ public class UiInteract : MonoBehaviour
         if (isActivated) SetController();
     }
 
-    public void Activate()
+    public void Activate(Transform _transform)
     {
+        //targetTransform = _transform;
+
         if (isInKeyboard) SetKeyboard();
         else SetController();
     }
@@ -59,6 +70,7 @@ public class UiInteract : MonoBehaviour
 
     public void Disable()
     {
+        targetTransform = null;
         isActivated = false;
         animator.SetTrigger(noneTriggerName);
     }

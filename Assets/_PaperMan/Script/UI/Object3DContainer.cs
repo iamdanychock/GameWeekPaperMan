@@ -7,6 +7,7 @@ using System;
 using TMPro;
 using FMODUnity;
 using FMOD.Studio;
+using Unity.Services.Analytics.Internal;
 
 namespace Com.IsartDigital.PaperMan
 {
@@ -24,6 +25,7 @@ namespace Com.IsartDigital.PaperMan
 
         [Space]
         [SerializeField] private float rotationSpeed = .01f;
+        [SerializeField] private float rotationSpeedController = .03f;
         private Quaternion _rotationWhenBeginDrag;
         private Vector2 _mouseLastPos;
 
@@ -54,6 +56,20 @@ namespace Com.IsartDigital.PaperMan
             _mouseLastPos = eventData.position;
         }
 
+        private void Update()
+        {
+            if (canRotate)
+            {
+                // rotate the object
+                Vector2 mousePositionFromLastFrame = new Vector2(Input.GetAxis("RS_h"), -Input.GetAxis("RS_v"));
+                containerTransform.rotation = Quaternion.AngleAxis(-rotationSpeedController * mousePositionFromLastFrame.x, cameraTransform.up) * _rotationWhenBeginDrag;
+                Vector3 cameraRight = Quaternion.AngleAxis(-rotationSpeedController * mousePositionFromLastFrame.x, cameraTransform.up) * cameraTransform.right;
+                containerTransform.rotation = Quaternion.AngleAxis(rotationSpeedController * mousePositionFromLastFrame.y, cameraRight) * containerTransform.rotation;
+
+                _rotationWhenBeginDrag = containerTransform.rotation;
+            }
+        }
+
         /// <summary>
         /// rotate the 3d object by using the mouse drag
         /// </summary>
@@ -62,10 +78,10 @@ namespace Com.IsartDigital.PaperMan
             if (!canRotate) return;
 
             // rotate the object
-            Vector2 mousePositionFromStart = eventData.position - _mouseLastPos;
-            containerTransform.rotation = Quaternion.AngleAxis(-rotationSpeed * mousePositionFromStart.x, cameraTransform.up) * _rotationWhenBeginDrag;
-            Vector3 cameraRight = Quaternion.AngleAxis(-rotationSpeed * mousePositionFromStart.x, cameraTransform.up) * cameraTransform.right;
-            containerTransform.rotation = Quaternion.AngleAxis(rotationSpeed * mousePositionFromStart.y, cameraRight) * containerTransform.rotation;
+            Vector2 mousePositionFromLastFrame = eventData.position - _mouseLastPos;
+            containerTransform.rotation = Quaternion.AngleAxis(-rotationSpeed * mousePositionFromLastFrame.x, cameraTransform.up) * _rotationWhenBeginDrag;
+            Vector3 cameraRight = Quaternion.AngleAxis(-rotationSpeed * mousePositionFromLastFrame.x, cameraTransform.up) * cameraTransform.right;
+            containerTransform.rotation = Quaternion.AngleAxis(rotationSpeed * mousePositionFromLastFrame.y, cameraRight) * containerTransform.rotation;
 
             // save the values for the next frame
             _mouseLastPos = eventData.position;
