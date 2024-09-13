@@ -156,6 +156,10 @@ namespace Com.IsartDigital.PaperMan
             {
                 isActivated = false;
                 canvas.gameObject.SetActive(false);
+
+                // call event
+                if (object3dToRotate)
+                    onHide?.Invoke(object3dToRotate);
             }
             // if the viewer is opening activate values
             else
@@ -164,6 +168,7 @@ namespace Com.IsartDigital.PaperMan
             }
         }
 
+        public Action<GameObject> onHide;
         /// <summary>
         /// hide the 3d object and the canvas as well as doing an anim for the object
         /// </summary>
@@ -171,7 +176,14 @@ namespace Com.IsartDigital.PaperMan
         {
             // check if skip the anim or not
             if (doAnim) StartAnim(-1);
-            else canvas.gameObject.SetActive(false);
+            else
+            {
+                // call event
+                if (object3dToRotate)
+                    onHide?.Invoke(object3dToRotate);
+
+                canvas.gameObject.SetActive(false);
+            }
 
             canRotate = false;
             PlayItemSoundDrop();
