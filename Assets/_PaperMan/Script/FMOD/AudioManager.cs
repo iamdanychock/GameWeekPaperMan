@@ -50,6 +50,7 @@ namespace Com.IsartDigital.PaperMan.Sound
             SetAmbiance(_AmbReference);
 
 
+
         }
 
 
@@ -134,6 +135,17 @@ namespace Com.IsartDigital.PaperMan.Sound
             _Music.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         }
 
+        public void StopAmbiance()
+        {
+            _AmbiantSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        }
+
+        public void OnGameEnd()
+        {
+            StopAmbiance();
+            _Music = RuntimeManager.CreateInstance("event:/Music/end_cinematic");
+            _Music.start();
+        }
 
         void Update()
         {
