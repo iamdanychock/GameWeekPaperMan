@@ -35,6 +35,8 @@ public class SettingsManager : MonoBehaviour
             _ScreenSizeButton.GetComponentInChildren<TextMeshProUGUI>().text = "Full Screen";
         else
             _ScreenSizeButton.GetComponentInChildren<TextMeshProUGUI>().text = "Windowed";
+
+        Visibility();
     }
 
 
