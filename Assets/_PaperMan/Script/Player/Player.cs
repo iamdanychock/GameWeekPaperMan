@@ -136,7 +136,7 @@ public class Player : MonoBehaviour
             GroundSound = GROUND_SOUNDS.NOTHING;
     }
 
-    void SetModVoid()
+    public void SetModVoid()
     {
         _state = DoActionVoid;
 
