@@ -1,4 +1,5 @@
 using Com.IsartDigital.PaperMan;
+using Com.IsartDigital.PaperMan.Sound;
 
 public class EndAnimTrigger : Interactable
 {
@@ -7,5 +8,6 @@ public class EndAnimTrigger : Interactable
         base.PlayerEntered();
         EndVideoManager.instance.StartVideo();
         Player.Instance.SetModVoid();
+        AudioManager.instance.OnGameEnd();
     }
 }
