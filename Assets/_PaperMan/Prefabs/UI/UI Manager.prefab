@@ -288,6 +288,14 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 162440394213998447, guid: c343de8b930969e448b161e39be39a3c, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ChangeMusicVolume
+      objectReference: {fileID: 0}
+    - target: {fileID: 888904631280141256, guid: c343de8b930969e448b161e39be39a3c, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ChangeSFXVolume
+      objectReference: {fileID: 0}
     - target: {fileID: 4756585639182895424, guid: c343de8b930969e448b161e39be39a3c, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

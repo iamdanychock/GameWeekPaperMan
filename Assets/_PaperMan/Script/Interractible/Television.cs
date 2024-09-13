@@ -5,6 +5,8 @@ using UnityEngine.Video;
 using UnityEngine.Events;
 using UnityEngine.Purchasing.MiniJSON;
 using FMODUnity;
+using FMOD.Studio;
+using FMOD;
 
 public class Television : Interactable
 {
@@ -16,7 +18,10 @@ public class Television : Interactable
     [SerializeField] private float turningOffDuration = .5f;
     [SerializeField] private AnimationCurve turnOffCurve;
     [SerializeField] private VideoPlayer videoPlayer;
-    [SerializeField] private EventReference _ClickTVSoundReference;
+    [SerializeField] private EventReference _VideoSoundToPlayReference;
+
+    private EventInstance SoundPlayingOnTVInstance;
+
     private bool isInAnimation = false;
     private bool startOnOffState;
 
@@ -29,9 +34,11 @@ public class Television : Interactable
         base.Start();
 
         meshRenderer?.sharedMaterial.SetFloat(onOffValueName, isOn ? 1 : 0);
+
+
         startPlaybackSpeed = videoPlayer.playbackSpeed;
         startOnOffState = isOn;
-
+        PlayTVSound();
         // connect to the death event of the player
         Player.Instance.onRespawn += OnPlayerRespawn;
     }
@@ -47,7 +54,11 @@ public class Television : Interactable
         isInAnimation = false;
         meshRenderer.sharedMaterial.SetFloat(onOffValueName, isOn ? 1 : 0);
         if (isOn)
+        {
             InterractionActive = true;
+            PlayTVSound();
+
+        }
     }
 
     protected override void Interact()
@@ -57,7 +68,7 @@ public class Television : Interactable
         // turn off or on
         if (!(!isOn && canBeTurnOn))
         {
-            RuntimeManager.PlayOneShot(_ClickTVSoundReference,transform.position);
+            RuntimeManager.PlayOneShot("event:/SFX/Interactions/switchoff", transform.position);
             StartCoroutine(TurnOnOff(isOn));
 
         }
@@ -101,5 +112,26 @@ public class Television : Interactable
         // set end anim values
         mat.SetFloat(onOffValueName, isGoingOff ? 0 : 1);
         isInAnimation = false;
+        TurnTVOffSound();
+        StopTVSound();
+    }
+
+    private void PlayTVSound()
+    {
+        SoundPlayingOnTVInstance = RuntimeManager.CreateInstance(_VideoSoundToPlayReference);
+        FMODUnity.RuntimeManager.AttachInstanceToGameObject(SoundPlayingOnTVInstance, transform);
+        SoundPlayingOnTVInstance.start();
+    }
+
+
+
+    private void StopTVSound()
+    {
+        SoundPlayingOnTVInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+    }
+
+    private void TurnTVOffSound()
+    {
+        RuntimeManager.PlayOneShotAttached("event:/Amb/tvoff", gameObject);
     }
 }

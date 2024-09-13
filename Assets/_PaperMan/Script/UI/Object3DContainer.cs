@@ -197,6 +197,7 @@ namespace Com.IsartDigital.PaperMan
             public EventReference itemSoundTake;
             public EventReference itemSoundDrop;
             public EventReference itemCassette;
+            public bool isCassette;
 
         }
     }

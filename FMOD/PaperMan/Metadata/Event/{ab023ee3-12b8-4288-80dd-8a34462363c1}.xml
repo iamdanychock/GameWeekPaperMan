@@ -129,6 +129,9 @@
 		</relationship>
 	</object>
 	<object class="GroupTrack" id="{51cbcd63-a7da-4d6e-a161-3e31a3dabf20}">
+		<relationship name="automationTracks">
+			<destination>{08466a16-4593-4f9a-9dc9-d6a60cb15f64}</destination>
+		</relationship>
 		<relationship name="modules">
 			<destination>{76b7dc3e-8f73-4f14-a59b-2735702b6587}</destination>
 			<destination>{00a85086-3dd1-4ba3-9f77-8b4c4215c34a}</destination>
@@ -177,6 +180,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{0384b98f-6de2-4721-9fea-46b2de6a317a}">
+		<property name="volume">
+			<value>-3</value>
+		</property>
 		<relationship name="automators">
 			<destination>{39fb9ae3-b046-42ca-9ce4-2851fe871854}</destination>
 		</relationship>
@@ -330,6 +336,9 @@
 		<property name="length">
 			<value>118</value>
 		</property>
+		<property name="volume">
+			<value>-6</value>
+		</property>
 		<property name="looping">
 			<value>true</value>
 		</property>
@@ -416,6 +425,11 @@
 			<destination>{0384b98f-6de2-4721-9fea-46b2de6a317a}</destination>
 		</relationship>
 	</object>
+	<object class="AutomationTrack" id="{08466a16-4593-4f9a-9dc9-d6a60cb15f64}">
+		<relationship name="automator">
+			<destination>{d1d3c6ba-929c-4502-a5e3-2ebeff260b04}</destination>
+		</relationship>
+	</object>
 	<object class="TransitionSourceSound" id="{76b7dc3e-8f73-4f14-a59b-2735702b6587}">
 		<property name="length">
 			<value>0</value>
@@ -485,8 +499,11 @@
 	</object>
 	<object class="EventMixerGroup" id="{dd8cb216-d112-4b6a-b5f4-e2fd47c53555}">
 		<property name="name">
-			<value>Audio 2</value>
+			<value>lampzap</value>
 		</property>
+		<relationship name="automators">
+			<destination>{d1d3c6ba-929c-4502-a5e3-2ebeff260b04}</destination>
+		</relationship>
 		<relationship name="effectChain">
 			<destination>{de34758f-0ae2-48b6-87e9-86b19e1a0625}</destination>
 		</relationship>
@@ -577,10 +594,10 @@
 			<value>-80</value>
 		</property>
 		<property name="attackTime">
-			<value>192.307709</value>
+			<value>440</value>
 		</property>
 		<property name="attackShape">
-			<value>0.164877206</value>
+			<value>-0.0482651405</value>
 		</property>
 		<property name="peakValue">
 			<value>-0.577777863</value>
@@ -984,6 +1001,14 @@
 			<destination>{83a867f0-5287-4ce1-b4b1-34724e8916a0}</destination>
 		</relationship>
 	</object>
+	<object class="Automator" id="{d1d3c6ba-929c-4502-a5e3-2ebeff260b04}">
+		<property name="nameOfPropertyBeingAutomated">
+			<value>volume</value>
+		</property>
+		<relationship name="automationCurves">
+			<destination>{35f7f7a6-29d8-4e75-9631-865a7339e12b}</destination>
+		</relationship>
+	</object>
 	<object class="MixerBusEffectChain" id="{de34758f-0ae2-48b6-87e9-86b19e1a0625}">
 		<relationship name="effects">
 			<destination>{22f3a7b9-00c6-409b-a0f8-52cf08e98c15}</destination>
@@ -1222,6 +1247,15 @@
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{c9abeb9d-0f37-4ba2-95a9-58efcb828227}" />
+	<object class="AutomationCurve" id="{35f7f7a6-29d8-4e75-9631-865a7339e12b}">
+		<relationship name="parameter">
+			<destination>{71deacaf-8903-4929-8337-57a281aeea4e}</destination>
+		</relationship>
+		<relationship name="automationPoints">
+			<destination>{e852832e-78ac-4973-a7a2-45166308c4f7}</destination>
+			<destination>{a150f94e-57e8-44a4-8908-ff9f2cba5424}</destination>
+		</relationship>
+	</object>
 	<object class="MixerBusFader" id="{22f3a7b9-00c6-409b-a0f8-52cf08e98c15}" />
 	<object class="AutomationPoint" id="{1b5af8ff-1bca-457d-91d3-577466959bad}">
 		<property name="position">
@@ -1417,6 +1451,22 @@
 		</property>
 		<property name="value">
 			<value>-80</value>
+		</property>
+	</object>
+	<object class="AutomationPoint" id="{e852832e-78ac-4973-a7a2-45166308c4f7}">
+		<property name="position">
+			<value>1.0032840722495895</value>
+		</property>
+		<property name="value">
+			<value>-80</value>
+		</property>
+	</object>
+	<object class="AutomationPoint" id="{a150f94e-57e8-44a4-8908-ff9f2cba5424}">
+		<property name="position">
+			<value>2</value>
+		</property>
+		<property name="value">
+			<value>-8</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{07f234fa-de33-4b5a-b9cd-3de6d0321522}">

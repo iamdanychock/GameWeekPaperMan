@@ -31,7 +31,7 @@ namespace Com.IsartDigital.PaperMan
 
             PLAYBACK_STATE test;
             
-            if (itemValues.itemCassette.Path.Length > 0)
+            if (itemValues.isCassette)
             {
                 _CassetteInstance.getPlaybackState(out test);
 
