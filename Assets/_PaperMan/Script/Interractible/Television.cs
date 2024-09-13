@@ -19,6 +19,7 @@ public class Television : Interactable
     [SerializeField] private AnimationCurve turnOffCurve;
     [SerializeField] private VideoPlayer videoPlayer;
     [SerializeField] private EventReference _VideoSoundToPlayReference;
+    [SerializeField] private Light tvLight;
 
     private EventInstance SoundPlayingOnTVInstance;
 
@@ -51,13 +52,13 @@ public class Television : Interactable
     {
         videoPlayer.playbackSpeed = startPlaybackSpeed;
         isOn = startOnOffState;
+        tvLight.enabled = isOn;
         isInAnimation = false;
         meshRenderer.sharedMaterial.SetFloat(onOffValueName, isOn ? 1 : 0);
         if (isOn)
         {
             InterractionActive = true;
             PlayTVSound();
-
         }
     }
 
@@ -87,7 +88,11 @@ public class Television : Interactable
         Material mat = meshRenderer.sharedMaterial;
         isInAnimation = true;
         isOn = !isGoingOff;
-        if (!isGoingOff) videoPlayer.playbackSpeed = startPlaybackSpeed;
+        if (!isGoingOff)
+        {
+            tvLight.enabled = true;
+            videoPlayer.playbackSpeed = startPlaybackSpeed;
+        }
 
         float elapsedTime = 0;
         float ratio;
@@ -108,6 +113,7 @@ public class Television : Interactable
             videoPlayer.playbackSpeed = 0f;
             // kill the player if they want to turn off the tv and if the tv is a killer
             if (killPlayer) Player.Instance.Kill();
+            tvLight.enabled = false;
         }
         // set end anim values
         mat.SetFloat(onOffValueName, isGoingOff ? 0 : 1);
