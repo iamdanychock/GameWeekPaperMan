@@ -33,12 +33,16 @@ namespace Com.IsartDigital.PaperMan
             
             if (itemValues.isCassette)
             {
+                Debug.Log("Cassette");
+
                 _CassetteInstance.getPlaybackState(out test);
 
                 if (test != PLAYBACK_STATE.PLAYING)
                 {
                     _CassetteInstance = RuntimeManager.CreateInstance(itemValues.itemCassette);
-                    _CassetteInstance.set3DAttributes(RuntimeUtils.To3DAttributes(transform.position));
+                    //_CassetteInstance.set3DAttributes(RuntimeUtils.To3DAttributes(transform.position));
+                    Debug.Log("Cassette se joue");
+
                     _CassetteInstance.start();
                 }
 

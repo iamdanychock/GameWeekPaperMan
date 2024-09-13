@@ -3405,6 +3405,7 @@ MonoBehaviour:
         Data3: 0
         Data4: 0
       Path: 
+    isCassette: 0
 --- !u!65 &112368772
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7219,19 +7220,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6211578276725296177, guid: baacf500bf83f35498de7240401ffc57, type: 3}
       propertyPath: _VideoSoundToPlayReference.Guid.Data1
-      value: 1266796923
+      value: 691410990
       objectReference: {fileID: 0}
     - target: {fileID: 6211578276725296177, guid: baacf500bf83f35498de7240401ffc57, type: 3}
       propertyPath: _VideoSoundToPlayReference.Guid.Data2
-      value: 1341214309
+      value: 1264969006
       objectReference: {fileID: 0}
     - target: {fileID: 6211578276725296177, guid: baacf500bf83f35498de7240401ffc57, type: 3}
       propertyPath: _VideoSoundToPlayReference.Guid.Data3
-      value: 1701360533
+      value: -1761320782
       objectReference: {fileID: 0}
     - target: {fileID: 6211578276725296177, guid: baacf500bf83f35498de7240401ffc57, type: 3}
       propertyPath: _VideoSoundToPlayReference.Guid.Data4
-      value: 537917810
+      value: 1411884717
       objectReference: {fileID: 0}
     - target: {fileID: 6211578276725296177, guid: baacf500bf83f35498de7240401ffc57, type: 3}
       propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.size
@@ -10581,19 +10582,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6211578276725296177, guid: baacf500bf83f35498de7240401ffc57, type: 3}
       propertyPath: _VideoSoundToPlayReference.Guid.Data1
-      value: 1693379827
+      value: 53236130
       objectReference: {fileID: 0}
     - target: {fileID: 6211578276725296177, guid: baacf500bf83f35498de7240401ffc57, type: 3}
       propertyPath: _VideoSoundToPlayReference.Guid.Data2
-      value: 1220209625
+      value: 1339629767
       objectReference: {fileID: 0}
     - target: {fileID: 6211578276725296177, guid: baacf500bf83f35498de7240401ffc57, type: 3}
       propertyPath: _VideoSoundToPlayReference.Guid.Data3
-      value: -82048612
+      value: -2069683321
       objectReference: {fileID: 0}
     - target: {fileID: 6211578276725296177, guid: baacf500bf83f35498de7240401ffc57, type: 3}
       propertyPath: _VideoSoundToPlayReference.Guid.Data4
-      value: 1785036971
+      value: 2055652279
       objectReference: {fileID: 0}
     - target: {fileID: 6211578276725296177, guid: baacf500bf83f35498de7240401ffc57, type: 3}
       propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.size
@@ -13970,6 +13971,7 @@ MonoBehaviour:
         Data3: 0
         Data4: 0
       Path: 
+    isCassette: 0
 --- !u!65 &560866704
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16597,6 +16599,7 @@ MonoBehaviour:
         Data3: 0
         Data4: 0
       Path: 
+    isCassette: 0
 --- !u!65 &630691649
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18613,6 +18616,7 @@ MonoBehaviour:
         Data3: 0
         Data4: 0
       Path: 
+    isCassette: 0
 --- !u!65 &693947631
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19289,6 +19293,7 @@ MonoBehaviour:
         Data3: 0
         Data4: 0
       Path: 
+    isCassette: 0
 --- !u!65 &708233712
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23342,19 +23347,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6211578276725296177, guid: baacf500bf83f35498de7240401ffc57, type: 3}
       propertyPath: _VideoSoundToPlayReference.Guid.Data1
-      value: -1603325559
+      value: -1018970457
       objectReference: {fileID: 0}
     - target: {fileID: 6211578276725296177, guid: baacf500bf83f35498de7240401ffc57, type: 3}
       propertyPath: _VideoSoundToPlayReference.Guid.Data2
-      value: 1154980782
+      value: 1202848020
       objectReference: {fileID: 0}
     - target: {fileID: 6211578276725296177, guid: baacf500bf83f35498de7240401ffc57, type: 3}
       propertyPath: _VideoSoundToPlayReference.Guid.Data3
-      value: -117334370
+      value: -2120474968
       objectReference: {fileID: 0}
     - target: {fileID: 6211578276725296177, guid: baacf500bf83f35498de7240401ffc57, type: 3}
       propertyPath: _VideoSoundToPlayReference.Guid.Data4
-      value: 1574306831
+      value: -350095580
       objectReference: {fileID: 0}
     - target: {fileID: 6211578276725296177, guid: baacf500bf83f35498de7240401ffc57, type: 3}
       propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.size
@@ -24260,19 +24265,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6211578276725296177, guid: baacf500bf83f35498de7240401ffc57, type: 3}
       propertyPath: _VideoSoundToPlayReference.Guid.Data1
-      value: 1967763588
+      value: 59675015
       objectReference: {fileID: 0}
     - target: {fileID: 6211578276725296177, guid: baacf500bf83f35498de7240401ffc57, type: 3}
       propertyPath: _VideoSoundToPlayReference.Guid.Data2
-      value: 1144699077
+      value: 1156104860
       objectReference: {fileID: 0}
     - target: {fileID: 6211578276725296177, guid: baacf500bf83f35498de7240401ffc57, type: 3}
       propertyPath: _VideoSoundToPlayReference.Guid.Data3
-      value: -175624568
+      value: 1295937960
       objectReference: {fileID: 0}
     - target: {fileID: 6211578276725296177, guid: baacf500bf83f35498de7240401ffc57, type: 3}
       propertyPath: _VideoSoundToPlayReference.Guid.Data4
-      value: -276368891
+      value: -2000535072
       objectReference: {fileID: 0}
     - target: {fileID: 6211578276725296177, guid: baacf500bf83f35498de7240401ffc57, type: 3}
       propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.size
@@ -24737,6 +24742,7 @@ MonoBehaviour:
         Data3: 0
         Data4: 0
       Path: 
+    isCassette: 0
 --- !u!65 &927883335
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -37152,6 +37158,7 @@ MonoBehaviour:
         Data3: 0
         Data4: 0
       Path: 
+    isCassette: 0
 --- !u!65 &1357057310
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -41750,19 +41757,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6211578276725296177, guid: baacf500bf83f35498de7240401ffc57, type: 3}
       propertyPath: _VideoSoundToPlayReference.Guid.Data1
-      value: -109915544
+      value: -1550929006
       objectReference: {fileID: 0}
     - target: {fileID: 6211578276725296177, guid: baacf500bf83f35498de7240401ffc57, type: 3}
       propertyPath: _VideoSoundToPlayReference.Guid.Data2
-      value: 1081470057
+      value: 1114906072
       objectReference: {fileID: 0}
     - target: {fileID: 6211578276725296177, guid: baacf500bf83f35498de7240401ffc57, type: 3}
       propertyPath: _VideoSoundToPlayReference.Guid.Data3
-      value: -1055805768
+      value: -1847658309
       objectReference: {fileID: 0}
     - target: {fileID: 6211578276725296177, guid: baacf500bf83f35498de7240401ffc57, type: 3}
       propertyPath: _VideoSoundToPlayReference.Guid.Data4
-      value: -290212963
+      value: -869046690
       objectReference: {fileID: 0}
     - target: {fileID: 6211578276725296177, guid: baacf500bf83f35498de7240401ffc57, type: 3}
       propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.size
@@ -44960,6 +44967,7 @@ MonoBehaviour:
         Data3: 0
         Data4: 0
       Path: 
+    isCassette: 0
 --- !u!65 &1637848844
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -47728,6 +47736,7 @@ MonoBehaviour:
         Data3: 0
         Data4: 0
       Path: 
+    isCassette: 0
 --- !u!65 &1739318220
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -50228,19 +50237,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6211578276725296177, guid: baacf500bf83f35498de7240401ffc57, type: 3}
       propertyPath: _VideoSoundToPlayReference.Guid.Data1
-      value: 783497250
+      value: 1149317550
       objectReference: {fileID: 0}
     - target: {fileID: 6211578276725296177, guid: baacf500bf83f35498de7240401ffc57, type: 3}
       propertyPath: _VideoSoundToPlayReference.Guid.Data2
-      value: 1218859676
+      value: 1315479756
       objectReference: {fileID: 0}
     - target: {fileID: 6211578276725296177, guid: baacf500bf83f35498de7240401ffc57, type: 3}
       propertyPath: _VideoSoundToPlayReference.Guid.Data3
-      value: -579751538
+      value: -1834878585
       objectReference: {fileID: 0}
     - target: {fileID: 6211578276725296177, guid: baacf500bf83f35498de7240401ffc57, type: 3}
       propertyPath: _VideoSoundToPlayReference.Guid.Data4
-      value: 259046242
+      value: -663961085
       objectReference: {fileID: 0}
     - target: {fileID: 6211578276725296177, guid: baacf500bf83f35498de7240401ffc57, type: 3}
       propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.size
@@ -55044,6 +55053,7 @@ MonoBehaviour:
         Data3: 0
         Data4: 0
       Path: 
+    isCassette: 0
 --- !u!1 &2046414985
 GameObject:
   m_ObjectHideFlags: 0
@@ -55645,6 +55655,7 @@ MonoBehaviour:
         Data3: 0
         Data4: 0
       Path: 
+    isCassette: 0
 --- !u!65 &2073969172
 BoxCollider:
   m_ObjectHideFlags: 0

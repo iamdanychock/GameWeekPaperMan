@@ -14,7 +14,7 @@ public class SettingsManager : MonoBehaviour
 
 
 
-    [SerializeField] private Button _ScreenSizeButton;
+    [SerializeField] private Toggle _ScreenSizeButton;
 
     private GameObject _PanelSettings => transform.GetChild(0).gameObject;
 
@@ -31,10 +31,6 @@ public class SettingsManager : MonoBehaviour
 
         
 
-        if (Screen.fullScreen)
-            _ScreenSizeButton.GetComponentInChildren<TextMeshProUGUI>().text = "Full Screen";
-        else
-            _ScreenSizeButton.GetComponentInChildren<TextMeshProUGUI>().text = "Windowed";
 
         Visibility();
     }
@@ -44,10 +40,7 @@ public class SettingsManager : MonoBehaviour
     {
         Screen.fullScreen = !Screen.fullScreen;
 
-        if (Screen.fullScreen)
-            _ScreenSizeButton.GetComponentInChildren<TextMeshProUGUI>().text = "Full Screen";
-        else
-            _ScreenSizeButton.GetComponentInChildren<TextMeshProUGUI>().text = "Windowed";
+
 
 
 
