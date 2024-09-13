@@ -30,5 +30,6 @@ public class EndVideoManager : MonoBehaviour
         videoPlayer.gameObject.SetActive(true);
         videoPlayer.Play();
         yield return new WaitForSeconds(videoDuration);
+        Application.Quit();
     }
 }
