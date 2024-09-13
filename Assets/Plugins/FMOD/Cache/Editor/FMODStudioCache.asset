@@ -144,19 +144,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Amb/video6
   Guid:
-    Data1: 691410990
-    Data2: 1264969006
-    Data3: -1761320782
-    Data4: 1411884717
+    Data1: 1266796923
+    Data2: 1341214309
+    Data3: 1701360533
+    Data4: 537917810
   Banks:
-  - {fileID: -3946375091570109478}
+  - {fileID: 6460941661829706626}
   IsStream: 0
   Is3D: 1
-  IsOneShot: 0
+  IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 8832
+  Length: 0
 --- !u!114 &-7344790999017223653
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -335,7 +335,7 @@ MonoBehaviour:
   - {fileID: 6460941661829706626}
   IsStream: 1
   Is3D: 0
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
@@ -355,10 +355,10 @@ MonoBehaviour:
   Path: FMOD/PaperMan/Build/Desktop/Amb.bank
   Name: Amb
   StudioPath: bank:/Amb
-  lastModified: 638618204740381294
+  lastModified: 638618216865014389
   FileSizes:
   - Name: Desktop
-    Value: 13765600
+    Value: 13103360
   Exists: 1
 --- !u!114 &-3926712472644517765
 MonoBehaviour:
@@ -374,19 +374,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Amb/video5
   Guid:
-    Data1: -1550929006
-    Data2: 1114906072
-    Data3: -1847658309
-    Data4: -869046690
+    Data1: -109915544
+    Data2: 1081470057
+    Data3: -1055805768
+    Data4: -290212963
   Banks:
-  - {fileID: -3946375091570109478}
+  - {fileID: 6460941661829706626}
   IsStream: 0
   Is3D: 1
-  IsOneShot: 0
+  IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 7488
+  Length: 0
 --- !u!114 &-3829974889167726576
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -484,7 +484,7 @@ MonoBehaviour:
   Path: FMOD/PaperMan/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638618193074434308
+  lastModified: 638618216865465693
   FileSizes:
   - Name: Desktop
     Value: 2522
@@ -679,7 +679,7 @@ MonoBehaviour:
   - {fileID: 4669912215218507413}
   StringsBanks:
   - {fileID: -2604284439467036025}
-  cacheTime: 638618204740381294
+  cacheTime: 638618216882977893
   cacheVersion: 131619
 --- !u!114 &783293713578804609
 MonoBehaviour:
@@ -695,19 +695,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Amb/video3
   Guid:
-    Data1: 1149317550
-    Data2: 1315479756
-    Data3: -1834878585
-    Data4: -663961085
+    Data1: 783497250
+    Data2: 1218859676
+    Data3: -579751538
+    Data4: 259046242
   Banks:
-  - {fileID: -3946375091570109478}
+  - {fileID: 6460941661829706626}
   IsStream: 1
   Is3D: 1
-  IsOneShot: 0
+  IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 12949
+  Length: 0
 --- !u!114 &2870759825988305909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -722,19 +722,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Amb/video2
   Guid:
-    Data1: 53236130
-    Data2: 1339629767
-    Data3: -2069683321
-    Data4: 2055652279
+    Data1: 1693379827
+    Data2: 1220209625
+    Data3: -82048612
+    Data4: 1785036971
   Banks:
-  - {fileID: -3946375091570109478}
+  - {fileID: 6460941661829706626}
   IsStream: 1
   Is3D: 1
-  IsOneShot: 0
+  IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 13760
+  Length: 0
 --- !u!114 &2941683462736176396
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -803,19 +803,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Amb/video1
   Guid:
-    Data1: -1018970457
-    Data2: 1202848020
-    Data3: -2120474968
-    Data4: -350095580
+    Data1: -1603325559
+    Data2: 1154980782
+    Data3: -117334370
+    Data4: 1574306831
   Banks:
-  - {fileID: -3946375091570109478}
+  - {fileID: 6460941661829706626}
   IsStream: 1
   Is3D: 1
-  IsOneShot: 0
+  IsOneShot: 1
   Parameters: []
   MinDistance: 1
-  MaxDistance: 40
-  Length: 12802
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &3866961085480925643
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -831,10 +831,10 @@ MonoBehaviour:
   Path: FMOD/PaperMan/Build/Desktop/musique.bank
   Name: musique
   StudioPath: bank:/musique
-  lastModified: 638618193087875809
+  lastModified: 638618216876128911
   FileSizes:
   - Name: Desktop
-    Value: 1974432
+    Value: 1974240
   Exists: 1
 --- !u!114 &4229609866410308930
 MonoBehaviour:
@@ -908,7 +908,7 @@ MonoBehaviour:
   Path: FMOD/PaperMan/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638618193074409140
+  lastModified: 638618216865450647
   FileSizes:
   - Name: Desktop
     Value: 6536768
@@ -979,10 +979,10 @@ MonoBehaviour:
   Path: FMOD/PaperMan/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638618193089206565
+  lastModified: 638618216882977893
   FileSizes:
   - Name: Desktop
-    Value: 1227456
+    Value: 1890272
   Exists: 1
 --- !u!114 &6934574937518759832
 MonoBehaviour:
@@ -1025,19 +1025,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Amb/video4
   Guid:
-    Data1: 59675015
-    Data2: 1156104860
-    Data3: 1295937960
-    Data4: -2000535072
+    Data1: 1967763588
+    Data2: 1144699077
+    Data3: -175624568
+    Data4: -276368891
   Banks:
-  - {fileID: -3946375091570109478}
+  - {fileID: 6460941661829706626}
   IsStream: 1
   Is3D: 1
-  IsOneShot: 0
+  IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 19200
+  Length: 0
 --- !u!114 &7310604401558437371
 MonoBehaviour:
   m_ObjectHideFlags: 0
