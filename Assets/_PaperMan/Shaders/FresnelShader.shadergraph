@@ -894,8 +894,8 @@
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
     "m_Value": {
-        "x": 0.4000000059604645,
-        "y": 0.75,
+        "x": 0.5,
+        "y": 1.0,
         "z": 0.0,
         "w": 0.0
     }

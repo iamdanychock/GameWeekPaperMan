@@ -38,6 +38,8 @@ namespace Com.IsartDigital.PaperMan
 
         public bool isActivated = false;
         public bool canRotate = false;
+        private bool isInAnimation = false;
+        private float currentAnimDirection;
 
         private void Awake()
         {
@@ -100,6 +102,7 @@ namespace Com.IsartDigital.PaperMan
 
             // reset container rotation then create the new 3d object
             containerTransform.rotation = Quaternion.identity;
+            _rotationWhenBeginDrag = Quaternion.identity;
             object3dToRotate = Instantiate(item.itemObject, containerTransform);
             ChangeLayerAllChildren(object3dToRotate.transform, gameObject.layer);
             object3dStartScale = Vector3.one * item.itemScale;
@@ -124,7 +127,8 @@ namespace Com.IsartDigital.PaperMan
 
         private void StartAnim(float direction)
         {
-            if (!canvas.activeSelf) return;
+            // dont start the anim if it is already doing one or if he canvas is disabled
+            if (!canvas.activeSelf || isInAnimation && direction == currentAnimDirection) return;
 
             if (animCoroutine != null)
                 StopCoroutine(animCoroutine);
@@ -137,6 +141,9 @@ namespace Com.IsartDigital.PaperMan
         /// <param name="direction"> 1 for going from 0 to 1 or -1 for it to go from 1 to 0
         private IEnumerator DoAnim(float direction)
         {
+            isInAnimation = true;
+            currentAnimDirection = direction;
+
             float elapsedTime = 0;
             float ratio;
             while (elapsedTime < animationDuration)
@@ -150,6 +157,8 @@ namespace Com.IsartDigital.PaperMan
 
             // set values at the end of anim
             object3dToRotate.transform.localScale = object3dStartScale;
+            isInAnimation = false;
+            currentAnimDirection = 0;
 
             // if the viewer is closing deactivate values
             if (direction == -1)
@@ -210,7 +219,6 @@ namespace Com.IsartDigital.PaperMan
             public EventReference itemSoundDrop;
             public EventReference itemCassette;
             public bool isCassette;
-
         }
     }
 }
