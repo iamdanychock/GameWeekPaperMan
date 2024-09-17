@@ -355,7 +355,7 @@ MonoBehaviour:
   Path: FMOD/PaperMan/Build/Desktop/Amb.bank
   Name: Amb
   StudioPath: bank:/Amb
-  lastModified: 638621782018962531
+  lastModified: 638618243536794587
   FileSizes:
   - Name: Desktop
     Value: 13765600
@@ -484,7 +484,7 @@ MonoBehaviour:
   Path: FMOD/PaperMan/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638621782019698853
+  lastModified: 638618243537687619
   FileSizes:
   - Name: Desktop
     Value: 2522
@@ -679,7 +679,7 @@ MonoBehaviour:
   - {fileID: 4669912215218507413}
   StringsBanks:
   - {fileID: -2604284439467036025}
-  cacheTime: 638621782031368212
+  cacheTime: 638618245441585054
   cacheVersion: 131619
 --- !u!114 &783293713578804609
 MonoBehaviour:
@@ -831,7 +831,7 @@ MonoBehaviour:
   Path: FMOD/PaperMan/Build/Desktop/musique.bank
   Name: musique
   StudioPath: bank:/musique
-  lastModified: 638621782029993594
+  lastModified: 638618243538814497
   FileSizes:
   - Name: Desktop
     Value: 1974432
@@ -908,7 +908,7 @@ MonoBehaviour:
   Path: FMOD/PaperMan/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638621782019677169
+  lastModified: 638618243537628595
   FileSizes:
   - Name: Desktop
     Value: 6536768
@@ -979,7 +979,7 @@ MonoBehaviour:
   Path: FMOD/PaperMan/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638621782031368212
+  lastModified: 638618245441585054
   FileSizes:
   - Name: Desktop
     Value: 1227168
