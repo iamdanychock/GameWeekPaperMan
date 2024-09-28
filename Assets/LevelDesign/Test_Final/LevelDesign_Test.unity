@@ -12479,6 +12479,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7360576181264621746, guid: 1c02caa78c12cbd458e1ded75223b63d, type: 3}
+      propertyPath: cameraZoomFieldOfView
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 7360576181264621746, guid: 1c02caa78c12cbd458e1ded75223b63d, type: 3}
       propertyPath: rotationSpeedController
       value: 2.4
       objectReference: {fileID: 0}

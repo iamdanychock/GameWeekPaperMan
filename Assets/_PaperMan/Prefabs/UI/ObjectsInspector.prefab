@@ -261,9 +261,10 @@ MonoBehaviour:
   canvas: {fileID: 5630216295735516862}
   object3dToRotate: {fileID: 0}
   containerTransform: {fileID: 2116268641791576243}
-  cameraTransform: {fileID: 2815070162463829083}
   itemName: {fileID: 8889266882006929148}
   itemDescription: {fileID: 976782827553833715}
+  cameraViewer: {fileID: 238825013705496095}
+  zoomDist: 50
   rotationSpeed: 0.3
   rotationSpeedController: 0.03
   animationCurve:

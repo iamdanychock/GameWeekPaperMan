@@ -54,6 +54,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _ColorFactor: 0.8
     - _GlitchOffsetChangeSpeed: 1
     - _GlitchYSpeed: 0.1
     - _HueShift: 0.1

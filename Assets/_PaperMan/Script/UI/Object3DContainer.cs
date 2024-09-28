@@ -1,13 +1,9 @@
+using FMODUnity;
+using System;
 using System.Collections;
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using System.Threading.Tasks;
-using System;
-using TMPro;
-using FMODUnity;
-using FMOD.Studio;
-using Unity.Services.Analytics.Internal;
 
 namespace Com.IsartDigital.PaperMan
 {
@@ -18,10 +14,17 @@ namespace Com.IsartDigital.PaperMan
         [SerializeField] private GameObject canvas;
         [SerializeField] private GameObject object3dToRotate;
         [SerializeField] private Transform containerTransform;
-        [SerializeField] private Transform cameraTransform;
         [SerializeField] private TextMeshProUGUI itemName;
         [SerializeField] private TextMeshProUGUI itemDescription;
         [NonSerialized] private EventReference itemSoundDrop;
+
+        [Header("Camera")]
+        [SerializeField] private UnityEngine.Camera cameraViewer;
+        [SerializeField] private float cameraZoomFieldOfView = 80;
+        // camera values
+        private Transform cameraTransform;
+        private Vector3 cameraStartPos;
+        private float cameraStartFieldOfView;
 
         [Space]
         [SerializeField] private float rotationSpeed = .01f;
@@ -49,6 +52,11 @@ namespace Com.IsartDigital.PaperMan
 
         private void Start()
         {
+            // get the camera values
+            cameraTransform = cameraViewer.transform;
+            cameraStartPos = cameraTransform.position;
+            cameraStartFieldOfView = cameraViewer.fieldOfView;
+
             Hide3DObject(false);
         }
 
@@ -67,8 +75,13 @@ namespace Com.IsartDigital.PaperMan
                 containerTransform.rotation = Quaternion.AngleAxis(-rotationSpeedController * mousePositionFromLastFrame.x, cameraTransform.up) * _rotationWhenBeginDrag;
                 Vector3 cameraRight = Quaternion.AngleAxis(-rotationSpeedController * mousePositionFromLastFrame.x, cameraTransform.up) * cameraTransform.right;
                 containerTransform.rotation = Quaternion.AngleAxis(rotationSpeedController * mousePositionFromLastFrame.y, cameraRight) * containerTransform.rotation;
-
+                // save values for next frame
                 _rotationWhenBeginDrag = containerTransform.rotation;
+
+                // check if player is trying to zoom
+                if (Input.GetMouseButton(0))
+                     cameraViewer.fieldOfView = cameraZoomFieldOfView;
+                else cameraViewer.fieldOfView = cameraStartFieldOfView;
             }
         }
 
