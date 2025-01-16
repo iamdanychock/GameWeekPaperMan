@@ -96,7 +96,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: e804fe664d897b745ad03e9ebe9eba7d, type: 2}
   m_LightingSettings: {fileID: 4890085278179872738, guid: e8853f444af62504b8f14b7b8320a588, type: 2}
 --- !u!196 &4
 NavMeshSettings:
@@ -1775,7 +1775,7 @@ Light:
   m_InnerSpotAngle: 22.916245
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -1808,7 +1808,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 0
@@ -2002,6 +2002,14 @@ PrefabInstance:
     - target: {fileID: 4580734455573244457, guid: 65fe01676d23f594c972502b0119731c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 88.748
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5439315386371845176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
       propertyPath: m_Name
@@ -2559,7 +2567,7 @@ Light:
   m_InnerSpotAngle: 22.916245
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -3592,6 +3600,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -42.593
       objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5439315386371845176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
       propertyPath: m_Name
       value: Lampiotte (54)
@@ -3735,6 +3751,14 @@ PrefabInstance:
     - target: {fileID: 4580734455573244457, guid: 65fe01676d23f594c972502b0119731c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 56.738
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5439315386371845176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
       propertyPath: m_Name
@@ -5166,6 +5190,14 @@ PrefabInstance:
     - target: {fileID: 4580734455573244457, guid: 65fe01676d23f594c972502b0119731c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5439315386371845176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
       propertyPath: m_Name
@@ -10140,6 +10172,14 @@ PrefabInstance:
       propertyPath: m_Intensity
       value: 4.5
       objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5439315386371845176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
       propertyPath: m_Name
       value: Lampiotte (15)
@@ -14040,6 +14080,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 46.564
       objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5439315386371845176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
       propertyPath: m_Name
       value: Lampiotte (3)
@@ -15580,6 +15628,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5439315386371845176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
       propertyPath: m_Name
       value: Lampiotte (63)
@@ -16893,6 +16949,124 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 545587734689352626, guid: d1583148357cb9a4aa499c45f4d6a181, type: 3}
   m_PrefabInstance: {fileID: 246030553}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &247011190
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 247011193}
+  - component: {fileID: 247011192}
+  - component: {fileID: 247011191}
+  m_Layer: 0
+  m_Name: Point Light_Street
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &247011191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247011190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
+--- !u!108 &247011192
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247011190}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 2
+  m_Shape: 0
+  m_Color: {r: 1, g: 0.72264147, b: 0.72264147, a: 1}
+  m_Intensity: 173
+  m_Range: 32.12
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 2
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 1
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 3.18
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!4 &247011193
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247011190}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.4, y: 14.5, z: 45}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &248192986
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17387,6 +17561,14 @@ PrefabInstance:
     - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
       propertyPath: m_Intensity
       value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5439315386371845176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
       propertyPath: m_Name
@@ -22752,6 +22934,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5439315386371845176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
       propertyPath: m_Name
       value: Lampiotte (28)
@@ -23988,6 +24178,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -38.512
       objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5439315386371845176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
       propertyPath: m_Name
       value: Lampiotte (11)
@@ -24049,6 +24247,14 @@ PrefabInstance:
     - target: {fileID: 4580734455573244457, guid: 65fe01676d23f594c972502b0119731c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 56.738
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5439315386371845176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
       propertyPath: m_Name
@@ -24138,7 +24344,7 @@ Light:
   m_InnerSpotAngle: 47.429207
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -24451,6 +24657,14 @@ PrefabInstance:
     - target: {fileID: 4580734455573244457, guid: 65fe01676d23f594c972502b0119731c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 11.618
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5439315386371845176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
       propertyPath: m_Name
@@ -28541,6 +28755,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5439315386371845176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
       propertyPath: m_Name
       value: Lampiotte (62)
@@ -28847,7 +29069,7 @@ Light:
   m_InnerSpotAngle: 22.916325
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -33490,7 +33712,7 @@ Light:
   m_InnerSpotAngle: 22.916245
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -33523,7 +33745,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 0
@@ -33958,7 +34180,7 @@ Light:
   m_InnerSpotAngle: 78.627495
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -34850,7 +35072,7 @@ Light:
   m_InnerSpotAngle: 78.627495
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -35878,6 +36100,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 88.748
       objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5439315386371845176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
       propertyPath: m_Name
       value: Lampiotte (59)
@@ -36399,6 +36629,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5439315386371845176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
       propertyPath: m_Name
       value: Lampiotte (24)
@@ -36729,7 +36967,7 @@ Light:
   m_InnerSpotAngle: 48.543457
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -37969,6 +38207,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 6.269
       objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5439315386371845176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
       propertyPath: m_Name
       value: Lampiotte (56)
@@ -38119,7 +38365,7 @@ Light:
   m_InnerSpotAngle: 22.916245
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -38343,6 +38589,14 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: c4943af2e63c03041bfaeecc59eb6849, type: 2}
+    - target: {fileID: 5241293214677034683, guid: baacf500bf83f35498de7240401ffc57, type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5241293214677034683, guid: baacf500bf83f35498de7240401ffc57, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6183618017850148867, guid: baacf500bf83f35498de7240401ffc57, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -40336,6 +40590,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5439315386371845176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
       propertyPath: m_Name
       value: Lampiotte (26)
@@ -41541,7 +41803,7 @@ Light:
   m_InnerSpotAngle: 78.627495
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -41898,7 +42160,7 @@ Light:
   m_InnerSpotAngle: 22.916245
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -41931,7 +42193,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 0
@@ -43444,6 +43706,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -4.001
       objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5439315386371845176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
       propertyPath: m_Name
       value: Lampiotte (45)
@@ -43672,7 +43942,7 @@ Light:
   m_InnerSpotAngle: 22.916245
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -43705,7 +43975,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 0
@@ -51294,6 +51564,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 6.269
       objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5439315386371845176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
       propertyPath: m_Name
       value: Lampiotte (55)
@@ -53575,6 +53853,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 33.321
       objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5439315386371845176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
       propertyPath: m_Name
       value: Lampiotte (29)
@@ -54843,6 +55129,14 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 43afcb2bdb6c26140a956717665a9506, type: 2}
+    - target: {fileID: 5241293214677034683, guid: baacf500bf83f35498de7240401ffc57, type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5241293214677034683, guid: baacf500bf83f35498de7240401ffc57, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6211578276725296177, guid: baacf500bf83f35498de7240401ffc57, type: 3}
       propertyPath: killPlayer
       value: 1
@@ -58000,7 +58294,7 @@ Light:
   m_InnerSpotAngle: 22.916245
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -59092,6 +59386,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -4.001
       objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5439315386371845176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
       propertyPath: m_Name
       value: Lampiotte (48)
@@ -59855,6 +60157,14 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 3a8dd05fe076c644997e4c9e103ba4d0, type: 2}
+    - target: {fileID: 5241293214677034683, guid: baacf500bf83f35498de7240401ffc57, type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5241293214677034683, guid: baacf500bf83f35498de7240401ffc57, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6211578276725296177, guid: baacf500bf83f35498de7240401ffc57, type: 3}
       propertyPath: killPlayer
       value: 1
@@ -62373,7 +62683,7 @@ Light:
   m_InnerSpotAngle: 22.916245
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -65254,6 +65564,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5439315386371845176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
       propertyPath: m_Name
       value: Lampiotte (1)
@@ -65420,7 +65738,7 @@ Light:
   m_InnerSpotAngle: 27.373196
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -65809,7 +66127,7 @@ Light:
   m_InnerSpotAngle: 78.627495
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -66115,6 +66433,14 @@ PrefabInstance:
     - target: {fileID: 4580734455573244457, guid: 65fe01676d23f594c972502b0119731c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 6.269
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5439315386371845176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
       propertyPath: m_Name
@@ -67092,6 +67418,14 @@ PrefabInstance:
     - target: {fileID: 4580734455573244457, guid: 65fe01676d23f594c972502b0119731c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -21.867
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5439315386371845176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
       propertyPath: m_Name
@@ -72075,6 +72409,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -4.001
       objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5439315386371845176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
       propertyPath: m_Name
       value: Lampiotte (46)
@@ -75187,6 +75529,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -20.216
       objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5439315386371845176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
       propertyPath: m_Name
       value: Lampiotte (25)
@@ -75913,6 +76263,14 @@ PrefabInstance:
     - target: {fileID: 4580734455573244457, guid: 65fe01676d23f594c972502b0119731c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 50.949
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5439315386371845176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
       propertyPath: m_Name
@@ -80299,6 +80657,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5439315386371845176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
       propertyPath: m_Name
       value: Lampiotte (22)
@@ -80535,7 +80901,7 @@ Light:
   m_InnerSpotAngle: 22.916245
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -80568,7 +80934,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 0
@@ -82275,6 +82641,14 @@ PrefabInstance:
     - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
       propertyPath: m_Intensity
       value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5439315386371845176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
       propertyPath: m_Name
@@ -84461,6 +84835,14 @@ PrefabInstance:
     - target: {fileID: 4580734455573244457, guid: 65fe01676d23f594c972502b0119731c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -4.001
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5439315386371845176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
       propertyPath: m_Name
@@ -87142,7 +87524,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -88660,6 +89042,14 @@ PrefabInstance:
     - target: {fileID: 4580734455573244457, guid: 65fe01676d23f594c972502b0119731c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 11.618
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5439315386371845176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
       propertyPath: m_Name
@@ -91620,6 +92010,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -4.001
       objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5439315386371845176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
       propertyPath: m_Name
       value: Lampiotte (44)
@@ -92109,7 +92507,7 @@ Light:
   m_InnerSpotAngle: 78.627495
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -96191,6 +96589,14 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 18e26841018e052418b6f9ccc1852531, type: 2}
+    - target: {fileID: 5241293214677034683, guid: baacf500bf83f35498de7240401ffc57, type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5241293214677034683, guid: baacf500bf83f35498de7240401ffc57, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6211578276725296177, guid: baacf500bf83f35498de7240401ffc57, type: 3}
       propertyPath: activateOutline
       value: 0
@@ -97117,6 +97523,14 @@ PrefabInstance:
     - target: {fileID: 4580734455573244457, guid: 65fe01676d23f594c972502b0119731c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5439315386371845176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
       propertyPath: m_Name
@@ -102452,7 +102866,7 @@ Light:
   m_InnerSpotAngle: 78.627495
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -104537,7 +104951,7 @@ Light:
   m_InnerSpotAngle: 57.457153
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -105651,7 +106065,7 @@ Light:
   m_InnerSpotAngle: 78.627495
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -106170,6 +106584,124 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 545587734689352626, guid: d1583148357cb9a4aa499c45f4d6a181, type: 3}
   m_PrefabInstance: {fileID: 1541779556}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1543542211
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1543542214}
+  - component: {fileID: 1543542213}
+  - component: {fileID: 1543542212}
+  m_Layer: 0
+  m_Name: Spot Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1543542212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1543542211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
+--- !u!108 &1543542213
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1543542211}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 0
+  m_Shape: 0
+  m_Color: {r: 0.7528302, g: 0.9786465, b: 1, a: 1}
+  m_Intensity: 1
+  m_Range: 10
+  m_SpotAngle: 50.4
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 2
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 1
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!4 &1543542214
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1543542211}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -4.5600004, y: 32.4, z: 7.6899996}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1001 &1546429157
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -107612,6 +108144,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 88.748
       objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5439315386371845176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
       propertyPath: m_Name
       value: Lampiotte (58)
@@ -108782,6 +109322,14 @@ PrefabInstance:
     - target: {fileID: 4580734455573244457, guid: 65fe01676d23f594c972502b0119731c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 14.752
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5439315386371845176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
       propertyPath: m_Name
@@ -112727,6 +113275,10 @@ PrefabInstance:
       propertyPath: m_IsOn
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7895244051840566483, guid: b9a42699a44120e4f80d392b23560ea1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8169145787691357219, guid: b9a42699a44120e4f80d392b23560ea1, type: 3}
       propertyPath: _SFXSlider
       value: 
@@ -114289,7 +114841,7 @@ Light:
   m_InnerSpotAngle: 132.11017
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -115955,7 +116507,7 @@ Light:
   m_InnerSpotAngle: 78.627495
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -118207,6 +118759,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5439315386371845176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
       propertyPath: m_Name
       value: Lampiotte (34)
@@ -119626,7 +120186,7 @@ Light:
   m_InnerSpotAngle: 78.627495
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -125192,6 +125752,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5439315386371845176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
       propertyPath: m_Name
       value: Lampiotte (21)
@@ -126901,6 +127469,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 2.152
       objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5439315386371845176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
       propertyPath: m_Name
       value: Lampiotte (52)
@@ -127419,6 +127995,14 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 4172aafccf2824548815b21c8119024c, type: 2}
+    - target: {fileID: 5241293214677034683, guid: baacf500bf83f35498de7240401ffc57, type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5241293214677034683, guid: baacf500bf83f35498de7240401ffc57, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6183618017850148867, guid: baacf500bf83f35498de7240401ffc57, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -127725,6 +128309,14 @@ PrefabInstance:
     - target: {fileID: 4580734455573244457, guid: 65fe01676d23f594c972502b0119731c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5439315386371845176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
       propertyPath: m_Name
@@ -129697,7 +130289,7 @@ Light:
   m_InnerSpotAngle: 19.573626
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -132802,6 +133394,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 51.172
       objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5439315386371845176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
       propertyPath: m_Name
       value: Lampiotte (61)
@@ -135197,6 +135797,124 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8810787449764824262, guid: 2d77a901ec9c25d4dbfc0c3445c47401, type: 3}
   m_PrefabInstance: {fileID: 1969537320}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1970918355
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1970918358}
+  - component: {fileID: 1970918357}
+  - component: {fileID: 1970918356}
+  m_Layer: 0
+  m_Name: Area Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1970918356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1970918355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
+--- !u!108 &1970918357
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1970918355}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 3
+  m_Shape: 0
+  m_Color: {r: 1, g: 0.9447642, b: 0.60188675, a: 1}
+  m_Intensity: 1
+  m_Range: 10
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 2
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 2
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 21.5, y: 25.6}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!4 &1970918358
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1970918355}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.6408564, y: -0.29883626, z: -0.29883626, w: 0.6408564}
+  m_LocalPosition: {x: 16.9, y: 18.5, z: 47.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 40, y: -90, z: -90}
 --- !u!1001 &1976413040
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -135244,6 +135962,14 @@ PrefabInstance:
     - target: {fileID: 4580734455573244457, guid: 65fe01676d23f594c972502b0119731c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -4.001
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5439315386371845176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
       propertyPath: m_Name
@@ -135634,7 +136360,7 @@ Light:
   m_InnerSpotAngle: 22.916245
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -135667,7 +136393,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 0
@@ -136137,7 +136863,7 @@ Light:
   m_InnerSpotAngle: 22.916245
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -136482,6 +137208,14 @@ PrefabInstance:
     - target: {fileID: 4580734455573244457, guid: 65fe01676d23f594c972502b0119731c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5439315386371845176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
       propertyPath: m_Name
@@ -136897,7 +137631,7 @@ Light:
   m_InnerSpotAngle: 55.228783
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -137309,7 +138043,7 @@ Light:
   m_InnerSpotAngle: 47.429207
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -138513,7 +139247,7 @@ Light:
   m_InnerSpotAngle: 22.916245
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -141540,6 +142274,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -4.001
       objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5439315386371845176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
       propertyPath: m_Name
       value: Lampiotte (42)
@@ -141568,7 +142310,7 @@ GameObject:
   - component: {fileID: 2091430682}
   m_Layer: 0
   m_Name: sol rue
-  m_TagString: Untagged
+  m_TagString: Concrete
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -143666,6 +144408,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5439315386371845176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
       propertyPath: m_Name
       value: Lampiotte (32)
@@ -144106,6 +144856,14 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a72e337a839b13b459a1777bd5675f76, type: 2}
+    - target: {fileID: 5241293214677034683, guid: baacf500bf83f35498de7240401ffc57, type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5241293214677034683, guid: baacf500bf83f35498de7240401ffc57, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6211578276725296177, guid: baacf500bf83f35498de7240401ffc57, type: 3}
       propertyPath: activateOutline
       value: 0
@@ -145548,6 +146306,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -42.593
       objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873001144449319176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5439315386371845176, guid: 65fe01676d23f594c972502b0119731c, type: 3}
       propertyPath: m_Name
       value: Lampiotte (53)
@@ -145819,7 +146585,7 @@ Light:
   m_InnerSpotAngle: 78.627495
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -145955,3 +146721,6 @@ SceneRoots:
   - {fileID: 359340153}
   - {fileID: 1427719323}
   - {fileID: 969705911}
+  - {fileID: 247011193}
+  - {fileID: 1970918358}
+  - {fileID: 1543542214}

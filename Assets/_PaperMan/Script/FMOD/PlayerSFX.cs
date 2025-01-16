@@ -16,6 +16,8 @@ public class PlayerSFX : MonoBehaviour
     private EventInstance _EventInstance;
     private EventInstance _PresenceInstance;
 
+    private CanPlaySteps;
+
     private void Awake()
     {
     }
@@ -45,7 +47,8 @@ public class PlayerSFX : MonoBehaviour
 
     public void PlayStep()
     {
-        PlaySFX(_FootSteps);
+
+            PlaySFX(_FootSteps);
         
     }
 
