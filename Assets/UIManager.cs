@@ -24,7 +24,7 @@ public class UIManager : MonoBehaviour
     {
         if (instance != null)
         {
-            Debug.LogError("Found more than on Audio Manager in the scene.");
+            Debug.LogError("Found more than on Pause Menu in the scene.");
         }
         instance = this;
     }

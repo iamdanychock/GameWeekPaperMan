@@ -790,9 +790,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 49707b554d75fdb4cb23a7c7ec9bb9a8, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 49707b554d75fdb4cb23a7c7ec9bb9a8, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 14ea1bc52937e0e4da0be7fd1b93ba51, type: 2}
+      objectReference: {fileID: 2100000, guid: 45973b3868dea1042b682daddd356116, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 49707b554d75fdb4cb23a7c7ec9bb9a8, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: -876546973899608171, guid: 31db643c5833f0043a08352d30b04bc1, type: 3}
     - target: {fileID: 919132149155446097, guid: 49707b554d75fdb4cb23a7c7ec9bb9a8, type: 3}
       propertyPath: m_Name
       value: SM_Bowl

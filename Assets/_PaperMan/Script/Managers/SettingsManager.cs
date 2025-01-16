@@ -32,7 +32,6 @@ public class SettingsManager : MonoBehaviour
         
 
 
-        Visibility();
     }
 
 
