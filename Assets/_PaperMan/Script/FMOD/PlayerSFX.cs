@@ -16,7 +16,7 @@ public class PlayerSFX : MonoBehaviour
     private EventInstance _EventInstance;
     private EventInstance _PresenceInstance;
 
-    private CanPlaySteps;
+    //private CanPlaySteps;
 
     private void Awake()
     {
