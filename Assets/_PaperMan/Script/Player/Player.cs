@@ -65,7 +65,7 @@ public class Player : MonoBehaviour
     public Action onRespawn;
 
     public Rigidbody RigidComponent => GetComponent<Rigidbody>();
-    SpriteRenderer _spriteComponent => GetComponent<SpriteRenderer>();
+    public SpriteRenderer _spriteComponent => GetComponent<SpriteRenderer>();
     Animator _animatorComponent => GetComponent<Animator>();
     ParticleSystem.EmissionModule _particleSystemMain;
 

@@ -11,7 +11,8 @@ public class CallPlayerFunctions : MonoBehaviour
         if (!babbby)
             return;
 
-        Player.Instance.transform.localPosition = Vector3.zero;
+        Player.Instance.transform.localPosition = new Vector3(0, 0, 0);
+        //Player.Instance._spriteComponent.visi
     }
 
     public void SetModFlying()
